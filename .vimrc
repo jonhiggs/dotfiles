@@ -12,6 +12,7 @@ set modeline
 set guioptions-=m
 set guioptions-=T
 set guioptions-=lrb
+set guioptions-=r
 
 " Trailing whitespace should be marked as red.
 autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
