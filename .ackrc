@@ -1,0 +1,4 @@
+--type-set=json=.json
+--type-set=cfg=.cfg
+--type-set=ruby=.pill
+--type-set=ruby=.rb
