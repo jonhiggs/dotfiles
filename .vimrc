@@ -13,6 +13,13 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=lrb
 
+" disable ex mode
+map Q <Esc>
+
+" configure navigation.
+map <C-n> :tabnext<CR>
+map <C-p> :tabprevious<CR>
+
 " Trailing whitespace should be marked as red.
 autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
 autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
