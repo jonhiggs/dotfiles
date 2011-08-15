@@ -11,7 +11,9 @@ set modeline
 " Remove gvim gui noise
 set guioptions-=m
 set guioptions-=T
-set guioptions-=lrb
+set guioptions-=l
+set guioptions-=r
+set guioptions-=b
 
 " disable ex mode
 map Q <Esc>
