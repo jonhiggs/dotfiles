@@ -1,0 +1,3 @@
+# Add json support
+--type-set=json=.json
+--type-set=cfg=.cfg
