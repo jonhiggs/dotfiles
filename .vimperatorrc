@@ -1,0 +1,7 @@
+"2.3.1 (created: 2010/04/07 18:25:13)
+
+set gui=nobookmarks
+set gui=nonavigation
+
+set runtimepath=/home/jon/.vimperator
+source! /home/jon/.vimperatorrc.local
