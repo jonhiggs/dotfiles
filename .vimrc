@@ -19,10 +19,11 @@ set guioptions-=b
 " disable ex mode
 map Q <Esc>
 
-" configure navigation.
+" configure keys for gvim.
 if has("gui_gtk2")
   map <C-n> :tabnext<CR>
   map <C-p> :tabprevious<CR>
+  map <C-d> :q<CR>
 endif
 
 " Trailing whitespace should be marked as red.
