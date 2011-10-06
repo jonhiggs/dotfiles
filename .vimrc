@@ -8,6 +8,7 @@ colorscheme ir_black
 set mouse=a
 set modeline
 set visualbell
+set ruler
 
 " Remove gvim gui noise
 set guioptions-=m
