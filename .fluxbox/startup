@@ -1,0 +1,17 @@
+#!/bin/bash
+xcompmgr &
+pidgin &
+audacious2 &
+~/.dropbox-dist/dropboxd &
+
+xset -b # turn off beeps
+numlockx on &
+unclutter -root &
+/usr/bin/gnome-do &
+tomboy &
+firefox &
+ssh-agent &
+urxvtd &
+/opt/dropbox/dropboxd &
+
+exec /usr/bin/fluxbox
