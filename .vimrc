@@ -34,7 +34,7 @@ autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
 highlight EOLWS ctermbg=red guibg=red
 
 " Highlight the todo lines.
-syntax match TODO /[#"\/;]\ TODO.*/
+syn keyword TODO contained TODO: FIXME: containedin=ALL
 highlight TODO ctermfg=red guifg=red cterm=bold gui=bold
 
 " Setup filetype for weird extensions.
