@@ -8,6 +8,7 @@ colorscheme ir_black
 set mouse=a
 set modeline
 set visualbell
+set ruler
 
 " Remove gvim gui noise
 set guioptions-=m
@@ -19,7 +20,7 @@ set guioptions-=b
 " disable ex mode
 map Q <Esc>
 
-" configure keys for gvim.
+" configure navigation.
 if has("gui_gtk2")
   map <C-n> :tabnext<CR>
   map <C-p> :tabprevious<CR>
