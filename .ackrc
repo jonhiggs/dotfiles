@@ -2,3 +2,5 @@
 --type-set=cfg=.cfg
 --type-set=ruby=.pill
 --type-set=ruby=.rb
+
+--pager=less -FRX
