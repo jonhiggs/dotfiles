@@ -23,7 +23,6 @@ map Q <Esc>
 if has("gui_gtk2")
   map <C-n> :tabnext<CR>
   map <C-p> :tabprevious<CR>
-  map <C-d> :q<CR>
 endif
 
 " Trailing whitespace should be marked as red.
