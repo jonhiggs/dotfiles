@@ -31,10 +31,10 @@ bind ^Q
 bind k focus up
 bind j focus down
 # configure default screens
-screen /usr/bin/vim --servername SCREEN
+screen /home/jon/dotfiles/.screen/vim.sh
 title "Vim"
 
-screen /usr/bin/bash
+screen /bin/bash
 
 # configure default regions.
 # ??? how to do this
