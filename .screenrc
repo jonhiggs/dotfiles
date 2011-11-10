@@ -22,6 +22,10 @@ bind ^k
 bind k
 bind ^x
 bind x
+bind s
+bind ^S
+bind q
+bind ^Q
 
 # configure default screens
 screen /usr/bin/vim --servername SCREEN
