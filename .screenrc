@@ -27,6 +27,9 @@ bind ^S
 bind q
 bind ^Q
 
+# and vim keyboard movement
+bind k focus up
+bind j focus down
 # configure default screens
 screen /usr/bin/vim --servername SCREEN
 title "Vim"
