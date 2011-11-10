@@ -11,11 +11,6 @@ startup_message off
 
 # turn off the visual bell
 vbell off
-# start my screens from 1 instead of 0.
-bind c screen 1
-bind ^c screen 1
-bind 0 select 10
-screen 1
 
 # remove binding for dangereous/anoying actions
 bind ^k
