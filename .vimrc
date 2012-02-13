@@ -31,6 +31,9 @@ autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
 autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
 highlight EOLWS ctermbg=red guibg=red
 
+" This may delete whitespace at end of file before saving. Need to test still.
+"autocmd BufWritePre * :%s/\s\+$//e
+
 " Highlight the todo lines.
 syntax match TODO /[#"\/;]\ TODO.*/
 highlight TODO ctermfg=red guifg=red cterm=bold gui=bold
