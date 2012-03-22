@@ -1,22 +1,19 @@
 #!/bin/bash
-xcompmgr &
-pidgin &
-audacious2 &
-~/.dropbox-dist/dropboxd &
 
+# ENVIRONMENT
 xset -b # turn off beeps
+xcompmgr &
 numlockx on &
 unclutter -root &
-/usr/bin/gnome-do &
+~/dotfiles/bin/clipboard-sync.sh
+
+# APPS
+pidgin &
+audacious2 &
+gnome-do &
 tomboy &
-firefox &
-ssh-agent &
+chrome &
 urxvtd &
 /opt/dropbox/dropboxd &
-
-#### KEEP THE CLIPBOARDS IN SYNC
-# a bit of a hack so I can paste from Chrome text boxes into my shell.
-autocutsel -s CLIPBOARD &
-autocutsel -s PRIMARY &
 
 exec /usr/bin/fluxbox
