@@ -1,6 +1,6 @@
 --type-set=json=.json
 --type-set=cfg=.cfg
-
---type-add=ruby=.pill
+--type-set=ruby=.pill
+--type-set=ruby=.rb
 
 --pager=less -FRX
