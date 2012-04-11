@@ -20,6 +20,9 @@ set guioptions-=b
 " disable ex mode
 map Q <Esc>
 
+" enable 256 colors
+set t_Co=256
+
 " configure navigation.
 if has("gui_gtk2")
   map <C-n> :tabnext<CR>
