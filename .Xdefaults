@@ -1,0 +1,65 @@
+URxvt*background: black
+URxvt*foreground: #eeeeee
+URxvt*font: xft:Monospace:pixelsize=12
+URxvt*boldFont: xft:Monospace:bold:pixelsize=12
+URxvt*saveLines: 12000
+URxvt*scrollBar: false
+URxvt*scrollstyle: rxvt
+URxvt*internalborder: 6
+
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: google-chrome
+URxvt*matcher.button: 1
+URxvt*colorUL: #86a2be
+
+!! black
+!URxvt*color0  : #4e4e4e
+!URxvt*color8  : #7c7c7c
+!! red
+!URxvt*color1  : #ff6c60
+!URxvt*color9  : #ffb6b0
+!! green
+!URxvt*color2  : #a8ff60
+!URxvt*color10 : #ceffab
+!! yellow
+!URxvt*color3  : #ffffb6
+!URxvt*color11 : #ffffcb
+!! blue
+!URxvt*color4  : #63cbfe
+!URxvt*color12 : #b9dbff
+!! magenta
+!URxvt*color5  : #ff73fd
+!URxvt*color13 : #ff9cfe
+!! cyan
+!URxvt*color6  : #c6c5fe
+!URxvt*color14 : #dfdffe
+!! white
+!URxvt*color7  : #eeeeee
+!URxvt*color15 : #ffffff
+
+!! THIS SECTION IS A HACK. THE LIGHT IS DARK AND THE DARK IS LIGHT
+!! Couldn't see how to fix it in rxvt easy and I wanted to work.
+! black
+URxvt*color8  : #4e4e4e
+URxvt*color0  : #7c7c7c
+! red
+URxvt*color9  : #ff6c60
+URxvt*color1  : #ffb6b0
+! green
+URxvt*color10 : #a8ff60
+URxvt*color2  : #ceffab
+! yellow
+URxvt*color11 : #ffffb6
+URxvt*color3  : #ffffcb
+! blue
+URxvt*color12 : #63cbfe
+URxvt*color4  : #b9dbff
+! magenta
+URxvt*color13 : #ff73fd
+URxvt*color5  : #ff9cfe
+! cyan
+URxvt*color14 : #c6c5fe
+URxvt*color6  : #dfdffe
+! white
+URxvt*color15 : #eeeeee
+URxvt*color7  : #ffffff
