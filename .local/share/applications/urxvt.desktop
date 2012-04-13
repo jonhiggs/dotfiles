@@ -6,6 +6,6 @@ Type=Application
 Terminal=false
 Icon[en_AU]=/usr/share/icons/gnome/256x256/apps/terminal.png
 Name[en_AU]=urxvt
-Exec=urxvt
+Exec=urxvt -tn "xterm-256color"
 Name=urxvt
 Icon=/usr/share/icons/gnome/256x256/apps/terminal.png
