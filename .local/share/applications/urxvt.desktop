@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_AU]=/usr/share/icons/gnome/256x256/apps/terminal.png
+Name[en_AU]=urxvt
+Exec=urxvt
+Name=urxvt
+Icon=/usr/share/icons/gnome/256x256/apps/terminal.png
