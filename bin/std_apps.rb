@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 packages = %w[
   ack-grep
+  autocutsel
+  curl
   git-core
   gitg
-  vim-gnome
-  curl
   libreadline-dev
+  openjdk-7-jre
+  rxvt-unicode-256color
+  vim-gnome
   zlib1g-dev 
 ]
 
