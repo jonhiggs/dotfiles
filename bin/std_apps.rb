@@ -12,6 +12,6 @@ packages = %w[
   zlib1g-dev 
 ]
 
-puts `apt-get install #{packages.join(' ')}`
+puts `sudo apt-get install #{packages.join(' ')}`
 
 puts "DON'T FORGET TO INSTALL RVM"
