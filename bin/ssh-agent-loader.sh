@@ -39,5 +39,5 @@ if [ -z $SSH_AUTH_SOCK ]; then
   eval `$SSHAGENT $SSHAGENTARGS`
   echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > $SSH_SETTINGS
   echo "export SSH_AGENT_PID=$SSH_AGENT_PID" >> $SSH_SETTINGS
-  /usr/bin/ssh-add /home/jon/.ssh/id_dsa
+  /usr/bin/ssh-add $HOME/.ssh/id_dsa
 fi
