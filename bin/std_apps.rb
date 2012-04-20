@@ -6,10 +6,12 @@ packages = %w[
   git-core
   gitg
   libreadline-dev
+  makeself
   openjdk-7-jre
+  pwgen
   rxvt-unicode-256color
   vim-gnome
-  zlib1g-dev 
+  zlib1g-dev
 ]
 
 puts `sudo apt-get install #{packages.join(' ')}`
