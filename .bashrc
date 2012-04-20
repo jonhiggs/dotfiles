@@ -97,5 +97,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
 
+# source in the aws environement settings if they are available.
+if [ -f ${HOME}/aws/etc/environment.sh ]; then
+  . ${HOME}/aws/etc/environment.sh
+fi
+
 export PATH=$PATH:$HOME/.rvm/bin     # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/dotfiles/bin # Add ~/dotfiles/bin into the path
