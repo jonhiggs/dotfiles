@@ -81,5 +81,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
 
-export PATH=$PATH:$HOME/.rvm/bin     # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/dotfiles/bin # Add ~/dotfiles/bin into the path
+function append_to_path() {
+  if [ -d $1 ]; then export PATH=$PATH:$1; fi
+}
+
+append_to_path ${HOME}/.rvm/bin
+append_to_path ${HOME}/dotfiles/bin
+append_to_path ${HOME}/Repos/dotfiles/bin
