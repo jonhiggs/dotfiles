@@ -39,7 +39,7 @@ alias gpu='git push'
 alias gpl='git pull'
 
 # MISC
-alias ack='ack-grep'
+if [ ${OS} == 'Linux' ]; then alias ack='ack-grep'; fi
 
 # APT
 alias apt-get='sudo apt-get'
