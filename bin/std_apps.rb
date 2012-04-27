@@ -5,6 +5,7 @@ packages = %w[
   curl
   git-core
   gitg
+  meld
   libreadline-dev
   makeself
   openjdk-7-jre
