@@ -15,7 +15,7 @@ startup_message off
 # turn off the visual bell
 vbell off
 
-# remove binding for dangereous/anoying actions
+# remove binding for dangerous/annoying actions
 bind ^k
 bind k
 bind ^x
