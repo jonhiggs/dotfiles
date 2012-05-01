@@ -30,7 +30,7 @@ bind k focus up
 bind j focus down
 
 # configure default screens
-screen /home/jon/dotfiles/.screen/vim.sh
+screen ${HOME}/dotfiles/.screen/vim.sh
 title "Vim"
 
 screen /bin/bash
