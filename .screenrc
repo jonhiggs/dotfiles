@@ -1,5 +1,5 @@
 shell -${SHELL}
-term xterm-256color
+term screen-256color
 
 hardstatus alwayslastline
 #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
