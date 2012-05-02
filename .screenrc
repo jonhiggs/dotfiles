@@ -1,5 +1,5 @@
 shell -${SHELL}
-term xterm-256color
+term screen-256color
 
 hardstatus alwayslastline
 #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
@@ -15,7 +15,7 @@ startup_message off
 # turn off the visual bell
 vbell off
 
-# remove binding for dangereous/anoying actions
+# remove binding for dangerous/annoying actions
 bind ^k
 bind k
 bind ^x
@@ -30,7 +30,7 @@ bind k focus up
 bind j focus down
 
 # configure default screens
-screen /home/jon/dotfiles/.screen/vim.sh
+screen ${HOME}/dotfiles/.screen/vim.sh
 title "Vim"
 
 screen /bin/bash

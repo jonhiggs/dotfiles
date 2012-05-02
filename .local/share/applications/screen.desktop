@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name[en_AU]=GNU Screen
+Exec=urxvt -e /usr/bin/screen -R
+Name=screen
+Icon[en_AU]=/usr/share/icons/gnome/256x256/apps/terminal.png
+Icon=/usr/share/icons/gnome/256x256/apps/terminal.png

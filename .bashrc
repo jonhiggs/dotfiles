@@ -20,6 +20,11 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# set the default name for the terminals in screen.
+if [ `echo ${TERM} | grep -c '^screen'` -ne 0 ]; then
+  PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
+fi
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
