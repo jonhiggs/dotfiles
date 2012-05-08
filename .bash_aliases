@@ -25,6 +25,7 @@ alias la='ls -A'
 alias l='ls -lAF'
 
 # VIM
+export EDITOR='vim'
 alias vi='vim'
 case ${OS} in
   "Linux")  alias vim='vim --servername SCREEN --remote-tab' ;;
