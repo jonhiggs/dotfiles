@@ -3,14 +3,17 @@ packages = %w[
   ack-grep
   autocutsel
   curl
+  expect
   git-core
   gitg
-  meld
+  lftp
   libreadline-dev
   makeself
+  meld
   openjdk-7-jre
   pwgen
   rxvt-unicode-256color
+  traceroute
   vim-gnome
   zlib1g-dev
 ]
