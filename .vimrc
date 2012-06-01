@@ -43,3 +43,6 @@ highlight TODO ctermfg=red guifg=red cterm=bold gui=bold
 
 " Setup filetype for weird extensions.
 au! BufRead,BufNewFile *.pill setfiletype ruby
+
+" configure ctrlp
+let g:ctrlp_map = '<c-t>'
