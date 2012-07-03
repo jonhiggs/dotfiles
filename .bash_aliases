@@ -24,6 +24,17 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -lAF'
 
+# OS SPECIFIC
+case ${OS} in
+  "Linux")
+    alias apt-get='sudo apt-get'
+    alias ack='ack-grep'
+  ;;
+  "Darwin")
+    alias df='df -H'
+  ;;
+esac
+
 # VIM
 export EDITOR='vim'
 alias vi='vim'
@@ -38,9 +49,3 @@ if [ ${OS} == "Darwin" ]; then alias gx='/Applications/GitX.app/Contents/MacOS/G
 alias gpom='git push origin master'
 alias gpu='git push'
 alias gpl='git pull'
-
-# MISC
-if [ ${OS} == 'Linux' ]; then alias ack='ack-grep'; fi
-
-# APT
-alias apt-get='sudo apt-get'
