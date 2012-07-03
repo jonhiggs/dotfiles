@@ -9,6 +9,7 @@ set mouse=a
 set modeline
 set visualbell
 set ruler
+set clipboard=unnamed
 
 " Remove gvim gui noise
 set guioptions-=m
