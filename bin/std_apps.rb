@@ -15,6 +15,7 @@ packages = %w[
   rxvt-unicode-256color
   traceroute
   vim-gnome
+  wget
   zlib1g-dev
 ]
 
