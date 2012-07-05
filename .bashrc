@@ -93,6 +93,11 @@ function append_to_path() {
   if [ -d $1 ]; then export PATH=$PATH:$1; fi
 }
 
+# SOURCE IN AWS
+if [ -f ~/Repos/aws/etc/environment ]; then
+  source ~/Repos/aws/etc/environment
+fi
+
 # SOURCE IN RVM
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   source "$HOME/.rvm/scripts/rvm"
