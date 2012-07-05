@@ -16,6 +16,9 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# a fix for iterm2
+export LC_CTYPE="utf-8"
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -90,6 +93,14 @@ function append_to_path() {
   if [ -d $1 ]; then export PATH=$PATH:$1; fi
 }
 
+# SOURCE IN RVM
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+  source "$HOME/.rvm/scripts/rvm"
+fi
+
 append_to_path ${HOME}/.rvm/bin
 append_to_path ${HOME}/dotfiles/bin
 append_to_path ${HOME}/Repos/dotfiles/bin
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
