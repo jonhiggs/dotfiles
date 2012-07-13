@@ -47,3 +47,8 @@ au! BufRead,BufNewFile *.pill setfiletype ruby
 
 " configure ctrlp
 let g:ctrlp_map = '<c-t>'
+
+autocmd FileType ruby   setlocal ai ts=2 sts=2 et sw=2 ft=ruby
+autocmd FileType eruby  setlocal ai ts=2 sts=2 et sw=2 ft=eruby
+autocmd FileType python setlocal ai ts=4 sts=4 et sw=4 ft=python
+autocmd FileType sh     setlocal ai ts=2 sts=2 et sw=2 ft=sh
