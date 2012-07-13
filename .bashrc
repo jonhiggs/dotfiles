@@ -89,6 +89,22 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
 
+if [ -f /usr/local/etc/bash_completion.d ] && ! shopt -oq posix; then
+  . /etc/bash_completion
+fi
+
+if [ -d ~/.bash_completion.d ] && ! shopt -oq posix; then
+  for file in ~/.bash_completion.d/*; do
+    . $file
+  done
+fi
+
+# bash completion for brew
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+
 function append_to_path() {
   if [ -d $1 ]; then export PATH=$PATH:$1; fi
 }
