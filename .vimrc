@@ -47,6 +47,10 @@ au! BufRead,BufNewFile *.pill setfiletype ruby
 
 " configure ctrlp
 let g:ctrlp_map = '<c-t>'
+let g:ctrlp_prompt_mappings = {
+\ 'AcceptSelection("e")': [],
+\ 'AcceptSelection("t")': ['<ct>', '<c-m>'],
+\ }
 
 autocmd FileType ruby   setlocal ai ts=2 sts=2 et sw=2
 autocmd FileType eruby  setlocal ai ts=2 sts=2 et sw=2
