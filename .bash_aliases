@@ -46,6 +46,7 @@ case ${OS} in
       alias vim='/Applications/Vico.app/Contents/MacOS/vicotool'
     else
       alias vim='mvim --remote-tab'
+      export EDITOR='mvim -f'
     fi
   ;;
 esac
@@ -56,8 +57,6 @@ if [ ${OS} == "Darwin" ]; then alias gx='/Applications/GitX.app/Contents/MacOS/G
 alias gpom='git push origin master'
 alias gpu='git push'
 alias gpl='git pull'
-
-
 
 # MY ALIASES
 alias ussh="ssh -i ~/.ssh/ubuntu"
