@@ -1,0 +1,4 @@
+[ui]
+username = Jon Higgs <jhiggs0@gmail.com>
+editor = vim
+ignore = ~/.hgignore
