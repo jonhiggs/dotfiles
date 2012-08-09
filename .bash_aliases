@@ -40,7 +40,14 @@ export EDITOR='vim'
 alias vi='vim'
 case ${OS} in
   "Linux")  alias vim='vim --servername SCREEN --remote-tab' ;;
-  "Darwin") alias vim='mvim --remote-tab' ;;
+  "Darwin")
+    type=mvim
+    if [ $type == "vico" ]; then
+      alias vim='/Applications/Vico.app/Contents/MacOS/vicotool'
+    else
+      alias vim='mvim --remote-tab'
+    fi
+  ;;
 esac
 
 # GIT
