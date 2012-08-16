@@ -11,6 +11,10 @@ set visualbell
 set ruler
 set clipboard=unnamed
 
+" Configure the font to terminus
+set guifont=Terminus Medium
+set noantialias
+
 " Remove gvim gui noise
 set guioptions-=m
 set guioptions-=T
