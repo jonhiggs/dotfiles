@@ -12,7 +12,7 @@ set ruler
 set clipboard=unnamed
 
 " Configure the font to terminus
-set guifont=Terminus Medium
+set guifont=Terminus\ Medium:h12
 set noantialias
 
 " Remove gvim gui noise
