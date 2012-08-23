@@ -118,6 +118,9 @@ append_to_path ${HOME}/.rvm/bin
 append_to_path ${HOME}/dotfiles/bin
 append_to_path ${HOME}/Repos/dotfiles/bin
 
+
+PS1="\! \[\e]1;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # SOURCE IN AWS
