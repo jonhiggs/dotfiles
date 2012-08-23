@@ -28,10 +28,19 @@ map Q <Esc>
 " enable 256 colors
 set t_Co=256
 
+" make Y behave like other capitals
+map Y y$
+
 " configure navigation.
 if has("gui_gtk2")
   map <C-n> :tabnext<CR>
   map <C-p> :tabprevious<CR>
+endif
+
+" swipe between tabs in macvim.
+if has('gui_macvim')
+  nnoremap <silent> <SwipeLeft> :tabnext<CR>
+  nnoremap <silent> <SwipeRight> :tabprevious<CR>
 endif
 
 " Trailing whitespace should be marked as red.
