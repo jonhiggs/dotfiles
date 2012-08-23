@@ -72,3 +72,11 @@ autocmd FileType sh     setlocal ai ts=2 sts=2 et sw=2
 
 " set a red column at 80 charactors.
 set colorcolumn=80
+
+nnoremap <C-w> :%s/\s\+$//<cr>:let @/=''<cr>
+
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+
+
+
