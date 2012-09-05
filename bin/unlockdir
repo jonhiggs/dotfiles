@@ -1,0 +1,7 @@
+#! /bin/bash
+#
+# Simple file unlocking utility for Mac OS X
+#
+ARGS=1
+find "$1" -type d -print0 | xargs -0 SetFile -a l
+find "$1" -type f -print0 | xargs -0 SetFile -a l
