@@ -10,6 +10,7 @@ set modeline
 set visualbell
 set ruler
 set clipboard=unnamed
+set showtabline=2
 
 " Configure the font to terminus
 set guifont=Terminus\ Medium:h12
