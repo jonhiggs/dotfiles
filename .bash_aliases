@@ -57,6 +57,7 @@ if [ ${OS} == "Darwin" ]; then alias gx='/Applications/GitX.app/Contents/MacOS/G
 alias gpom='git push origin master'
 alias gpu='git push'
 alias gpl='git pull'
+alias gmt='git mergetool -t opendiff'
 
 # MY ALIASES
 alias ussh="ssh -i ~/.ssh/ubuntu"
