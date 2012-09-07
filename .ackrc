@@ -4,4 +4,7 @@
 --type-set=ruby=.rb
 --type-set=erb=.erb
 
+--type-set=DUMB=.orig
+--noDUMB
+
 --pager=less -FRX
