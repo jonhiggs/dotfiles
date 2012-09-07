@@ -32,18 +32,6 @@ set t_Co=256
 " make Y behave like other capitals
 map Y y$
 
-" configure navigation.
-if has("gui_gtk2")
-  map <C-n> :tabnext<CR>
-  map <C-p> :tabprevious<CR>
-endif
-
-" swipe between tabs in macvim.
-if has('gui_macvim')
-  nnoremap <silent> <SwipeLeft> :tabnext<CR>
-  nnoremap <silent> <SwipeRight> :tabprevious<CR>
-endif
-
 " Trailing whitespace should be marked as red.
 autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
 autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
@@ -74,10 +62,7 @@ autocmd FileType sh     setlocal ai ts=2 sts=2 et sw=2
 " set a red column at 80 charactors.
 set colorcolumn=80
 
-nnoremap <C-w> :%s/\s\+$//<cr>:let @/=''<cr>
+"nnoremap <C-w> :%s/\s\+$//<cr>:let @/=''<cr>
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
-
-
-
