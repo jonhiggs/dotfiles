@@ -16,6 +16,9 @@ set showtabline=2
 set guifont=Terminus\ Medium:h12
 set noantialias
 
+" Configure the statusline
+set laststatus=2
+
 " Remove gvim gui noise
 set guioptions-=m
 set guioptions-=T
