@@ -11,13 +11,13 @@ set visualbell
 set ruler
 set clipboard=unnamed
 set showtabline=2
+set nowrap
+set laststatus=2
+set colorcolumn=80
 
 " Configure the font to terminus
 set guifont=Terminus\ Medium:h12
 set noantialias
-
-" Configure the statusline
-set laststatus=2
 
 " Remove gvim gui noise
 set guioptions-=m
@@ -31,6 +31,9 @@ map Q <Esc>
 
 " enable 256 colors
 set t_Co=256
+
+" make invisible characters grey.
+highlight NonText ctermfg=12 guifg=#3C3C3C
 
 " make Y behave like other capitals
 map Y y$
@@ -61,11 +64,6 @@ autocmd FileType ruby   setlocal ai ts=2 sts=2 et sw=2
 autocmd FileType eruby  setlocal ai ts=2 sts=2 et sw=2
 autocmd FileType python setlocal ai ts=4 sts=4 et sw=4
 autocmd FileType sh     setlocal ai ts=2 sts=2 et sw=2
-
-" set a red column at 80 charactors.
-set colorcolumn=80
-
-"nnoremap <C-w> :%s/\s\+$//<cr>:let @/=''<cr>
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
