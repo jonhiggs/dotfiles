@@ -8,3 +8,6 @@
 --noDUMB
 
 --pager=less -FRX
+
+
+--color-lineno=black
