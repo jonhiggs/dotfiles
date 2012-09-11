@@ -35,8 +35,11 @@ map Q <Esc>
 " enable 256 colors
 set t_Co=256
 
-" make invisible characters grey.
+" Configure the invisible charactors
 highlight NonText ctermfg=12 guifg=#3C3C3C
+highlight NonText guibg=#000000
+highlight SpecialKey guibg=#111111
+set listchars=tab:▸\ ,eol:\ 
 
 " make Y behave like other capitals
 map Y y$
