@@ -41,10 +41,10 @@ highlight NonText ctermfg=12 guifg=#3C3C3C
 " make Y behave like other capitals
 map Y y$
 
-" Trailing whitespace should be marked as red.
-autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
-autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
-highlight EOLWS ctermbg=red guibg=red
+"" Trailing whitespace should be marked as red.
+"autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
+"autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
+"highlight EOLWS ctermbg=red guibg=red
 
 " This may delete whitespace at end of file before saving. Need to test still.
 "autocmd BufWritePre * :%s/\s\+$//e
