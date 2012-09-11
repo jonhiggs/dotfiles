@@ -60,9 +60,9 @@ let g:ctrlp_prompt_mappings = {
 \ }
 
 " Configure standard settings for file types.
-autocmd FileType sh              setlocal ai ts=2 sw=2 sts=2 et
-autocmd FileType ruby,eruby,yaml setlocal ai ts=2 sw=2 sts=2 et
-autocmd FileType python          setlocal ai ts=4 sw=4 sts=4
+autocmd FileType sh              setlocal autoindent ts=2 sw=2 sts=2 expandtab
+autocmd FileType ruby,eruby,yaml setlocal autoindent ts=2 sw=2 sts=2 expandtab
+autocmd FileType python          setlocal autoindent ts=4 sw=4 sts=4
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
