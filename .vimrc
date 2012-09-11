@@ -13,7 +13,10 @@ set clipboard=unnamed
 set showtabline=2
 set nowrap
 set laststatus=2
+
+" Configure the colorcolumn
 set colorcolumn=80
+highlight ColorColumn guibg=#3C111A
 
 " Configure the font to terminus
 set guifont=Terminus\ Medium:h12
