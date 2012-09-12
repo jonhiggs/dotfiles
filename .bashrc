@@ -17,7 +17,7 @@ HISTSIZE=20000
 HISTFILESIZE=20000
 
 # a fix for iterm2
-export LC_CTYPE="utf-8"
+export LC_CTYPE="en_US.UTF-8"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
