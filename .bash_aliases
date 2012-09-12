@@ -39,7 +39,11 @@ esac
 export EDITOR='vim'
 alias vi='vim'
 case ${OS} in
-  "Linux")  alias vim='vim --servername SCREEN --remote-tab' ;;
+  "Linux")
+    if [ ! -z $DISPLAY ]; then
+      alias vim='vim --servername SCREEN --remote-tab'
+    fi
+  ;;
   "Darwin")
     type=mvim
     if [ $type == "vico" ]; then
