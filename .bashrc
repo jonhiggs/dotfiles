@@ -100,10 +100,11 @@ if [ -d ~/.bash_completion.d ] && ! shopt -oq posix; then
 fi
 
 # bash completion for brew
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+if [ -f /usr/local/bin/brew ]; then
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+      . `brew --prefix`/etc/bash_completion
+  fi
 fi
-
 
 function append_to_path() {
   if [ -d $1 ]; then export PATH=$PATH:$1; fi
