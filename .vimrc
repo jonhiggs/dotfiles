@@ -12,7 +12,7 @@ set showtabline=2
 set nowrap
 set laststatus=2
 set colorcolumn=80
-set cursorline
+set nocursorline         " disabled because it makes keyboard repeat too slow.
 set t_Co=256             " enable 256 colors
 
 set background=dark
