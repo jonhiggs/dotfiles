@@ -71,3 +71,5 @@ alias ussh="ssh -i ~/.ssh/ubuntu"
 alias aws-environment="echo \$EC2_CERT | grep -o 'aws-[a-z]*' | sed 's/aws-//'"
 alias aws-production="source ~/Repos/aws-production/etc/environment"
 alias aws-testing="source ~/Repos/aws-testing/etc/environment"
+
+alias ack="echo 'Oi! Use ag now... It is faster'"
