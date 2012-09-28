@@ -57,7 +57,9 @@ esac
 
 # GIT
 if [ ${OS} == "Linux" ]; then alias gg='gitg'; fi
-if [ ${OS} == "Darwin" ]; then alias gx='/Applications/GitX.app/Contents/MacOS/GitX ./'; fi
+if [ ${OS} == "Darwin" ]; then
+  alias gx='gitx &'
+fi
 alias gpom='git push origin master'
 alias gpu='git push'
 alias gpl='git pull'
