@@ -65,6 +65,12 @@ alias gpu='git push'
 alias gpl='git pull'
 alias gmt='git mergetool -t opendiff'
 
+# KNIFE
+helpers="~/Repos/chef/bin/helpers"
+alias kb="$helpers/bump"
+alias ku="$helpers/upload"
+alias kf="$helpers/freeze"
+
 # MY ALIASES
 alias ussh="ssh -i ~/.ssh/ubuntu"
 
