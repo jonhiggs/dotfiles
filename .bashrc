@@ -39,6 +39,7 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
   xterm-color) color_prompt=yes;;
+  xterm-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -57,6 +58,7 @@ if [ -n "$force_color_prompt" ]; then
   fi
 fi
 
+color_prompt=no
 fqdn=`hostname -f`
 
 if [ "$color_prompt" = yes ]; then
