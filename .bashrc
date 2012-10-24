@@ -62,9 +62,9 @@ color_prompt=no
 fqdn=`hostname -f`
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@'${fqdn}'\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@'${fqdn}'\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@'${fqdn}':\w\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\u@'${fqdn}':\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -76,6 +76,7 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
