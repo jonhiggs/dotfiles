@@ -66,6 +66,20 @@ if [ "$color_prompt" = yes ]; then
 else
   PS1='${debian_chroot:+($debian_chroot)}\u@'${fqdn}':\w\$ '
 fi
+
+# enable red/yellow/green ps1 depending on environment.
+case `dnsdomainname` in
+  t.layar.com)
+    PS1="\033[01;32m\]${PS1}\033[00m\]"
+  ;;
+  s.layar.com)
+    PS1="\033[01;33m\]${PS1}\033[00m\]"
+  ;;
+  layar.com)
+    PS1="\033[01;31m\]${PS1}\033[00m\]"
+  ;;
+esac
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
