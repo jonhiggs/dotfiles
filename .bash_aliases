@@ -52,6 +52,32 @@ case ${OS} in
       alias vim='mvim --remote-tab'
       export EDITOR='mvim -f'
     fi
+
+    # DARWIN GNU COREUTILS
+    if [ `brew list | grep coreutils &> /dev/null; echo $?` -eq 0 ]; then
+      alias cat="gcat"
+      alias cut="gcut"
+      alias cp="gcp"
+      alias date="gdate"
+      alias echo="gecho"
+      alias gnice="ggnice"
+      alias groups="ggroups"
+      alias head="ghead"
+      alias ln="gln"
+      alias ls="gls --color=auto"
+      alias mkdir="gmkdir"
+      alias mktemp="gmktemp"
+      alias sed="gsed"
+      alias sleep="gsleep"
+      alias sort="gsort"
+      alias split="gsplit"
+      alias tail="gtail"
+      alias tee="gtee"
+      alias touch="gtouch"
+      alias uname="guname"
+      alias uniq="guniq"
+      alias uptime="guptime"
+    fi
   ;;
 esac
 
@@ -83,3 +109,4 @@ alias ack="echo 'Oi! Use ag now... It is faster'"
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
 alias pwgen="pwgen -s 14 1"
 
+/* vim: syntax=sh:ts=2:sw=2 */
