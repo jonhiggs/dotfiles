@@ -12,6 +12,7 @@ case ${OS} in
     export GREP_COLOR="1;37;41"
     export LANG=C
     alias ls='ls -G'
+    alias dnsdomainname='domainname'
   ;;
 esac
 
