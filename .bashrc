@@ -140,7 +140,6 @@ append_to_path ${HOME}/.rvm/bin
 append_to_path ${HOME}/dotfiles/bin
 append_to_path ${HOME}/Repos/dotfiles/bin
 
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # SOURCE IN AWS
