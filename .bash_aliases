@@ -99,9 +99,10 @@ alias gco='git checkout'
 
 # KNIFE
 helpers="~/Repos/chef/bin/helpers"
-alias kb="$helpers/bump"
-alias ku="$helpers/upload"
-alias kf="$helpers/freeze"
+alias kb="$helpers/cookbook_bump"
+alias ku="$helpers/cookbook_upload"
+alias kf="$helpers/cookbook_freeze"
+alias kfa="$helpers/cookbook_freeze_all"
 
 # MY ALIASES
 alias ussh="ssh -i ~/.ssh/ubuntu"
