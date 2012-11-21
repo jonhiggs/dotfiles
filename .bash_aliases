@@ -115,5 +115,6 @@ alias ack="echo 'Oi! Use ag now... It is faster'"
 
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
 alias pwgen="pwgen -s 14 1"
+alias marked="/Applications/Marked.app/Contents/Resources/mark"
 
 /* vim: syntax=sh:ts=2:sw=2 */
