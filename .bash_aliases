@@ -57,8 +57,8 @@ case ${OS} in
     # DARWIN GNU COREUTILS
     if [ `brew list | grep coreutils &> /dev/null; echo $?` -eq 0 ]; then
       alias cat="gcat"
-      alias cut="gcut"
       alias cp="gcp"
+      alias cut="gcut"
       alias date="gdate"
       alias echo="gecho"
       alias gnice="ggnice"
@@ -72,6 +72,7 @@ case ${OS} in
       alias sleep="gsleep"
       alias sort="gsort"
       alias split="gsplit"
+      alias stat="gstat"
       alias tail="gtail"
       alias tee="gtee"
       alias touch="gtouch"
