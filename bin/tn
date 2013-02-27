@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z `which terminal-notifier` ]; then
+  echo "try a gem install terminal-notifier"
+  exit 1
+fi
+
+if [ -z "$2" ]; then
+  echo 'syntax is: tn "title" "message"'
+  exit 1
+fi
+
+terminal-notifier -message "$2" -title "$1"

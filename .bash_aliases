@@ -33,6 +33,7 @@ case ${OS} in
   ;;
   "Darwin")
     alias df='df -H'
+    alias tn='~/Repos/dotfiles/bin/tn'
   ;;
 esac
 
