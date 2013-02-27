@@ -79,6 +79,7 @@ case ${OS} in
       alias uname="guname"
       alias uniq="guniq"
       alias uptime="guptime"
+      alias readlink="greadlink"
     fi
   ;;
 esac
