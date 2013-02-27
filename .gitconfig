@@ -1,3 +1,5 @@
 [user]
   name = Jon Higgs
   email = jhiggs0@gmail.com
+[help]
+	autocorrect = 1
