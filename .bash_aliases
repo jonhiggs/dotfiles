@@ -108,6 +108,11 @@ alias ku="$helpers/cookbook_upload"
 alias kf="$helpers/cookbook_freeze"
 alias kfa="$helpers/cookbook_freeze_all"
 
+# MUSIC_MANAGEMENT
+music_management_dir='/Users/jon/Repos/music_management'
+alias dir2mp3="$music_management_dir/dir2mp3"
+alias sync_music="$music_management_dir/sync_music"
+
 # MY ALIASES
 alias ussh="ssh -i ~/.ssh/ubuntu"
 
