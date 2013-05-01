@@ -115,6 +115,7 @@ alias sync_music="$music_management_dir/sync_music"
 
 # MY ALIASES
 alias ussh="ssh -i ~/.ssh/ubuntu"
+alias ssh-no-bastion="ssh -o ProxyCommand=none"
 
 alias aws-environment="echo \$EC2_CERT | grep -o 'aws-[a-z]*' | sed 's/aws-//'"
 alias aws-production="source ~/Repos/aws-production/etc/environment"
