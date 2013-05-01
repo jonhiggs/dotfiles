@@ -1,5 +1,13 @@
 [user]
-  name = Jon Higgs
-  email = jhiggs0@gmail.com
+	name = Jon Higgs
+	email = jhiggs0@gmail.com
 [help]
 	autocorrect = 1
+[core]
+	excludesfile = /Users/jonhiggs/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
