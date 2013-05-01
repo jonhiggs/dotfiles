@@ -2,3 +2,10 @@
 username = Jon Higgs <jhiggs0@gmail.com>
 editor = vim
 ignore = ~/.hgignore
+[extensions]
+transplant =
+mq =
+hgext.hgshelve=~/Repos/hgshelve/hgshelve.py
+rebase =
+[diff]
+git=true
