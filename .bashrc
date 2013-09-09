@@ -131,6 +131,10 @@ function append_to_path() {
   if [ -d $1 ]; then export PATH=$PATH:$1; fi
 }
 
+function prepend_to_path() {
+  if [ -d $1 ]; then export PATH=$1:$PATH; fi
+}
+
 # SOURCE IN RVM
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   source "$HOME/.rvm/scripts/rvm"
@@ -139,6 +143,7 @@ fi
 append_to_path ${HOME}/.rvm/bin
 append_to_path ${HOME}/dotfiles/bin
 append_to_path ${HOME}/Repos/dotfiles/bin
+prepend_to_path ${HOME}/opt/mp4v2/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
