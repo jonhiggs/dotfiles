@@ -1,5 +1,5 @@
 [ui]
-username = Jon Higgs <jhiggs0@gmail.com>
+username = Jon Higgs <jhiggs@eml.cc>
 editor = vim
 ignore = ~/.hgignore
 [extensions]
