@@ -88,8 +88,8 @@ esac
 # GIT
 if [ ${OS} == "Linux" ]; then alias gg='gitg'; fi
 if [ ${OS} == "Darwin" ]; then
-  alias gitx="/Applications/GitX.app/Contents/Resources/gitx &"
-  alias gx='gitx &'
+  alias gitx="/Applications/GitX.app/Contents/Resources/gitx"
+  alias gx='gitx'
 fi
 
 alias gmt='git mergetool -t opendiff'
