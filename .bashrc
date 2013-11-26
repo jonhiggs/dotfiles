@@ -147,6 +147,8 @@ prepend_to_path ${HOME}/opt/mp4v2/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+PATH=/usr/local/bin:$PATH # make sure /usr/local/bin is first.
+
 # SOURCE IN AWS
 if [ -f ~/Repos/aws-production/etc/environment ]; then
   source ~/Repos/aws-production/etc/environment
