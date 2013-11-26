@@ -128,4 +128,7 @@ alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
 alias pwgen="pwgen -s 14 1"
 alias marked="/Applications/Marked.app/Contents/Resources/mark"
 
+# a hack to find python at the wrong place. (https://github.com/mxcl/homebrew/issues/22534)
+alias hg="/usr/local/share/python/hg"
+
 # vim: syntax=sh:ts=2:sw=2
