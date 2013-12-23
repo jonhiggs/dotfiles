@@ -149,7 +149,12 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 PATH=/usr/local/bin:$PATH # make sure /usr/local/bin is first.
 
-# SOURCE IN AWS
-if [ -f ~/Repos/aws-production/etc/environment ]; then
-  source ~/Repos/aws-production/etc/environment
-fi
+files="
+  ${HOME}/Repos/aws-production/etc/environment
+  ${HOME}/Repos/deploy_version2/app/etc/environment.sh
+"
+
+for path in ${files}; do
+  cd $(dirname ${path})
+  source $(basename ${path})
+done
