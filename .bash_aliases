@@ -128,6 +128,7 @@ alias ack="echo 'Oi! Use ag now... It is faster'"
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
 alias pwgen="pwgen -s 14 1"
 alias marked="/Applications/Marked.app/Contents/Resources/mark"
+alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
 
 # a hack to find python at the wrong place. (https://github.com/mxcl/homebrew/issues/22534)
 alias hg="/usr/local/share/python/hg"
