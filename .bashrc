@@ -158,3 +158,5 @@ for path in ${files}; do
   cd $(dirname ${path})
   source $(basename ${path})
 done
+
+cd
