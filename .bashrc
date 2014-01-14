@@ -117,7 +117,7 @@ fi
 # bash completion for brew
 if [ -f /usr/local/bin/brew ]; then
   if [ -f `brew --prefix`/etc/bash_completion ]; then
-      . `brew --prefix`/etc/bash_completion
+    . `brew --prefix`/etc/bash_completion
   fi
 fi
 
@@ -135,15 +135,9 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
 fi
 
 
-prepend_to_path /Library/Frameworks/Python.framework/Versions/2.7/bin
+#prepend_to_path /Library/Frameworks/Python.framework/Versions/2.7/bin
 prepend_to_path ${HOME}/bin
 prepend_to_path /usr/local/bin
-
 append_to_path ${HOME}/.rvm/bin
-append_to_path ${HOME}/opt/cecho
-append_to_path ${HOME}/opt/deploy/app/bin
-append_to_path ${HOME}/opt/driller
 append_to_path ${HOME}/opt/ec2-ssh/bin
-append_to_path ${HOME}/opt/question
-
-source ${HOME}/opt/deploy/app/etc/environment.sh
+append_to_path ${HOME}/opt/deploy/app/bin

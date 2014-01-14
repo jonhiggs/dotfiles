@@ -91,6 +91,7 @@ if [ ${OS} == "Linux" ]; then alias gg='gitg'; fi
 if [ ${OS} == "Darwin" ]; then
   alias gitx="/Applications/GitX.app/Contents/Resources/gitx"
   alias gx='gitx'
+  alias st='stree'
 fi
 
 alias gmt='git mergetool -t opendiff'
@@ -110,23 +111,12 @@ alias ku="$helpers/cookbook_upload"
 alias kf="$helpers/cookbook_freeze"
 alias kfa="$helpers/cookbook_freeze_all"
 
-# MUSIC_MANAGEMENT
-music_management_dir='/Users/jon/Repos/music_management'
-alias dir2mp3="$music_management_dir/dir2mp3"
-alias sync_music="$music_management_dir/sync_music"
-
 # MY ALIASES
-alias ussh="ssh -i ~/.ssh/ubuntu"
-alias ssh-no-bastion="ssh -o ProxyCommand=none"
-
-alias ack="echo 'Oi! Use ag now... It is faster'"
-
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
-alias pwgen="pwgen -s 14 1"
+alias ack="echo 'Oi! Use ag now... It is faster'"
 alias marked="/Applications/Marked.app/Contents/Resources/mark"
 alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
-
-# a hack to find python at the wrong place. (https://github.com/mxcl/homebrew/issues/22534)
-alias hg="/usr/local/share/python/hg"
+alias pwgen="pwgen -s 14 1"
+alias ussh="ssh -i ~/.ssh/ubuntu"
 
 # vim: syntax=sh:ts=2:sw=2
