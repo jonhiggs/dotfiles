@@ -38,8 +38,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-  xterm-color) color_prompt=yes;;
-  xterm-256color) color_prompt=yes;;
+  "xterm-color"|"xterm-256color")    color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -94,13 +93,8 @@ xterm*|rxvt*)
 esac
 
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+  source ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -140,23 +134,14 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   source "$HOME/.rvm/scripts/rvm"
 fi
 
+prepend_to_path ${HOME}/bin
+prepend_to_path /usr/local/bin
+
 append_to_path ${HOME}/.rvm/bin
-append_to_path ${HOME}/dotfiles/bin
-append_to_path ${HOME}/Repos/dotfiles/bin
-prepend_to_path ${HOME}/opt/mp4v2/bin
+append_to_path ${HOME}/opt/cecho
+append_to_path ${HOME}/opt/deploy/app/bin
+append_to_path ${HOME}/opt/driller
+append_to_path ${HOME}/opt/ec2-ssh/bin
+append_to_path ${HOME}/opt/question
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-PATH=/usr/local/bin:$PATH # make sure /usr/local/bin is first.
-
-files="
-  ${HOME}/Repos/aws-production/etc/environment
-  ${HOME}/Repos/deploy_version2/app/etc/environment.sh
-"
-
-for path in ${files}; do
-  cd $(dirname ${path})
-  source $(basename ${path})
-done
-
-cd
+source ${HOME}/opt/deploy/app/etc/environment.sh
