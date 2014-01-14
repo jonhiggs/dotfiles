@@ -119,10 +119,6 @@ alias sync_music="$music_management_dir/sync_music"
 alias ussh="ssh -i ~/.ssh/ubuntu"
 alias ssh-no-bastion="ssh -o ProxyCommand=none"
 
-alias aws-environment="echo \$EC2_CERT | grep -o 'aws-[a-z]*' | sed 's/aws-//'"
-alias aws-production="source ~/Repos/aws-production/etc/environment"
-alias aws-testing="source ~/Repos/aws-testing/etc/environment"
-
 alias ack="echo 'Oi! Use ag now... It is faster'"
 
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
