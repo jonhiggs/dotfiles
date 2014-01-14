@@ -134,6 +134,8 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   source "$HOME/.rvm/scripts/rvm"
 fi
 
+
+prepend_to_path /Library/Frameworks/Python.framework/Versions/2.7/bin
 prepend_to_path ${HOME}/bin
 prepend_to_path /usr/local/bin
 
