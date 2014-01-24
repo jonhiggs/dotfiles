@@ -23,7 +23,7 @@ alias egrep='egrep --color=auto'
 # STANDARD ALIASES
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -lAF'
+alias l='ls -lAFh'
 alias cdd='cd ../; ls'
 
 # OS SPECIFIC
