@@ -94,15 +94,6 @@ if [ ${OS} == "Darwin" ]; then
   alias st='stree'
 fi
 
-alias gmt='git mergetool -t opendiff'
-alias gpl='git pull'
-alias gpom='git push origin master'
-alias gpu='git push'
-alias grb='git rebase'
-alias gs='git stash'
-alias gsp='git stash pop'
-alias gst='git status'
-alias gco='git checkout'
 
 # KNIFE
 helpers="~/Repos/chef/bin/helpers"
