@@ -139,6 +139,5 @@ fi
 prepend_to_path ${HOME}/bin
 prepend_to_path /usr/local/bin
 append_to_path ${HOME}/.rvm/bin
-append_to_path ${HOME}/opt/ec2-ssh/bin
 append_to_path ${HOME}/opt/deploy/app/bin
 append_to_path ${HOME}/opt/httest-2.4.88/src
