@@ -7,5 +7,8 @@ transplant =
 mq =
 hgext.hgshelve=~/Repos/hgshelve/hgshelve.py
 rebase =
+purge =
 [diff]
 git=true
+[pager]
+pager = less
