@@ -39,8 +39,6 @@ case ${OS} in
 esac
 
 # VIM
-export EDITOR='vim'
-alias vi='vim'
 case ${OS} in
   "Linux")
     if [ ! -z $DISPLAY ]; then
@@ -48,13 +46,22 @@ case ${OS} in
     fi
   ;;
   "Darwin")
-    type=mvim
-    if [ $type == "vico" ]; then
-      alias vim='/Applications/Vico.app/Contents/MacOS/vicotool'
-    else
-      alias vim='mvim --remote-tab'
-      export EDITOR='mvim -f'
-    fi
+    export EDITOR='/usr/local/bin/vim'
+    type="vim"
+    case ${type} in
+      "vico")
+        alias vim='/Applications/Vico.app/Contents/MacOS/vicotool'
+      ;;
+      "macvim")
+        alias vim='mvim --remote-tab'
+        export EDITOR='mvim -f'
+      ;;
+      "vim")
+        alias vim='/usr/local/bin/vim --servername SHARED --remote-tab'
+        export EDITOR='/usr/local/bin/vim --remote-tab'
+      ;;
+    esac
+    alias vi='vim'
 
     # DARWIN GNU COREUTILS
     if [ `brew list | grep coreutils &> /dev/null; echo $?` -eq 0 ]; then

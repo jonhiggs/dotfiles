@@ -5,7 +5,7 @@ ignore = ~/.hgignore
 [extensions]
 transplant =
 mq =
-hgext.hgshelve=~/Repos/hgshelve/hgshelve.py
+shelve =
 rebase =
 purge =
 [diff]
