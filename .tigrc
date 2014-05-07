@@ -1,0 +1,5 @@
+bind status C         none
+bind status <Ctrl-G>  !git commit
+bind status P         !git push origin
+bind status A         !git commit --amend
+bind status R         !git reset --soft HEAD~1
