@@ -30,11 +30,9 @@ alias cdd='cd ../; ls'
 case ${OS} in
   "Linux")
     alias apt-get='sudo apt-get'
-    alias ack='ack-grep'
   ;;
   "Darwin")
     alias df='df -H'
-    alias tn='~/Repos/dotfiles/bin/tn'
   ;;
 esac
 
@@ -112,10 +110,9 @@ alias kfa="$helpers/cookbook_freeze_all"
 
 # MY ALIASES
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
-alias ack="echo 'Oi! Use ag now... It is faster'"
 alias marked="/Applications/Marked.app/Contents/Resources/mark"
 alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
 alias pwgen="pwgen -s 14 1"
-alias ussh="ssh -i ~/.ssh/ubuntu"
+alias tig="tig status"
 
 # vim: syntax=sh:ts=2:sw=2
