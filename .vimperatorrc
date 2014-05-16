@@ -3,6 +3,7 @@
 noremap j 3j
 noremap k 3k
 set defsearch=google
+set gui=nonavigation
 set hintchars=ajskdlfqweruiopzxcvm
 source! /Users/jonhiggs/.vimperatorrc.local
 
