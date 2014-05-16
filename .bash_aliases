@@ -56,7 +56,6 @@ case ${OS} in
       ;;
       "vim")
         alias vim='/usr/local/bin/vim --servername SHARED --remote-tab'
-        export EDITOR='/usr/local/bin/vim --remote-tab'
       ;;
     esac
     alias vi='vim'
