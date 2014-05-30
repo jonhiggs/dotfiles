@@ -98,8 +98,6 @@ if [ ${OS} == "Darwin" ]; then
   alias st='stree'
 fi
 
-alias esb="ec2-ssh $(ec2-instances-by-security-group bootstrapping)"
-
 # KNIFE
 helpers="~/Repos/chef/bin/helpers"
 alias kb="$helpers/cookbook_bump"
