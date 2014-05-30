@@ -3,3 +3,18 @@ bind status <Ctrl-G>  !git commit
 bind status P         !git push origin
 bind status A         !git commit --amend
 bind status R         !git reset --soft HEAD~1
+
+color default         white black
+color author          default default normal
+color cursor          default 242 bold
+color date            yellow default normal
+color diff-chunk      white 052 normal
+color graph-commit    green default
+color header          white 025 bold
+color overflow        green red
+color stat-none       red default
+color stat-staged     green default
+color stat-unstaged   red default
+color stat-untracked  red default
+color title-blur      white 025 bold
+color title-focus     white 236
