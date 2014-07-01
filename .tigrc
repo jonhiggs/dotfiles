@@ -1,3 +1,5 @@
+line-graphics ascii
+
 bind status C         none
 bind status <Ctrl-G>  !git commit
 bind status P         !git push origin
