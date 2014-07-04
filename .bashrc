@@ -36,34 +36,17 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+[[ "${TERM}" == "xterm" ]] && export TERM="xterm-256color"
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
   "xterm-color"|"xterm-256color")    color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
-  else
-    color_prompt=
-  fi
-fi
-
-color_prompt=no
-fqdn=`hostname -f`
-
 if [ "$color_prompt" = yes ]; then
   PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@'${fqdn}'\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@'${fqdn}':\w\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\u@\h'${fqdn}':\w\$ '
 fi
 
 if [ `uname` == 'Linux' ]; then
@@ -80,8 +63,6 @@ if [ `uname` == 'Linux' ]; then
     ;;
   esac
 fi
-
-unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -134,10 +115,33 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
   source "$HOME/.rvm/scripts/rvm"
 fi
 
+# SETUP SSH AGENT
+if [[ -z ${SSH_AGENT_PID} ]]; then
+  eval $(ssh-agent)
+fi
 
 #prepend_to_path /Library/Frameworks/Python.framework/Versions/2.7/bin
-prepend_to_path ${HOME}/bin
 prepend_to_path /usr/local/bin
+prepend_to_path ${HOME}/bin
 append_to_path ${HOME}/.rvm/bin
 append_to_path ${HOME}/opt/deploy/app/bin
 append_to_path ${HOME}/opt/httest-2.4.88/src
+
+export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
+export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
+export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
+
+if [[ -f /tmp/ec2-launch-time ]]; then
+  export EC2_LAUNCH_TIME=$(cat /tmp/ec2-launch-time)
+else
+  export EC2_LAUNCH_TIME=$(
+    aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} |
+      jshon -e Reservations -e 0 -e Instances -e 0 -e LaunchTime -u
+  )
+  echo ${EC2_LAUNCH_TIME} > /tmp/ec2-launch-time
+fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export LESS="-R"
+export TZ="/usr/share/zoneinfo/Europe/Amsterdam"
+export EDITOR="vim"
