@@ -73,33 +73,12 @@ xterm*|rxvt*)
     ;;
 esac
 
-
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-  . /etc/bash_completion
-fi
-
-if [ -f /usr/local/etc/bash_completion.d ] && ! shopt -oq posix; then
-  . /etc/bash_completion
-fi
-
-if [ -d ~/.bash_completion.d ] && ! shopt -oq posix; then
-  for file in ~/.bash_completion.d/*; do
-    . $file
-  done
-fi
-
-# bash completion for brew
-if [ -f /usr/local/bin/brew ]; then
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-  fi
+if [ -f ~/.bash_login ]; then
+  source ~/.bash_login
 fi
 
 function append_to_path() {
@@ -110,16 +89,6 @@ function prepend_to_path() {
   if [ -d $1 ]; then export PATH=$1:$PATH; fi
 }
 
-# SOURCE IN RVM
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
-  source "$HOME/.rvm/scripts/rvm"
-fi
-
-# SETUP SSH AGENT
-if [[ -z ${SSH_AGENT_PID} ]]; then
-  eval $(ssh-agent)
-fi
-
 #prepend_to_path /Library/Frameworks/Python.framework/Versions/2.7/bin
 prepend_to_path /usr/local/bin
 prepend_to_path ${HOME}/bin
@@ -127,18 +96,20 @@ append_to_path ${HOME}/.rvm/bin
 append_to_path ${HOME}/opt/deploy/app/bin
 append_to_path ${HOME}/opt/httest-2.4.88/src
 
-export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
-export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
-export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
+if [ "$(hostname)" != "waffle" ]; then
+  export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
+  export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
+  export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
 
-if [[ -f /tmp/ec2-launch-time ]]; then
-  export EC2_LAUNCH_TIME=$(cat /tmp/ec2-launch-time)
-else
-  export EC2_LAUNCH_TIME=$(
-    aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} |
-      jshon -e Reservations -e 0 -e Instances -e 0 -e LaunchTime -u
-  )
-  echo ${EC2_LAUNCH_TIME} > /tmp/ec2-launch-time
+  if [[ -f /tmp/ec2-launch-time ]]; then
+    export EC2_LAUNCH_TIME=$(cat /tmp/ec2-launch-time)
+  else
+    export EC2_LAUNCH_TIME=$(
+      aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} |
+        jshon -e Reservations -e 0 -e Instances -e 0 -e LaunchTime -u
+    )
+    echo ${EC2_LAUNCH_TIME} > /tmp/ec2-launch-time
+  fi
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

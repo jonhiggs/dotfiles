@@ -1,7 +1,25 @@
-#!/bin/bash
-
-if [ -f $HOME/.bashrc ]; then
-  source $HOME/.bashrc
+# SOURCE IN RVM
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+  source "$HOME/.rvm/scripts/rvm"
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# SETUP SSH AGENT
+if [[ -z ${SSH_AGENT_PID} ]]; then
+  eval $(ssh-agent)
+fi
+
+# BASH COMPLETION
+bash_completion_dirs="
+  /etc/bash_completion.d/
+  ${HOME}/.bash_completion.d/
+  /usr/local/etc/bash_completion.d/
+"
+
+. /usr/local/etc/bash_completion
+for dir in $bash_completion_dirs; do
+  if [ -d $dir ] && ! shopt -oq posix; then
+    for file in $dir/*; do
+      . $file
+    done
+  fi
+done
