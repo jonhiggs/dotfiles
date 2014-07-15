@@ -1,42 +1,19 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=20000
 HISTFILESIZE=20000
-
-# a fix for iterm2
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+shopt -s histappend
 shopt -s checkwinsize
 
+PATH="/usr/local/bin:/usr/bin:/bin"
+PS1='\u@\h:\w\$ '
+
 # set the default name for the terminals in screen.
-if [[ "${TERM}" =~ "screen" ]]; then
-  PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
-fi
-
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# If this is an xterm set the title to user@host:dir
-color_prompt=yes
-PS1='${debian_chroot:+($debian_chroot)}\u@\h'${fqdn}':\w\$ '
-#PS1="\u \w\a\] $ "
+[[ "${TERM}" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
 
 # SOURCE EXTRAS
 for file in ${HOME}/.bash_aliases ${HOME}/.bash_login; do
@@ -51,11 +28,8 @@ function prepend_to_path() {
   if [ -d $1 ]; then export PATH=$1:$PATH; fi
 }
 
-prepend_to_path /usr/local/bin
 prepend_to_path ${HOME}/bin
-append_to_path  ${HOME}/.rvm/bin
 append_to_path  ${HOME}/opt/deploy/app/bin
-append_to_path  ${HOME}/opt/httest-2.4.88/src
 
 if [ "$(hostname)" != "waffle" ]; then
   export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
