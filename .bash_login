@@ -6,3 +6,6 @@
 
 # BASH COMPLETION
 . /usr/local/etc/bash_completion
+
+# AWS COMPLETION
+complete -C aws_completer aws
