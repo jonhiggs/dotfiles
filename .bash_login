@@ -9,3 +9,5 @@
 
 # AWS COMPLETION
 complete -C aws_completer aws
+
+# vim: ft=sh
