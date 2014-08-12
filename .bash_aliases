@@ -21,18 +21,16 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # STANDARD ALIASES
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -lAFh'
 alias cdd='cd ../; ls'
+alias df='df -H'
+alias l='ls -lAFh'
+alias la='ls -A'
+alias ll='ls -alF'
 
 # OS SPECIFIC
 case ${OS} in
   "Linux")
     alias apt-get='sudo apt-get'
-  ;;
-  "Darwin")
-    alias df='df -H'
   ;;
 esac
 
