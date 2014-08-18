@@ -1,5 +1,3 @@
-line-graphics ascii
-
 bind status C         none
 bind status <Ctrl-G>  !git commit
 bind status P         !git push origin
@@ -20,3 +18,5 @@ color stat-unstaged   red default
 color stat-untracked  red default
 color title-blur      white 025 bold
 color title-focus     white 236
+
+set line-graphics		= ascii
