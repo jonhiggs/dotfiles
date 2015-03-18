@@ -1,3 +1,5 @@
+set line-graphics		= utf-8
+
 bind status C         none
 bind status <Ctrl-G>  !git commit
 bind status P         !git push origin
@@ -19,4 +21,11 @@ color stat-untracked  red default
 color title-blur      white 025 bold
 color title-focus     white 236
 
-set line-graphics		= ascii
+
+
+# VIM STUFF
+bind generic    F       view-grep       # Rebind the grep view
+bind generic    g       none            # Clear old 'g' binding to allow for 'gg' etc.
+bind generic    gg      move-first-line
+bind main       G       none            # Clear commit graph toggling
+bind generic    G       move-last-line

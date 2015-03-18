@@ -29,9 +29,8 @@ function prepend_to_path() {
 }
 
 prepend_to_path ${HOME}/bin
-append_to_path  ${HOME}/opt/deploy/app/bin
 
-if [ "$(hostname)" != "waffle" ]; then
+if [[ "$(hostname -s )" != "dragon" ]]; then
   export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
   export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
   export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
@@ -52,5 +51,7 @@ fi
 
 export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
-export TZ="/usr/share/zoneinfo/Europe/Amsterdam"
+export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="vim"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
