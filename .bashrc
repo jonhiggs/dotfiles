@@ -54,4 +54,5 @@ export LESS="-R"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="vim"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="${PATH}:/sbin"
+export PATH="${PATH}:${HOME}/.rvm/bin" # Add RVM to PATH for scripting
