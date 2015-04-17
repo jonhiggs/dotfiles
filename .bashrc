@@ -30,7 +30,7 @@ function prepend_to_path() {
 
 prepend_to_path ${HOME}/bin
 
-if [[ "$(hostname -s )" != "dragon" ]]; then
+if [[ ${EC2_INSTANCE} ]]; then
   export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
   export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
   export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
