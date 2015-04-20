@@ -2,6 +2,7 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # SETUP SSH AGENT
+# Start an agent for real terms. Tmux sessions use the parent settings.
 if [[ "${TERM}" =~ ^xterm ]]; then
   [[ -f ~/.ssh/id_rsa ]] && eval $(ssh-agent)
 fi
