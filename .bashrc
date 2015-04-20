@@ -9,7 +9,7 @@ HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
-PATH="/usr/local/bin:/usr/bin:/bin"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 PS1='\u@\h:\w\$ '
 
 # set the default name for the terminals in screen.
@@ -54,5 +54,4 @@ export LESS="-R"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="vim"
 
-export PATH="${PATH}:/sbin"
 export PATH="${PATH}:${HOME}/.rvm/bin" # Add RVM to PATH for scripting
