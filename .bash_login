@@ -5,7 +5,7 @@
 [[ -z ${SSH_AGENT_PID} ]] && eval $(ssh-agent)
 
 # BASH COMPLETION
-. /usr/local/etc/bash_completion
+[[ -f /usr/local/etc/bash_completion ]] && . /usr/local/etc/bash_completion
 
 # AWS COMPLETION
 complete -C aws_completer aws
