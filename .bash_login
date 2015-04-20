@@ -2,8 +2,8 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # SETUP SSH AGENT
-if [[ -e ~/.ssh/id_rsa ]]; then
-  [[ -z ${SSH_AGENT_PID} ]] && eval $(ssh-agent)
+if [[ "${TERM}" =~ ^xterm ]]; then
+  [[ -f ~/.ssh/id_rsa ]] && eval $(ssh-agent)
 fi
 
 # BASH COMPLETION
