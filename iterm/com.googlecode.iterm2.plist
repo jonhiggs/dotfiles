@@ -440,11 +440,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>724 252 445 270 0 0 1680 1050 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>19 568 605 485 0 0 1050 1658 </string>
+	<string>19 568 924 485 0 0 1050 1680 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>451 479 384 129 0 0 1280 777 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 194 592 584 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1053 0 1277 764 1050 0 1280 778 </string>
+	<string>4 0 1046 1646 0 0 1050 1657 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1051 174 570 476 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1008,7 +1010,7 @@
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -1733,7 +1735,7 @@
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -1968,7 +1970,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-02-17T00:36:25Z</date>
+	<date>2015-04-20T10:55:55Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -2010,7 +2012,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Lucida Grande UI</string>
+	<string>.Helvetica Neue DeskInterface</string>
 	<key>Window Arrangements</key>
 	<dict>
 		<key>Work</key>
