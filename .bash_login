@@ -13,4 +13,6 @@ fi
 # AWS COMPLETION
 complete -C aws_completer aws
 
+[[ "${TERM}" =~ ^screen ]] && tmux rename-window 'default'
+
 # vim: ft=sh
