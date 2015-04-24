@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-packages = %w[
+linux_packages = %w[
   ack-grep
   autocutsel
   curl
@@ -19,6 +19,6 @@ packages = %w[
   zlib1g-dev
 ]
 
-puts `sudo apt-get install #{packages.join(' ')}`
+puts `sudo apt-get install #{linux_packages.join(' ')}`
 
 puts "DON'T FORGET TO INSTALL RVM"
