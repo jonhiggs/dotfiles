@@ -438,15 +438,15 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>482 248 214 309 0 0 1280 800 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>724 252 445 270 0 0 1680 1050 </string>
+	<string>-790 283 445 136 -1280 250 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>19 568 924 485 0 0 1050 1680 </string>
+	<string>-933 194 924 485 -1280 0 1280 800 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>451 479 384 129 0 0 1280 777 </string>
+	<string>652 674 384 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 194 592 584 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 0 1046 1646 0 0 1050 1657 </string>
+	<string>4 0 1046 1646 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1051 174 570 476 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1000,7 +1000,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Menlo-Regular 14</string>
+			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<false/>
 			<key>Normal Font</key>
@@ -1170,7 +1170,7 @@
 			<key>Use Italic Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.2670238018035889</real>
+			<real>1.1570550203323364</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -1725,9 +1725,9 @@
 			<key>Name</key>
 			<string>Writing</string>
 			<key>Non Ascii Font</key>
-			<string>Cousine 18</string>
+			<string>Menlo-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
-			<true/>
+			<false/>
 			<key>Normal Font</key>
 			<string>Cousine 18</string>
 			<key>Option Key Sends</key>
@@ -1970,7 +1970,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-04-20T10:55:55Z</date>
+	<date>2015-04-24T04:13:36Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
