@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Flip ` and \</name>
+    <identifier>private.switch_profile</identifier>
+    <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::BACKSLASH</autogen>
+    <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE</autogen>
+  </item>
+
+    <item>
+      <name>Fn to tmux</name>
+      <identifier>remap.fn2tmux</identifier>
+      <autogen>__KeyToKey__ KeyCode::FN, KeyCode::COMMA, ModifierFlag::OPTION_L</autogen>
+    </item>
+
+    <item>
+      <name>Command_R to Fn</name>
+      <identifier>remap.cmd_r2fn</identifier>
+      <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::FN</autogen>
+    </item>
+
+    <item>
+      <name>Holding Fn+1,2,3,4,... to F1,F2,F3,...,F12</name>
+      <appendix>Holding Fn+1 to F1</appendix>
+      <appendix>Holding Fn+2 to F2</appendix>
+      <appendix>Holding Fn+3 to F3</appendix>
+      <appendix>Holding Fn+4 to F4</appendix>
+      <appendix>Holding Fn+5 to F5</appendix>
+      <appendix>Holding Fn+6 to F6</appendix>
+      <appendix>Holding Fn+7 to F7</appendix>
+      <appendix>Holding Fn+8 to F8</appendix>
+      <appendix>Holding Fn+9 to F9</appendix>
+      <appendix>Holding Fn+10 to F10</appendix>
+      <appendix>Holding Fn+- to F11</appendix>
+      <appendix>Holding Fn+= to F12</appendix>
+      <identifier>remap.holding_fn_num_to_function</identifier>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, KeyCode::F1</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_2, ModifierFlag::FN, KeyCode::F2</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_3, ModifierFlag::FN, KeyCode::F3</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_4, ModifierFlag::FN, KeyCode::F4</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_5, ModifierFlag::FN, KeyCode::F5</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_6, ModifierFlag::FN, KeyCode::F6</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_7, ModifierFlag::FN, KeyCode::F7</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_8, ModifierFlag::FN, KeyCode::F8</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_9, ModifierFlag::FN, KeyCode::F9</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::KEY_0, ModifierFlag::FN, KeyCode::F10</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::MINUS, ModifierFlag::FN, KeyCode::F11</autogen>
+      <autogen>__HoldingKeyToKey__ KeyCode::EQUAL, ModifierFlag::FN, KeyCode::F12</autogen>
+    </item>
+
+
+</root>
