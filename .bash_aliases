@@ -109,5 +109,6 @@ alias writeroom="open -b com.hogbaysoftware.WriteRoom.mac"
 alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
 alias pwgen="pwgen -s 14 1"
 alias tig="tig status"
+alias cs="switch"
 
 # vim: syntax=sh:ts=2:sw=2

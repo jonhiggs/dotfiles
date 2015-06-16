@@ -12,6 +12,10 @@ function credo() {
   fi
 }
 
+function switch() {
+  credo -a $1 switch
+}
+
 function gitx() {
   gitx_id=$(osascript -e 'id of app "GitX"')
   open -b ${gitx_id} --args $(pwd)
