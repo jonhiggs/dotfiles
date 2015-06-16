@@ -16,7 +16,7 @@ PS1='\u@\h:\w\$ '
 [[ "${TERM}" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
 
 # SOURCE EXTRAS
-for file in ${HOME}/.bash_aliases ${HOME}/.bash_login; do
+for file in ${HOME}/.bash_aliases ${HOME}/.bash_functions ${HOME}/.bash_login; do
   [[ -f $file ]] && source $file
 done
 
