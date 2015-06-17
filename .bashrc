@@ -20,14 +20,6 @@ for file in ${HOME}/.bash_aliases ${HOME}/.bash_functions ${HOME}/.bash_login; d
   [[ -f $file ]] && source $file
 done
 
-function append_to_path() {
-  if [ -d $1 ]; then export PATH=$PATH:$1; fi
-}
-
-function prepend_to_path() {
-  if [ -d $1 ]; then export PATH=$1:$PATH; fi
-}
-
 prepend_to_path ${HOME}/bin
 
 if [[ ${EC2_INSTANCE} ]]; then
