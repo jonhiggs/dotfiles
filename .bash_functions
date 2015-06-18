@@ -25,8 +25,9 @@ function switch() {
 }
 
 function gitx() {
+  dir=${1:-$(pwd)}
   gitx_id=$(osascript -e 'id of app "GitX"')
-  open -b ${gitx_id} --args $(pwd)
+  open -b ${gitx_id} --args $(driller --absolute ${dir})
 }
 
 # vim: ft=sh
