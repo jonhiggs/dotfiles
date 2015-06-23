@@ -110,5 +110,6 @@ alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
 alias pwgen="pwgen -s 14 1"
 alias tig="tig status"
 alias cs="switch"
+alias ghost="sudo ghost"
 
 # vim: syntax=sh:ts=2:sw=2
