@@ -4,7 +4,7 @@
 [help]
 	autocorrect = 1
 [core]
-	excludesfile = /Users/jonhiggs/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [diff]
   tool = opendiff
 [merge]
