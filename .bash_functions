@@ -41,4 +41,8 @@ function gitx() {
   open -b ${gitx_id} --args $(driller --absolute ${dir})
 }
 
+function marked() {
+  open -b $(osascript -e 'id of app "Marked 2"') $@
+}
+
 # vim: ft=sh

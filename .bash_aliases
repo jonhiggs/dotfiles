@@ -104,7 +104,6 @@ alias kfa="$helpers/cookbook_freeze_all"
 
 # MY ALIASES
 alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
-alias marked="/Applications/Marked.app/Contents/Resources/mark"
 alias writeroom="open -b com.hogbaysoftware.WriteRoom.mac"
 alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
 alias pwgen="pwgen -s 14 1"
