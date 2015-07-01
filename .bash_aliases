@@ -59,7 +59,7 @@ case ${OS} in
       alias ls="gls --color=auto"
       alias mkdir="gmkdir"
       alias mktemp="gmktemp"
-      alias sed="gsed"
+      #alias sed="gsed"
       alias sleep="gsleep"
       alias sort="gsort"
       alias split="gsplit"
