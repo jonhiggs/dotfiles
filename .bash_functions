@@ -18,8 +18,8 @@ function credo() {
     done
   fi
 
-  if ~/projects/credo/bin/credo sourceable $@; then
-    output=$(~/projects/credo/bin/credo $@)
+  if ~/VirtualEnvs/credo/bin/credo sourceable $@; then
+    output=$(~/VirtualEnvs/credo/bin/credo $@)
     if (($? == 0)); then
       echo "$output" > /tmp/lolz
       source /tmp/lolz
@@ -27,7 +27,7 @@ function credo() {
       echo "$output"
     fi
   else
-    ~/projects/credo/bin/credo $@
+    ~/VirtualEnvs/credo/bin/credo $@
   fi
 }
 
