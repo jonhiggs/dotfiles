@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+PIPPIE_DIR=${WORKON_HOME}/pippie
+source ~/.bash_profile
+
+if [[ ! -f "./setup.py" ]]; then
+  echo "This directory cannot be pippie'd"
+  echo "Try changing to a directory with a setup.py file"
+  exit 1
+fi
+
+[[ -d ${PIPPIE_DIR} ]] && rmvirtualenv pippie || exit 1
+
+mkvirtualenv --python=$(which python3) pippie
+workon pippie
+pip install -e .
