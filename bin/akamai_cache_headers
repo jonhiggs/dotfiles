@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [[ -z $1 ]]; then
+  echo "Supply the url you need the cache headers for."
+  exit 1
+fi
+
+address=$1
+
+curl -H "Pragma: akamai-x-cache-on, akamai-x-cache-remote-on,
+         akamai-x-check-cacheable, akamai-x-get-cache-key,
+         akamai-x-get-extracted-values, akamai-x-get-nonces,
+         akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key,
+         akamai-x-serial-no" -IXGET ${address}
