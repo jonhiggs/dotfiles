@@ -45,4 +45,22 @@ function marked() {
   open -b $(osascript -e 'id of app "Marked 2"') $@
 }
 
+function vim() {
+  v="/usr/local/bin/vim"
+  servername="SCREEN"
+  running=$($v --serverlist | grep "^${servername}$" > /dev/null && echo true || echo false)
+
+  if [[ ! -z $1 ]]; then
+    if $running; then
+      file="--remote-tab $1"
+    else
+      file="$1"
+    fi
+  else
+    file=""
+  fi
+
+  $v --servername ${servername} ${file}
+}
+
 # vim: ft=sh

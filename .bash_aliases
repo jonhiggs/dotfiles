@@ -43,19 +43,6 @@ case ${OS} in
   ;;
   "Darwin")
     export EDITOR='/usr/local/bin/vim'
-    type="vim"
-    case ${type} in
-      "vico")
-        alias vim='/Applications/Vico.app/Contents/MacOS/vicotool'
-      ;;
-      "macvim")
-        alias vim='mvim --remote-tab'
-        export EDITOR='mvim -f'
-      ;;
-      "vim")
-        alias vim='/usr/local/bin/vim --servername SHARED --remote-tab'
-      ;;
-    esac
     alias vi='vim'
 
     # DARWIN GNU COREUTILS
