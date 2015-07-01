@@ -52,7 +52,10 @@ function marked() {
 function vim() {
   v="/usr/local/bin/vim"
   servername="SCREEN"
-  running=$($v --serverlist | grep "^${servername}$" > /dev/null && echo true || echo false)
+  running=$(
+    $v --serverlist | grep "^${servername}$" > /dev/null &&
+      echo true || echo false
+  )
 
   if [[ ! -z $1 ]]; then
     if $running; then
