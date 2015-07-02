@@ -13,8 +13,9 @@ function credo() {
   if [[ "$routed_interface" != "$loopback_interface" ]]; then
     echo "creating $addr alias"
     sudo ifconfig lo0 alias $addr
+    plist=/Library/LaunchDaemons/delfick.credo.fake_metadata.plist
     for action in unload load; do
-      sudo launchctl $action /Library/LaunchDaemons/delfick.credo.fake_metadata.plist
+      sudo launchctl $action $plist
     done
   fi
 
