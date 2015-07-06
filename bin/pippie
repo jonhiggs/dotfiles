@@ -10,6 +10,16 @@ fi
 
 [[ -d ${PIPPIE_DIR} ]] && rmvirtualenv pippie || exit 1
 
-mkvirtualenv --python=$(which python3) pippie
+if [[ ! -z $1 ]]; then
+  if [[ ! -f $1 ]]; then
+    echo "First argument should be a path to the Python bin to use."
+    exit 1
+  fi
+  python=$1
+else
+  python=$(which python)
+fi
+
+mkvirtualenv --python=$python pippie
 workon pippie
 pip install -e .
