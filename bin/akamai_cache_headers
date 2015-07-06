@@ -5,10 +5,15 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-address=$1
+ADDRESS=$1
+USER_AGENT="JoeDog"
+HEADERS=$(cat <<EOF
+accept-encoding: gzip;q=0,deflate,sdch
+Pragma:          akamai-x-cache-on, akamai-x-cache-remote-on,
+                 akamai-x-check-cacheable, akamai-x-get-cache-key,
+                 akamai-x-get-extracted-values, akamai-x-get-nonces,
+                 akamai-x-get-ssl-client-session-id,
+                 akamai-x-get-true-cache-key, akamai-x-serial-no
+EOF)
 
-curl -H "Pragma: akamai-x-cache-on, akamai-x-cache-remote-on,
-         akamai-x-check-cacheable, akamai-x-get-cache-key,
-         akamai-x-get-extracted-values, akamai-x-get-nonces,
-         akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key,
-         akamai-x-serial-no" -IXGET ${address}
+curl -H "${HEADERS}" -A ${USER_AGENT} -IXGET ${ADDRESS} 2> /dev/null
