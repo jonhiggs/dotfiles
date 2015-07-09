@@ -10,7 +10,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-PS1='\u@\h:\w\$ '
+PS1='\w\$ '
 
 # set the default name for the terminals in screen.
 [[ "${TERM}" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
