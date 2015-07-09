@@ -1,3 +1,10 @@
+#!/usr/bin/env bash
+
+if [[ ! -f /usr/local/etc/bash_completion ]]; then
+  echo "The bash_completion script isn't found. To fix, do this:"
+  echo "  brew install bash-completion"
+fi
+
 for f in ${HOME}/.bash_completion.d/*; do
   . $f
 done
