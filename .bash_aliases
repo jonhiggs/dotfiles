@@ -1,16 +1,5 @@
 OS=`uname`
 
-# STANDARD ALIASES
-alias cdd='cd ../; ls'
-alias df='df -H'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias l='ls -lAFh'
-alias la='ls -A'
-alias ll='ls -alF'
-alias ls='ls -G'
-
 # OS SPECIFIC
 case ${OS} in
   "Linux")
@@ -57,11 +46,21 @@ case ${OS} in
 esac
 
 export EDITOR='/usr/local/bin/vim'
+
 # MY ALIASES
-alias vi='vim'
+alias cdd='cd ../; ls'
+alias cs="switch"
+alias df='df -H'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias ghost="sudo ghost"
+alias grep='grep --color=auto'
+alias l='ls -lAFh'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls -G'
 alias pwgen="pwgen -s 14 1"
 alias tig="tig status"
-alias cs="switch"
-alias ghost="sudo ghost"
+alias vi='vim'
 
 # vim: syntax=sh:ts=2:sw=2
