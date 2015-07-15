@@ -1,49 +1,30 @@
 OS=`uname`
 
-# CONFIGURE COLOR SUPPORT
+# STANDARD ALIASES
+alias cdd='cd ../; ls'
+alias df='df -H'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -lAFh'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls -G'
+
+# OS SPECIFIC
 case ${OS} in
   "Linux")
     if [ -x /usr/bin/dircolors ]; then
       test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
       alias ls='ls --color=auto'
     fi
+
+    alias apt-get='sudo apt-get'
   ;;
   "Darwin")
     export GREP_COLOR="1;37;41"
     export LANG=C
-    alias ls='ls -G'
     alias dnsdomainname='domainname'
-  ;;
-esac
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# STANDARD ALIASES
-alias cdd='cd ../; ls'
-alias df='df -H'
-alias l='ls -lAFh'
-alias la='ls -A'
-alias ll='ls -alF'
-
-# OS SPECIFIC
-case ${OS} in
-  "Linux")
-    alias apt-get='sudo apt-get'
-  ;;
-esac
-
-# VIM
-case ${OS} in
-  "Linux")
-    if [ ! -z $DISPLAY ]; then
-      alias vim='vim --servername SCREEN --remote-tab'
-    fi
-  ;;
-  "Darwin")
-    export EDITOR='/usr/local/bin/vim'
-    alias vi='vim'
 
     # DARWIN GNU COREUTILS
     if [ `brew list | grep coreutils &> /dev/null; echo $?` -eq 0 ]; then
@@ -75,24 +56,9 @@ case ${OS} in
   ;;
 esac
 
-# GIT
-if [ ${OS} == "Linux" ]; then alias gg='gitg'; fi
-if [ ${OS} == "Darwin" ]; then
-  alias st='stree'
-  alias gx='gitx'
-fi
-
-# KNIFE
-helpers="~/Repos/chef/bin/helpers"
-alias kb="$helpers/cookbook_bump"
-alias ku="$helpers/cookbook_upload"
-alias kf="$helpers/cookbook_freeze"
-alias kfa="$helpers/cookbook_freeze_all"
-
+export EDITOR='/usr/local/bin/vim'
 # MY ALIASES
-alias 1pass="/usr/local/share/npm/lib/node_modules/1pass/bin/1pass"
-alias writeroom="open -b com.hogbaysoftware.WriteRoom.mac"
-alias pocket="${HOME}/Repos/pocket-cli/pocket-cli.py"
+alias vi='vim'
 alias pwgen="pwgen -s 14 1"
 alias tig="tig status"
 alias cs="switch"
