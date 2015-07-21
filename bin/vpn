@@ -25,9 +25,11 @@ done
 case $1 in
   "status")
     scutil --nc list |
-      grep IPSec |
-      awk '{ print $5,":",$2 }' |
-      sed 's/[^a-zA-Z0-9:\ ]//g'
+      grep -e IPSec -e L2TP |
+      awk '{ print $5,$7,":",$2 }' |
+      sed 's/-->\ //g' |
+      sed 's/[^a-zA-Z0-9:\ \.\-]//g' |
+      sort
     ;;
   "connect")
     if [[ -z $2 ]]; then
