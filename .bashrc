@@ -10,7 +10,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-PS1='\w\$ '
+PS1='\[\e[1;33m\]\w\$\[\e[0m\] '
 
 export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
