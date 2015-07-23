@@ -1,5 +1,11 @@
 # SOURCE IN RVM
+export PATH="$HOME/.rvm/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# VIRTUALENVWRAPPER
+export WORKON_HOME="$HOME/VirtualEnvs"
+[[ -d ${WORKON_HOME} ]] || mkdir ${WORKON_HOME}
+source /usr/local/bin/virtualenvwrapper.sh
 
 # SETUP SSH AGENT
 # Start an agent for real terms. Tmux sessions use the parent settings.
@@ -14,5 +20,30 @@ fi
 complete -C aws_completer aws
 
 [[ "${TERM}" =~ ^screen ]] && tmux rename-window 'default'
+
+# SSH CONFIG
+[[ -f ~/.ssh/rea ]] && ssh-add ~/.ssh/rea &> /dev/null
+
+# DOCKER
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=${HOME}/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+# EC2
+if [[ ${EC2_INSTANCE} ]]; then
+  export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
+  export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
+  export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
+
+  if [[ -f /tmp/ec2-launch-time ]]; then
+    export EC2_LAUNCH_TIME=$(cat /tmp/ec2-launch-time)
+  else
+    export EC2_LAUNCH_TIME=$(
+      aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} |
+        jshon -e Reservations -e 0 -e Instances -e 0 -e LaunchTime -u
+    )
+    echo ${EC2_LAUNCH_TIME} > /tmp/ec2-launch-time
+  fi
+fi
 
 # vim: ft=sh

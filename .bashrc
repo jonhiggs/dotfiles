@@ -9,8 +9,13 @@ HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 PS1='\w\$ '
+
+export LC_CTYPE="en_US.UTF-8"
+export LESS="-R"
+export TZ="/usr/share/zoneinfo/Australia/Melbourne"
+export EDITOR="vim"
 
 # set the default name for the terminals in screen.
 [[ "${TERM}" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
@@ -20,33 +25,6 @@ for file in ${HOME}/.bash_aliases ${HOME}/.bash_functions ${HOME}/.bash_login; d
   [[ -f $file ]] && source $file
 done
 
-prepend_to_path ${HOME}/bin
-
-if [[ ${EC2_INSTANCE} ]]; then
-  export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
-  export AWS_AZ=$(ec2-metadata --availability-zone | awk '{print $2}')
-  export AWS_DEFAULT_REGION=$(echo ${AWS_AZ} | sed 's/[a-z]$//')
-
-  if [[ -f /tmp/ec2-launch-time ]]; then
-    export EC2_LAUNCH_TIME=$(cat /tmp/ec2-launch-time)
-  else
-    export EC2_LAUNCH_TIME=$(
-      aws ec2 describe-instances --instance-ids ${EC2_INSTANCE_ID} |
-        jshon -e Reservations -e 0 -e Instances -e 0 -e LaunchTime -u
-    )
-    echo ${EC2_LAUNCH_TIME} > /tmp/ec2-launch-time
-  fi
-fi
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-export LC_CTYPE="en_US.UTF-8"
-export LESS="-R"
-export TZ="/usr/share/zoneinfo/Australia/Melbourne"
-export EDITOR="vim"
-
-# Docker settings
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=${HOME}/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
