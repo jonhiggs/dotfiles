@@ -413,6 +413,10 @@
 	<string>~/etc/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 565}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -442,15 +446,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>121 169 512 283 0 0 1280 800 </string>
+	<string>768 415 512 94 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>356 97 924 485 0 0 1280 777 </string>
+	<string>438 155 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 376 570 401 0 0 1280 800 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>173 27 570 451 0 0 1280 800 </string>
+	<string>1757 670 585 501 1280 439 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -651,11 +655,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.11684455722570419</real>
+				<real>0.3333333432674408</real>
 				<key>Green Component</key>
 				<real>1</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>1</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -1170,7 +1174,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.1815165281295776</real>
+			<real>1.1143712997436523</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -1182,7 +1186,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>456018386.73457098</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>456388909.03177899</real>
+	<real>459511659.53106201</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1247,7 +1251,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-06-22T23:50:46Z</date>
+	<date>2015-07-26T05:24:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
