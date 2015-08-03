@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 PIPPIE_DIR=${WORKON_HOME}/pippie
-source ~/.bash_profile
+source /usr/local/bin/virtualenvwrapper.sh
 
 if [[ ! -f "./setup.py" ]]; then
   echo "This directory cannot be pippie'd"
