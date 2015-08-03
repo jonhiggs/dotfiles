@@ -9,7 +9,7 @@ HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
-PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
 
 export LC_CTYPE="en_US.UTF-8"
@@ -18,10 +18,10 @@ export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="vim"
 
 # set the default name for the terminals in screen.
-[[ "${TERM}" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
+[[ "$TERM" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
 
 # SOURCE EXTRAS
-for file in ${HOME}/.bash_aliases ${HOME}/.bash_functions ${HOME}/.bash_login; do
+for file in $HOME/.bash_aliases $HOME/.bash_functions $HOME/.bash_login; do
   [[ -f $file ]] && source $file
 done
 
