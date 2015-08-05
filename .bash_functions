@@ -9,8 +9,7 @@ function prepend_to_path() {
 function credo() {
   addr="169.254.169.254"
   loopback_interface="lo0"
-  routed_interface="$(route get $addr | grep interface | awk '{ print $2 }')"
-  if [[ "$routed_interface" != "$loopback_interface" ]]; then
+  if ! ifconfig ${loopback_interface} | grep ${addr} > /dev/null; then
     echo "creating $addr alias"
     sudo ifconfig lo0 alias $addr
     plist=/Library/LaunchDaemons/delfick.credo.fake_metadata.plist
