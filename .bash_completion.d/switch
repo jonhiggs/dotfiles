@@ -1,0 +1,13 @@
+_switch() {
+    local command="$1"
+    local word="$2"
+
+    local options=$(ls ${HOME}/.credo/repos/rea)
+
+    COMPREPLY=($(compgen -W "${options}" -- ${word}))
+    return 0
+}
+
+complete -F _switch switch
+
+# vim: ft=sh
