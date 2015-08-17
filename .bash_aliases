@@ -63,6 +63,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls -G'
 alias pwgen="pwgen -s 14 1"
+alias mailinator="echo \$(/usr/local/bin/pwgen -0 -A 6 1)@mailinator.com"
 alias tig="tig status"
 alias vi='vim'
 
