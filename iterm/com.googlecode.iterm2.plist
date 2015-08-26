@@ -448,7 +448,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>768 415 512 94 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>438 155 924 485 0 0 1280 777 </string>
+	<string>356 167 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -655,11 +655,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.0039215688593685627</real>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -704,7 +704,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux</string>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1186,7 +1186,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>456018386.73457098</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>459511659.53106201</real>
+	<real>461746160.02405298</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1251,7 +1251,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-07-26T05:24:56Z</date>
+	<date>2015-08-21T00:57:37Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
