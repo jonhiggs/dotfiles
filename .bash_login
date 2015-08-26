@@ -7,6 +7,11 @@ export WORKON_HOME="$HOME/VirtualEnvs"
 [[ -d ${WORKON_HOME} ]] || mkdir ${WORKON_HOME}
 source /usr/local/bin/virtualenvwrapper.sh
 
+# GOLANG
+export GOPATH=${HOME}/go
+[[ -d ${GOPATH} ]] || mkdir ${GOPATH}
+export PATH="${GOPATH}/bin:${PATH}"
+
 # SETUP SSH AGENT
 # Start an agent for real terms. Tmux sessions use the parent settings.
 if [[ "${TERM}" =~ ^xterm ]]; then
