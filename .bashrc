@@ -23,8 +23,7 @@ export EDITOR="vim"
 # SOURCE EXTRAS
 for file in $HOME/.bash_aliases                                 \
             $HOME/.bash_functions                               \
-            $HOME/Repos/bash-my-aws/cloudformation-functions    \
-            $HOME/Repos/bash-my-aws/instance-functions          \
+            $HOME/Repos/bash-my-aws/*-functions                 \
             $HOME/.bash_login
 do
   [[ -f $file ]] && source $file
