@@ -6,15 +6,15 @@ case ${OS} in
     if [ -x /usr/bin/dircolors ]; then
       test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
       alias ls='ls --color=auto'
-      #http://geoff.greer.fm/lscolors/
-      export LS_COLORS="di=34;40:ln=35;40:so=31;40:pi=33;40:ex=32;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
+      # http://geoff.greer.fm/lscolors/
+      export LS_COLORS="di=34;40:ln=36;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
     fi
 
     alias apt-get='sudo apt-get'
   ;;
   "Darwin")
     export GREP_COLOR="1;37;41"
-    export LSCOLORS="exfxbxdxcxegedabagacad"
+    export LSCOLORS="exgxcxdxbxegedabagacad"
     export LANG=C
     alias dnsdomainname='domainname'
 
