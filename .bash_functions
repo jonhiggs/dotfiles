@@ -56,9 +56,10 @@ function marked() {
 
 function vim() {
   v="/usr/local/bin/vim"
-  servername="SCREEN"
+  [[ -z ${SERVERNAME} ]] && SERVERNAME="SCREEN"
+
   running=$(
-    $v --serverlist | grep "^${servername}$" > /dev/null &&
+    $v --serverlist | grep "^${SERVERNAME}$" > /dev/null &&
       echo true || echo false
   )
 
@@ -72,7 +73,7 @@ function vim() {
     file=""
   fi
 
-  $v --servername ${servername} ${file}
+  $v --servername ${SERVERNAME} ${file}
 }
 
 # vim: ft=sh
