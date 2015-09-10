@@ -58,20 +58,21 @@ function vim() {
   v="/usr/local/bin/vim"
   SERVERNAME=$(echo ${SERVERNAME:-screen} | awk '{print toupper($0)'})
 
-  running=$(
+  local file=""
+  local running=$(
     $v --serverlist | grep "^${SERVERNAME}$" > /dev/null &&
       echo true || echo false
   )
 
-  if [[ ! -z $1 ]]; then
-    if $running; then
-      file="--remote-tab $1"
-    else
-      file="$1"
-    fi
+  if $running; then
+    local file="--remote-tab"
   else
-    file=""
+    local file_prefix="-p"
   fi
+
+  for f in $@; do
+    local file+="${file_prefix} $f "
+  done
 
   $v --servername ${SERVERNAME} ${file}
 }
