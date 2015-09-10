@@ -56,7 +56,7 @@ function marked() {
 
 function vim() {
   v="/usr/local/bin/vim"
-  [[ -z ${SERVERNAME} ]] && SERVERNAME="SCREEN"
+  SERVERNAME=$(echo ${SERVERNAME:-screen} | awk '{print toupper($0)'})
 
   running=$(
     $v --serverlist | grep "^${SERVERNAME}$" > /dev/null &&
