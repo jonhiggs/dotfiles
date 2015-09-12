@@ -66,5 +66,6 @@ alias pwgen="pwgen -s 14 1"
 alias mailinator="echo \$(/usr/local/bin/pwgen -0 -A 6 1)@mailinator.com"
 alias tig="tig status"
 alias vi='vim'
+alias sdate='gdate --rfc-3339=date'
 
 # vim: syntax=sh:ts=2:sw=2
