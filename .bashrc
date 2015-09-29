@@ -23,7 +23,9 @@ export EDITOR="vim"
 # SOURCE EXTRAS
 for file in $HOME/.bash_aliases                                 \
             $HOME/.bash_functions                               \
-            $HOME/Repos/bash-my-aws/*-functions                 \
+            $HOME/Repos/bash-my-aws/lib/instance-functions      \
+            $HOME/Repos/bash-my-aws/lib/stack-functions         \
+            $HOME/Repos/bash-my-aws/lib/asg-functions           \
             $HOME/.bash_login
 do
   [[ -f $file ]] && source $file
