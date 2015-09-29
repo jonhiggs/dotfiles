@@ -55,7 +55,7 @@ function marked() {
 }
 
 function vim() {
-  v="/usr/local/bin/vim"
+  local v="/usr/local/bin/vim"
   SERVERNAME=$(echo ${SERVERNAME:-screen} | awk '{print toupper($0)'})
 
   local file=""
@@ -64,7 +64,7 @@ function vim() {
       echo true || echo false
   )
 
-  if $running; then
+  if ${running}; then
     local file="--remote-tab"
   else
     local file_prefix="-p"
