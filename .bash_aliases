@@ -67,6 +67,7 @@ alias mailinator="echo \$(/usr/local/bin/pwgen -0 -A 6 1)@mailinator.com"
 alias tig="tig status"
 alias vi='vim'
 alias sdate='gdate --rfc-3339=date'
+alias lock='pmset displaysleepnow'
 
 # BMA ALIASES
 alias instances="instances --query 'Reservations[].Instances[][InstanceId,[Tags[?Key==\`Name\`].Value][0][0]]'"
