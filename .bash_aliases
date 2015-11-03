@@ -68,4 +68,8 @@ alias tig="tig status"
 alias vi='vim'
 alias sdate='gdate --rfc-3339=date'
 
+# BMA ALIASES
+alias instances="instances --query 'Reservations[].Instances[][InstanceId,[Tags[?Key==\`Name\`].Value][0][0]]'"
+alias stack='stacks'
+
 # vim: syntax=sh:ts=2:sw=2
