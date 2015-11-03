@@ -448,7 +448,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>768 415 512 94 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>356 167 924 485 0 0 1280 800 </string>
+	<string>948 1306 924 485 -688 800 2560 1440 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1186,7 +1186,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>456018386.73457098</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>461746160.02405298</real>
+	<real>465871282.126252</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1251,7 +1251,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-08-21T00:57:37Z</date>
+	<date>2015-10-07T00:34:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1284,6 +1284,10 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>.Helvetica Neue DeskInterface</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
