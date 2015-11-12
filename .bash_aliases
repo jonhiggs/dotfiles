@@ -70,7 +70,7 @@ alias sdate='gdate --rfc-3339=date'
 alias lock='pmset displaysleepnow'
 
 # BMA ALIASES
-alias instances="instances --query 'Reservations[].Instances[][InstanceId,[Tags[?Key==\`Name\`].Value][0][0]]'"
 alias stack='stacks'
+alias instance="instances"
 
 # vim: syntax=sh:ts=2:sw=2
