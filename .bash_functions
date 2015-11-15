@@ -55,22 +55,27 @@ function marked() {
 }
 
 function nvim() {
-  if ps -o command | grep ^/usr/local/bin/nvim &> /dev/null; then
-    local running="true"
-  else
-    local running="false"
-  fi
-
-  if ! ${running} && [[ -S ${NVIM_LISTEN_ADDRESS} ]]; then
-    # clean up lingering socket
-    rm ${NVIM_LISTEN_ADDRESS}
-  fi
-
-  if ${running} && [[ -S ${NVIM_LISTEN_ADDRESS} ]]; then
+  if _nvim_socket_used ${NVIM_LISTEN_ADDRESS}; then
     ~/etc/vimfiles/nvim-tabedit.py $@
   else
+    rm -f ${NVIM_LISTEN_ADDRESS} # clean up lingering socket
     /usr/local/bin/nvim -p $@
   fi
+}
+
+function _nvim_socket_used() {
+  # return 0 when used
+  # return 1 when not used
+  local socket=$1
+
+  [[ -z ${socket} ]]        && return 1
+  [[ ! -S ${socket} ]]      && return 1
+  [[ -z "$(pidof nvim)" ]]  && return 1
+
+  for pid in $(pidof nvim); do
+    lsof -p ${pid} | grep -c ${socket} &> /dev/null && return 0
+  done
+  return false
 }
 
 # vim: ft=sh
