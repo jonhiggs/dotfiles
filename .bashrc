@@ -9,6 +9,10 @@ HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
+XDG_CONFIG_HOME="${HOME}/.config"
+XDG_DATA_HOME="${HOME}/Library"
+XDG_CACHE_HOME="${HOME}/Library/Caches"
+
 PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
 
