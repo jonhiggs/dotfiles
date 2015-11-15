@@ -54,27 +54,12 @@ function marked() {
   open -b $(osascript -e 'id of app "Marked 2"') $@
 }
 
-function vim() {
-  local v="/usr/local/bin/vim"
-  SERVERNAME=$(echo ${SERVERNAME:-screen} | awk '{print toupper($0)'})
-
-  local file=""
-  local running=$(
-    $v --serverlist | grep "^${SERVERNAME}$" > /dev/null &&
-      echo true || echo false
-  )
-
-  if ${running}; then
-    local file="--remote-tab"
+function nvim() {
+  if [[ -S ${NVIM_LISTEN_ADDRESS} ]]; then
+    ~/etc/vimfiles/nvim-tabedit.py $@
   else
-    local file_prefix="-p"
+    /usr/local/bin/nvim -p $@
   fi
-
-  for f in $@; do
-    local file+="${file_prefix} $f "
-  done
-
-  $v --servername ${SERVERNAME} ${file}
 }
 
 # vim: ft=sh

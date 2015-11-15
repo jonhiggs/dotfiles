@@ -20,6 +20,7 @@ export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="nvim"
+export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 # set the default name for the terminals in screen.
 [[ "$TERM" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
