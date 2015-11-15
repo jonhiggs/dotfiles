@@ -15,7 +15,7 @@ PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
 export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # set the default name for the terminals in screen.
 [[ "$TERM" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'

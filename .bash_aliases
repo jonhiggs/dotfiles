@@ -48,8 +48,6 @@ case ${OS} in
   ;;
 esac
 
-export EDITOR='/usr/local/bin/vim'
-
 # MY ALIASES
 alias cdd='cd ../; ls'
 alias cs="switch"
