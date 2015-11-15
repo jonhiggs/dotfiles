@@ -55,7 +55,18 @@ function marked() {
 }
 
 function nvim() {
-  if [[ -S ${NVIM_LISTEN_ADDRESS} ]]; then
+  if ps -o command | grep ^/usr/local/bin/nvim &> /dev/null; then
+    local running="true"
+  else
+    local running="false"
+  fi
+
+  if ! ${running} && [[ -S ${NVIM_LISTEN_ADDRESS} ]]; then
+    # clean up lingering socket
+    rm ${NVIM_LISTEN_ADDRESS}
+  fi
+
+  if ${running} && [[ -S ${NVIM_LISTEN_ADDRESS} ]]; then
     ~/etc/vimfiles/nvim-tabedit.py $@
   else
     /usr/local/bin/nvim -p $@
