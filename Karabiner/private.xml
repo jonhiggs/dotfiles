@@ -103,7 +103,7 @@
 
     <item>
       <name>Fn Keys to F1-F12 (new mac)</name>
-      <appendix>(For keyboards of F10 == Volume Mute and F4 == Launchpad)</appendix>
+      <appendix>(If F11 doesn't work, Mission Control may be set to take it)</appendix>
       <identifier>custom.remap.app_term_functional2function2</identifier>
       <only>TERMINAL</only>
       <autogen>__KeyToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, KeyCode::F1</autogen>
@@ -124,4 +124,3 @@
 
   </item>
 </root>
-
