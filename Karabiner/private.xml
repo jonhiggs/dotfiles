@@ -85,6 +85,17 @@
     </item>
 
     <item>
+      <name>Vim Movement</name>
+      <appendix>Fn-hjkl for arrows</appendix>
+      <not>TERMINAL</not>
+      <identifier>remap.vim_movement</identifier>
+      <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+    </item>
+
+    <item>
       <name>Fn+Num to F1-F12</name>
       <identifier>remap.holding_fn_num_to_function</identifier>
       <autogen>__HoldingKeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, KeyCode::F1</autogen>
