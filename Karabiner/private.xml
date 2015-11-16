@@ -38,6 +38,45 @@
     </item>
 
     <item>
+      <name>Readline Delete Line</name>
+      <appendix>Control+U to delete line</appendix>
+      <not>TERMINAL</not>
+      <identifier>remap.readline_delete_line</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Readline Backwards Delete Word</name>
+      <appendix>Control+W to delete word behind</appendix>
+      <not>TERMINAL</not>
+      <identifier>remap.readline_backwards_delete_word</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Readline Forwards Delete Word</name>
+      <appendix>Option+D to delete word ahead</appendix>
+      <not>TERMINAL</not>
+      <identifier>remap.readline_forwards_delete_word</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+
+    <item>
       <name>Readline Forward Delete</name>
       <appendix>Control+D forward deletes</appendix>
       <not>TERMINAL</not>
