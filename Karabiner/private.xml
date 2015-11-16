@@ -38,6 +38,14 @@
     </item>
 
     <item>
+      <name>Readline Forward Delete</name>
+      <appendix>Control+D forward deletes</appendix>
+      <not>TERMINAL</not>
+      <identifier>remap.readline_forward_delete</identifier>
+      <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::FORWARD_DELETE</autogen>
+    </item>
+
+    <item>
       <name>Fn+Num to F1-F12</name>
       <identifier>remap.holding_fn_num_to_function</identifier>
       <autogen>__HoldingKeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, KeyCode::F1</autogen>
