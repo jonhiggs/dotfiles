@@ -14,16 +14,23 @@ XDG_DATA_HOME="${HOME}/Library"
 XDG_CACHE_HOME="${HOME}/Library/Caches"
 
 PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
+
+__my_prompt_command() {
+  if [[ $? -eq 0 ]]; then
+    # PS1 is normally yellow
+    PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
+  else
+    # PS1 is red if the last command returned non-zero
+    PS1='\[\e[0;31m\]\w\$\[\e[0m\] '
+  fi
+}
+PROMPT_COMMAND="__my_prompt_command"
 
 export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="nvim"
 export NVIM_LISTEN_ADDRESS="/tmp/nvim"
-
-# set the default name for the terminals in screen.
-[[ "$TERM" =~ "screen" ]] && PROMPT_COMMAND='echo -ne "\033k$HOSTNAME\033\\"'
 
 # SOURCE EXTRAS
 for file in $HOME/.bash_functions                    \
