@@ -51,4 +51,10 @@ if [[ ${EC2_INSTANCE} ]]; then
   fi
 fi
 
+# LESS SYNTAX HIGHLIGHTING
+for cmd in /usr/bin/lesspipe /usr/local/bin/lesspipe.sh; do
+  [[ -x ${cmd} ]] || continue
+  eval "$(SHELL=/bin/sh ${cmd})"
+done
+
 # vim: ft=sh
