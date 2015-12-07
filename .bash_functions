@@ -36,11 +36,14 @@ function switch() {
   unset AWS_SECRET_ACCESS_KEY
   unset AWS_SECURITY_TOKE
   unset AWS_SESSION_TOKEN
-
   if [[ -z $1 ]]; then
-    credo show
+    echo ${SWITCHED_TO}
   else
-    credo --account $1 switch
+    credo --account $1 switch > /dev/null &&
+      export SWITCHED_TO=$1               &&
+      return 0
+
+    return 1
   fi
 }
 
