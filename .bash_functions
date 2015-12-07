@@ -34,7 +34,7 @@ function credo() {
 function switch() {
   unset AWS_ACCESS_KEY_ID
   unset AWS_SECRET_ACCESS_KEY
-  unset AWS_SECURITY_TOKE
+  unset AWS_SECURITY_TOKEN
   unset AWS_SESSION_TOKEN
   if [[ -z $1 ]]; then
     echo ${SWITCHED_TO}
