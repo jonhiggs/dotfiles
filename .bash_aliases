@@ -19,7 +19,7 @@ case ${OS} in
     alias dnsdomainname='domainname'
 
     # DARWIN GNU COREUTILS
-    if [ `brew list | grep coreutils &> /dev/null; echo $?` -eq 0 ]; then
+    if brew list | grep coreutils &> /dev/null; then
       alias cat="gcat"
       alias cp="gcp"
       alias cut="gcut"
