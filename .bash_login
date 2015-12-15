@@ -12,6 +12,9 @@ export GOPATH=${HOME}/go
 [[ -d ${GOPATH} ]] || mkdir ${GOPATH}
 export PATH="${GOPATH}/bin:${PATH}"
 
+# JAVA
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 # SETUP SSH AGENT
 # Start an agent for real terms. Tmux sessions use the parent settings.
 if [[ "${TERM}" =~ ^xterm ]]; then
