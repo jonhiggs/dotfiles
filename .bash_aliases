@@ -32,6 +32,7 @@ case ${OS} in
       alias ls="gls --color=auto"
       alias mkdir="gmkdir"
       alias mktemp="gmktemp"
+      alias readlink="greadlink"
       #alias sed="gsed"
       alias sleep="gsleep"
       alias sort="gsort"
@@ -44,7 +45,6 @@ case ${OS} in
       alias uname="guname"
       alias uniq="guniq"
       alias uptime="guptime"
-      alias readlink="greadlink"
     fi
   ;;
 esac
