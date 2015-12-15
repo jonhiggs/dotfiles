@@ -40,6 +40,7 @@ case ${OS} in
       alias tail="gtail"
       alias tee="gtee"
       alias touch="gtouch"
+      alias umount="diskutil umount"
       alias uname="guname"
       alias uniq="guniq"
       alias uptime="guptime"
@@ -63,7 +64,6 @@ alias ls='ls -G'
 alias pwgen="pwgen -s 14 1"
 alias sdate='gdate --rfc-3339=date'
 alias tig="tig status"
-alias umount="diskutil umount"
 alias vi='nvim'
 alias vim='nvim'
 
