@@ -41,11 +41,11 @@ case ${OS} in
       alias tail="gtail"
       alias tee="gtee"
       alias touch="gtouch"
-      alias umount="diskutil umount"
       alias uname="guname"
       alias uniq="guniq"
       alias uptime="guptime"
     fi
+    alias umount="diskutil umount"
   ;;
 esac
 
