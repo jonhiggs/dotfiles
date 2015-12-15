@@ -50,7 +50,6 @@ esac
 
 # MY ALIASES
 alias cdd='cd ../; ls'
-alias cs="switch"
 alias df='df -H'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -61,7 +60,6 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias lock='pmset displaysleepnow'
 alias ls='ls -G'
-alias mailinator="echo \$(/usr/local/bin/pwgen -0 -A 6 1)@mailinator.com"
 alias pwgen="pwgen -s 14 1"
 alias sdate='gdate --rfc-3339=date'
 alias tig="tig status"
