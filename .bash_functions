@@ -32,19 +32,36 @@ function credo() {
 }
 
 function switch() {
-  unset AWS_ACCESS_KEY_ID
-  unset AWS_SECRET_ACCESS_KEY
-  unset AWS_SECURITY_TOKEN
-  unset AWS_SESSION_TOKEN
-  if [[ -z $1 ]]; then
-    echo ${SWITCHED_TO}
-  else
-    credo --account $1 switch > /dev/null &&
-      export SWITCHED_TO=$1               &&
-      return 0
+  #unset AWS_ACCESS_KEY_ID
+  #unset AWS_SECRET_ACCESS_KEY
+  #unset AWS_SECURITY_TOKEN
+  #unset AWS_SESSION_TOKEN
+  #if [[ -z $1 ]]; then
+  #  echo ${SWITCHED_TO}
+  #else
+  #  credo --account $1 switch > /dev/null &&
+  #    export SWITCHED_TO=$1               &&
+  #    return 0
 
+  #  return 1
+  #fi
+
+  local user="jon.higgs"
+  local host="idp.realestate.com.au"
+
+  case $1 in
+    "rca-dev")  local role="RCA-Dev-Administrator"  ;;
+    "rca-stg")  local role="RCA-Stg-Administrator"  ;;
+    "rca-prod") local role="RCA-Prod-Administrator" ;;
+    "devprod")  local role="Shared-Prod-NormalUser" ;;
+  esac
+
+  source ~/Repos/saml-aws-functions/bash-functions
+  if ! authenticate -u ${user} -h ${host} -r ${role} > /dev/null; then
+    echo
     return 1
   fi
+  echo
 }
 
 function gitx() {
