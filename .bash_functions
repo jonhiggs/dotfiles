@@ -57,11 +57,7 @@ function switch() {
   esac
 
   source ~/Repos/saml-aws-functions/bash-functions
-  if ! authenticate -u ${user} -h ${host} -r ${role} > /dev/null; then
-    echo
-    return 1
-  fi
-  echo
+  authenticate -u ${user} -h ${host} -r ${role} > /dev/null || return 1
 }
 
 function gitx() {
