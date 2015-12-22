@@ -46,18 +46,18 @@ function switch() {
   #  return 1
   #fi
 
-  local user="jon.higgs"
-  local host="idp.realestate.com.au"
+  IDP_USER="jon.higgs"
+  IDP_HOST="idp.realestate.com.au"
 
   case $1 in
-    "rca-dev")  local role="RCA-Dev-Administrator"  ;;
-    "rca-stg")  local role="RCA-Stg-Administrator"  ;;
-    "rca-prod") local role="RCA-Prod-Administrator" ;;
-    "devprod")  local role="Shared-Prod-NormalUser" ;;
+    "rca-dev")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
+    "rca-stg")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
+    "rca-prod") AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
+    "devprod")  AWS_DEFAULT_ROLE="Shared-Prod-NormalUser" ;;
   esac
 
   source ~/Repos/saml-aws-functions/bash-functions
-  authenticate -u ${user} -h ${host} -r ${role} > /dev/null || return 1
+  authenticate > /dev/null || return 1
 }
 
 function gitx() {
