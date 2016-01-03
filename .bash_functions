@@ -32,20 +32,6 @@ function credo() {
 }
 
 function switch() {
-  #unset AWS_ACCESS_KEY_ID
-  #unset AWS_SECRET_ACCESS_KEY
-  #unset AWS_SECURITY_TOKEN
-  #unset AWS_SESSION_TOKEN
-  #if [[ -z $1 ]]; then
-  #  echo ${SWITCHED_TO}
-  #else
-  #  credo --account $1 switch > /dev/null &&
-  #    export SWITCHED_TO=$1               &&
-  #    return 0
-
-  #  return 1
-  #fi
-
   IDP_USER="jon.higgs"
   IDP_HOST="idp.realestate.com.au"
 
