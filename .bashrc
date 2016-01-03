@@ -24,7 +24,8 @@ __my_prompt_command() {
     PS1='\[\e[0;31m\]\w\$\[\e[0m\] '
   fi
 }
-PROMPT_COMMAND="__my_prompt_command"
+
+PROMPT_COMMAND="__my_prompt_command && source ~/.aws_credentials"
 
 export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
@@ -36,7 +37,8 @@ export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 for file in $HOME/.bash_functions                    \
             $HOME/Repos/bash-my-aws/lib/*-functions  \
             $HOME/.bash_login                        \
-            $HOME/.bash_aliases
+            $HOME/.bash_aliases                      \
+            $HOME/.aws_credentials
 do
   [[ -f $file ]] && source $file
 done

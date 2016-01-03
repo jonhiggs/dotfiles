@@ -44,6 +44,9 @@ function switch() {
 
   source ~/Repos/saml-aws-functions/bash-functions
   authenticate > /dev/null || return 1
+  env | grep ^AWS_ | sed 's/^/export /' > ~/.aws_credentials
+  chmod 600 ~/.aws_credentials
+  chown ${USER} ~/.aws_credentials
 }
 
 function gitx() {
