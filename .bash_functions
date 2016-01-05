@@ -36,10 +36,10 @@ function switch() {
   IDP_HOST="idp.realestate.com.au"
 
   case $1 in
+    "devprod")  AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
     "rca-dev")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
     "rca-stg")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
     "rca-prod") AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
-    "devprod")  AWS_DEFAULT_ROLE="Shared-Prod-NormalUser" ;;
   esac
 
   source ~/Repos/saml-aws-functions/bash-functions
