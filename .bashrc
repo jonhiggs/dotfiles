@@ -36,6 +36,7 @@ export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 # SOURCE EXTRAS
 for file in $HOME/.bash_functions                    \
             $HOME/Repos/bash-my-aws/lib/*-functions  \
+            $HOME/Repos/bash-my-aws/custom/*         \
             $HOME/.bash_login                        \
             $HOME/.bash_aliases                      \
             $HOME/.aws_credentials
