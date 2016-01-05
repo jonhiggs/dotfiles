@@ -20,7 +20,7 @@ __my_prompt_command() {
     # PS1 is normally yellow
     PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
   else
-    # PS1 is red if the last command returned non-zero
+    # PS1 is red when the last command returns non-zero exit status
     PS1='\[\e[0;31m\]\w\$\[\e[0m\] '
   fi
 }
