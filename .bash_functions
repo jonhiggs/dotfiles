@@ -38,8 +38,8 @@ function switch() {
   case $1 in
     "devprod")  AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
     "rca-dev")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
-    "rca-stg")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
     "rca-prod") AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
+    "rca-stg")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
   esac
 
   source ~/Repos/saml-aws-functions/bash-functions
