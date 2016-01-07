@@ -31,10 +31,9 @@ function credo() {
   fi
 }
 
+export IDP_USER="jon.higgs"
+export IDP_HOST="idp.realestate.com.au"
 function switch() {
-  IDP_USER="jon.higgs"
-  IDP_HOST="idp.realestate.com.au"
-
   case $1 in
     "devprod")  AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
     "rca-dev")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
