@@ -35,10 +35,10 @@ export IDP_USER="jon.higgs"
 export IDP_HOST="idp.realestate.com.au"
 function switch() {
   case $1 in
-    "devprod")  AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
-    "rca-dev")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
-    "rca-prod") AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
-    "rca-stg")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
+    "devprod"|"871035937574")  AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
+    "rca-dev"|"023709156796")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
+    "rca-prod"|"991147164666") AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
+    "rca-stg"|"006328727901")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
   esac
 
   source ~/Repos/saml-aws-functions/bash-functions
