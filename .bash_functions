@@ -45,6 +45,7 @@ function switch() {
       unset $(env | grep -E -o ^AWS[^=]*)
       return 0
     ;;
+    *) return 1
   esac
 
   source ~/Repos/saml-aws-functions/bash-functions
