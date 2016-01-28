@@ -56,6 +56,12 @@ function switch() {
   chown ${USER} ~/.aws_credentials
 }
 
+function aws_account() {
+  cat ~/.bash_functions \
+  | grep ${AWS_ACCOUNT} \
+  | cut -d\" -f2
+}
+
 function gitx() {
   dir=${1:-$(pwd)}
   gitx_id=$(osascript -e 'id of app "GitX"')

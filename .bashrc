@@ -16,12 +16,18 @@ XDG_CACHE_HOME="${HOME}/Library/Caches"
 PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 __my_prompt_command() {
+  if [[ ! -z ${AWS_ACCOUNT} ]]; then
+    PS1="[90m($(aws_account))[m "
+  else
+    PS1=""
+  fi
+
   if [[ $? -eq 0 ]]; then
     # PS1 is normally yellow
-    PS1='\[\e[0;33m\]\w\$\[\e[0m\] '
+    PS1+='\[\e[0;33m\]\w\$\[\e[0m\] '
   else
     # PS1 is red when the last command returns non-zero exit status
-    PS1='\[\e[0;31m\]\w\$\[\e[0m\] '
+    PS1+='\[\e[0;31m\]\w\$\[\e[0m\] '
   fi
 }
 
