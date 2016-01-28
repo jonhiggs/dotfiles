@@ -35,11 +35,13 @@ export IDP_USER="jon.higgs"
 export IDP_HOST="idp.realestate.com.au"
 function switch() {
   case $1 in
-    "devprod"|"871035937574")  AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
-    "rca-dev"|"023709156796")  AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
-    "rca-prod"|"991147164666") AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
-    "rca-stg"|"006328727901")  AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
-    "gandalf"|"369407384105")  AWS_DEFAULT_ROLE="Gandalf-Admin-Role"     ;;
+    "devprod"|"871035937574")     AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
+    "rca-dev"|"023709156796")     AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
+    "rca-prod"|"991147164666")    AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
+    "rca-stg"|"006328727901")     AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
+    "gandalf"|"369407384105")     AWS_DEFAULT_ROLE="Gandalf-Admin-Role"     ;;
+    "production"|"807801523733")  AWS_DEFAULT_ROLE="Shared-Prod-NormalUser" ;;
+    "staging"|"226746743607")     AWS_DEFAULT_ROLE="Shared-Staging-NormalUser" ;;
     "none")
       echo > ~/.aws_credentials
       unset $(env | grep -E -o ^AWS[^=]*)
