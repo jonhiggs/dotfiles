@@ -29,10 +29,17 @@ __my_prompt_command() {
     # PS1 is red when the last command returns non-zero exit status
     PS1+='\[\e[0;31m\]\w\$\[\e[0m\] '
   fi
+
+  # SOURCE THE AWS CREDENTIALS
+  local expires_at=$(cat ~/.aws_credentials | awk -F= '/EXPIRE=/ { print $2 }')
+  if [[ "${expires_at}" > "$(date +%s)" ]]; then
+    source ~/.aws_credentials
+  else
+    switch none
+  fi
 }
 
-PROMPT_COMMAND="__my_prompt_command && source ~/.aws_credentials"
-
+PROMPT_COMMAND="__my_prompt_command"
 export LC_CTYPE="en_US.UTF-8"
 export LESS="-R"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
