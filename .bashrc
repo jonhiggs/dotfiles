@@ -17,7 +17,8 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 __my_prompt_command() {
   if [[ ! -z ${AWS_ACCOUNT} ]]; then
-    PS1="[90m($(aws_account))[m "
+    PS1="\[\e[0;90m\]"
+    PS1+="($(aws_account)) "
   else
     PS1=""
   fi
