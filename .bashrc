@@ -59,3 +59,8 @@ for file in $HOME/.bash_functions                    \
 do
   [[ -f $file ]] && source $file
 done
+
+# WARN WITH HOST ENTRIES
+if ! \ghost list | grep 'Listing 0 host' &> /dev/null; then
+  echo "YOU HAVE CUSTOM HOSTFILE ENTRIES (ghost bust)"
+fi
