@@ -70,6 +70,10 @@ function gitx() {
   open -b ${gitx_id} --args $(driller --absolute ${dir})
 }
 
+function groot() {
+  cd $(driller --scm-root ./)
+}
+
 function marked() {
   open -b $(osascript -e 'id of app "Marked 2"') $@
 }
