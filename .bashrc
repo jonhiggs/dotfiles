@@ -17,13 +17,7 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 __my_prompt_command() {
   exit_status=$?
-
-  if [[ ! -z ${AWS_ACCOUNT} ]]; then
-    PS1="\[\e[0;90m\]"
-    PS1+="($(aws_account)) "
-  else
-    PS1=""
-  fi
+  PS1="$(aws_ps1)"
 
   if [[ ${exit_status} -eq 0 ]]; then
     # PS1 is normally yellow
@@ -31,14 +25,6 @@ __my_prompt_command() {
   else
     # PS1 is red when the last command returns non-zero exit status
     PS1+='\[\e[0;31m\]\w\$\[\e[0m\] '
-  fi
-
-  # SOURCE THE AWS CREDENTIALS
-  local expires_at=$(cat ~/.aws_credentials | awk -F= '/EXPIRE=/ { print $2 }')
-  if [[ "${expires_at}" > "$(date +%s)" ]]; then
-    source ~/.aws_credentials
-  else
-    switch none
   fi
 }
 

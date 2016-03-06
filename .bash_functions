@@ -31,39 +31,6 @@ function credo() {
   fi
 }
 
-export IDP_USER="jon.higgs"
-export IDP_HOST="idp.realestate.com.au"
-function switch() {
-  case $1 in
-    "devprod"|"871035937574")     AWS_DEFAULT_ROLE="Muppets-Admin"          ;;
-    "rca-dev"|"023709156796")     AWS_DEFAULT_ROLE="RCA-Dev-Administrator"  ;;
-    "rca-prod"|"991147164666")    AWS_DEFAULT_ROLE="RCA-Prod-Administrator" ;;
-    "rca-stg"|"006328727901")     AWS_DEFAULT_ROLE="RCA-Stg-Administrator"  ;;
-    "gandalf"|"369407384105")     AWS_DEFAULT_ROLE="Gandalf-Admin-Role"     ;;
-    "production"|"807801523733")  AWS_DEFAULT_ROLE="Shared-Prod-NormalUser" ;;
-    "staging"|"226746743607")     AWS_DEFAULT_ROLE="Shared-Staging-NormalUser" ;;
-    "none")
-      echo > ~/.aws_credentials
-      unset $(env | grep -E -o ^AWS[^=]*)
-      return 0
-    ;;
-    *) return 1
-  esac
-
-  source ~/Repos/saml-aws-functions/bash-functions
-  authenticate > /dev/null || return 1
-  unset AWS_DEFAULT_ROLE
-  env | grep ^AWS_ | sed 's/^/export /' > ~/.aws_credentials
-  chmod 600 ~/.aws_credentials
-  chown ${USER} ~/.aws_credentials
-}
-
-function aws_account() {
-  cat ~/.bash_functions \
-  | grep ${AWS_ACCOUNT} \
-  | cut -d\" -f2
-}
-
 function gitx() {
   dir=${1:-$(pwd)}
   gitx_id=$(osascript -e 'id of app "GitX"')
