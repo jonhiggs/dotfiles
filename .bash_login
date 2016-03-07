@@ -54,6 +54,9 @@ if [[ ${EC2_INSTANCE} ]]; then
   fi
 fi
 
+# ARDUINO
+PATH+=":/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin"
+
 # LESS SYNTAX HIGHLIGHTING
 for cmd in /usr/bin/lesspipe /usr/local/bin/lesspipe.sh; do
   [[ -x ${cmd} ]] || continue
