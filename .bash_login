@@ -15,7 +15,7 @@ export PATH="${GOPATH}/bin:${PATH}"
 # JAVA
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
-# SETUP SSH AGENT
+# SSH
 # Start an agent for real terms. Tmux sessions use the parent settings.
 if [[ "${TERM}" =~ ^xterm ]]; then
   [[ -f ~/.ssh/id_rsa ]] && eval $(ssh-agent)
@@ -27,6 +27,7 @@ fi
 # AWS COMPLETION
 complete -C aws_completer aws
 
+# TMUX
 [[ "${TERM}" =~ ^screen ]] && tmux rename-window 'default'
 
 # SSH CONFIG
