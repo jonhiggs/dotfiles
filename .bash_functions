@@ -54,4 +54,8 @@ function nvim() {
   fi
 }
 
+function dockerenv() {
+  eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || return 0)
+}
+
 # vim: ft=sh
