@@ -54,6 +54,14 @@ function nvim() {
   fi
 }
 
+function ghost() {
+  bin="/Users/jon.higgs/.rvm/gems/ruby-2.2.2/bin/ghost"
+  case $1 in
+    "list") ${bin} $1      ;;
+    *)      sudo ${bin} $1 ;;
+  esac
+}
+
 function dockerenv() {
   eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || return 0)
 }
