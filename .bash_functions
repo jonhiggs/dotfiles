@@ -63,7 +63,7 @@ function ghost() {
 }
 
 function dockerenv() {
-  eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || return 0)
+  eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || return 1)
 }
 
 # vim: ft=sh
