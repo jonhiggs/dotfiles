@@ -54,7 +54,6 @@ alias cdd='cd ../; ls'
 alias df='df -H'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias ghost="sudo ghost"
 alias grep='grep --color=auto'
 alias l='ls -lAFh'
 alias la='ls -A'
