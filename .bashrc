@@ -17,6 +17,7 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 __my_prompt_command() {
   exit_status=$?
+  source "${HOME}/.bash_environment"
   aws_load
   #PS1="$(aws_ps1)"
   PS1=""
@@ -40,6 +41,7 @@ export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 # SOURCE EXTRAS
 for file in $HOME/.bash_aliases                      \
             $HOME/.bash_functions                    \
+            $HOME/.bash_environment                  \
             $HOME/Repos/bash-my-aws/lib/*-functions  \
             $HOME/Repos/bash-my-aws/custom/*         \
             $HOME/Repos/aws_prompt/lib.inc           \
