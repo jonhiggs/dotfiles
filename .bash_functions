@@ -57,8 +57,8 @@ function nvim() {
 function ghost() {
   bin="/Users/jon.higgs/.rvm/gems/ruby-2.2.2/bin/ghost"
   case $1 in
-    "list") ${bin} $1      ;;
-    *)      sudo ${bin} $1 ;;
+    "list") ${bin} $@      ;;
+    *)      sudo ${bin} $@ ;;
   esac
 }
 
