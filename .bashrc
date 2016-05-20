@@ -17,8 +17,8 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 __my_prompt_command() {
   exit_status=$?
-  aws_load
   eval $(bash_environment)
+  aws_load
 
   if [[ ${exit_status} -eq 0 ]]; then
     # PS1 is normally yellow
