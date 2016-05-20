@@ -41,34 +41,4 @@ function dockerenv() {
   eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || return 1)
 }
 
-function bash_environment() {
-  local env_file="${HOME}/.bash_environment"
-  local k=$(echo "$1" | cut -d= -f1)
-  local v=$(echo "$1" | cut -d= -f2)
-
-  [[ -f "${env_file}" ]] || touch "${env_file}"
-
-  if [[ $# -eq 1 ]]; then
-    if grep -E "^$k=" "${env_file}" &> /dev/null; then
-      # replace
-      sed -i -e "s/$k=.*/$1/" "${env_file}"
-    else
-      # append
-      echo $1 >> "${env_file}"
-    fi
-  fi
-
-  # cleanup
-  data="$(
-    cat "${env_file}" \
-      | grep -v "^# vim:" \
-      | grep -v ^$ \
-      | sort \
-      | uniq
-  )"
-  echo "${data}" > .bash_environment
-  echo "# vim: ft=sh" >> .bash_environment
-  source "${env_file}"
-}
-
 # vim: ft=sh
