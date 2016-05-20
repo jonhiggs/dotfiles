@@ -6,31 +6,6 @@ function prepend_to_path() {
   if [ -d $1 ]; then export PATH=$1:$PATH; fi
 }
 
-function credo() {
-  addr="169.254.169.254"
-  loopback_interface="lo0"
-  if ! ifconfig ${loopback_interface} | grep ${addr} > /dev/null; then
-    echo "creating $addr alias"
-    sudo ifconfig lo0 alias $addr
-    plist=/Library/LaunchDaemons/delfick.credo.fake_metadata.plist
-    for action in unload load; do
-      sudo launchctl $action $plist
-    done
-  fi
-
-  if ~/VirtualEnvs/credo/bin/credo sourceable $@; then
-    output=$(~/VirtualEnvs/credo/bin/credo $@)
-    if (($? == 0)); then
-      echo "$output" > /tmp/lolz
-      source /tmp/lolz
-    else
-      echo "$output"
-    fi
-  else
-    ~/VirtualEnvs/credo/bin/credo $@
-  fi
-}
-
 function gitx() {
   dir=${1:-$(pwd)}
   gitx_id=$(osascript -e 'id of app "GitX"')
