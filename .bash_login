@@ -33,9 +33,6 @@ complete -C aws_completer aws
 # SSH CONFIG
 [[ -f ~/.ssh/rea ]] && ssh-add ~/.ssh/rea &> /dev/null
 
-# DOCKER
-export DOCKER_MACHINE_NAME='default'
-
 # EC2
 if [[ ${EC2_INSTANCE} ]]; then
   export EC2_INSTANCE_ID=$(ec2-metadata --instance-id | awk '{print $2}')
