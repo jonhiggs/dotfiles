@@ -37,6 +37,16 @@ function ghost() {
   esac
 }
 
+function disconnector() {
+  osascript -e 'quit app "iTunes"'
+  for dir in /Volumes/iTunes; do
+    while [[ -d "${dir}" ]]; do
+      umount "${dir}"
+      sleep 1
+    done
+  done
+}
+
 function dockerenv() {
   status="$(docker-machine status ${DOCKER_MACHINE_NAME})"
   [[ "${status}" == "Stopped" ]] && docker-machine start ${DOCKER_MACHINE_NAME}
