@@ -38,6 +38,8 @@ function ghost() {
 }
 
 function dockerenv() {
+  status="$(docker-machine status ${DOCKER_MACHINE_NAME})"
+  [[ "${status}" == "Stopped" ]] && docker-machine start ${DOCKER_MACHINE_NAME}
   eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || return 1)
 }
 
