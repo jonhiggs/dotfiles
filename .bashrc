@@ -42,7 +42,7 @@ for file in $HOME/.bash_aliases                      \
             $HOME/.bash_environment                  \
             $HOME/Repos/bash-my-aws/lib/*-functions  \
             $HOME/Repos/bash-my-aws/custom/*         \
-            $HOME/Repos/aws_prompt/lib.inc           \
+            $HOME/Repos/rea-as-switcher/lib.inc      \
             $HOME/.bash_login                        \
             $HOME/.aws_credentials
 do
