@@ -63,8 +63,8 @@ alias ls='ls -G'
 alias pwgen="pwgen -s 14 1"
 alias sdate='gdate --rfc-3339=date'
 alias tig="tig status"
-alias switch='aws_switch'
-alias unswitch='aws_unswitch'
+alias switch='rea-as-switch'
+alias unswitch='rea-as-unswitch'
 alias vi='nvim'
 alias vim='nvim'
 

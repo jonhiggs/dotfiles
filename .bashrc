@@ -18,7 +18,7 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 __my_prompt_command() {
   exit_status=$?
   eval $(bash_environment)
-  aws_stick
+  rea-as-stick
 
   if [[ ${exit_status} -eq 0 ]]; then
     # PS1 is normally yellow
@@ -37,13 +37,13 @@ export EDITOR="nvim"
 export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 # SOURCE EXTRAS
-for file in $HOME/.bash_aliases                      \
-            $HOME/.bash_functions                    \
-            $HOME/.bash_environment                  \
-            $HOME/Repos/bash-my-aws/lib/*-functions  \
-            $HOME/Repos/bash-my-aws/custom/*         \
-            $HOME/Repos/rea-as-switcher/lib.inc      \
-            $HOME/.bash_login                        \
+for file in $HOME/.bash_aliases                                   \
+            $HOME/.bash_functions                                 \
+            $HOME/.bash_environment                               \
+            $HOME/Repos/bash-my-aws/lib/*-functions               \
+            $HOME/Repos/bash-my-aws/custom/*                      \
+            $HOME/Repos/rea-as-switcher/rea-as-switcher.inc       \
+            $HOME/.bash_login                                     \
             $HOME/.aws_credentials
 do
   [[ -f $file ]] && source $file
