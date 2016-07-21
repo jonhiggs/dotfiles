@@ -18,7 +18,7 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 __my_prompt_command() {
   exit_status=$?
   eval $(bash_environment)
-  rea-as-stick
+  type rea-as-stick &> /dev/null && rea-as-stick
 
   if [[ ${exit_status} -eq 0 ]]; then
     # PS1 is normally yellow
