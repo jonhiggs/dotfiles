@@ -50,6 +50,8 @@ do
 done
 
 # WARN WITH HOST ENTRIES
-if ! \ghost list | grep 'Listing 0 host' &> /dev/null; then
-  echo "YOU HAVE CUSTOM HOSTFILE ENTRIES (ghost bust)"
+if which ghost &> /dev/null; then
+  if ! \ghost list | grep 'Listing 0 host' &> /dev/null; then
+    echo "YOU HAVE CUSTOM HOSTFILE ENTRIES (ghost bust)"
+  fi
 fi
