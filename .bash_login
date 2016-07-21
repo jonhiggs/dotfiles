@@ -1,19 +1,27 @@
 # SOURCE IN RVM
-export PATH="$HOME/.rvm/bin:$PATH"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+  export PATH="$HOME/.rvm/bin:$PATH"
+  source "$HOME/.rvm/scripts/rvm"
+fi
 
 # VIRTUALENVWRAPPER
-export WORKON_HOME="$HOME/VirtualEnvs"
-[[ -d ${WORKON_HOME} ]] || mkdir ${WORKON_HOME}
-source /usr/local/bin/virtualenvwrapper.sh
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+  export WORKON_HOME="$HOME/VirtualEnvs"
+  [[ -d ${WORKON_HOME} ]] || mkdir ${WORKON_HOME}
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # GOLANG
-export GOPATH=${HOME}/go
-[[ -d ${GOPATH} ]] || mkdir ${GOPATH}
-export PATH="${GOPATH}/bin:${PATH}"
+if which go &> /dev/null; then
+  export GOPATH=${HOME}/go
+  [[ -d ${GOPATH} ]] || mkdir ${GOPATH}
+  export PATH="${GOPATH}/bin:${PATH}"
+fi
 
 # JAVA
-export JAVA_HOME="$(/usr/libexec/java_home)"
+if which java_home &> /dev/null; then
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+fi
 
 # SSH
 # Start an agent for real terms. Tmux sessions use the parent settings.
