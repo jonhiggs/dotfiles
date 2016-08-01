@@ -10,15 +10,6 @@ function groot() {
   cd $(driller --scm-root ./)
 }
 
-function nvim() {
-  if ~/etc/vimfiles/nvim-socket_used ${NVIM_LISTEN_ADDRESS}; then
-    ~/etc/vimfiles/nvim-tabedit.py $@
-  else
-    rm -f ${NVIM_LISTEN_ADDRESS} # clean up lingering socket
-    /usr/local/bin/nvim -p $@
-  fi
-}
-
 function disconnector() {
   osascript -e 'quit app "iTunes"'
   for dir in /Volumes/iTunes; do
