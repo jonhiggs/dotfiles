@@ -19,14 +19,6 @@ function nvim() {
   fi
 }
 
-function ghost() {
-  bin="/usr/bin/ghost"
-  case $1 in
-    "list"|"")  ${bin} $@      ;;
-    *)          sudo ${bin} $@ ;;
-  esac
-}
-
 function disconnector() {
   osascript -e 'quit app "iTunes"'
   for dir in /Volumes/iTunes; do

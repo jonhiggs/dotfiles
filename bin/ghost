@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+bin="/usr/bin/ghost"
+case $1 in
+  "list"|"")  ${bin} $@      ;;
+  *)          sudo ${bin} $@ ;;
+esac
