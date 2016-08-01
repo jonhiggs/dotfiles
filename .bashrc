@@ -50,6 +50,7 @@ for file in $HOME/etc/dotfiles/bash/functions.inc                 \
             $HOME/etc/dotfiles/bash/java                          \
             $HOME/etc/dotfiles/bash/ssh                           \
             $HOME/etc/dotfiles/bash/bash_completion               \
+            $HOME/etc/dotfiles/bash/ls                            \
             $HOME/etc/dotfiles/bash/tmux                          \
             $HOME/etc/dotfiles/bash/arduino                       \
             $HOME/etc/dotfiles/bash/less                          \
