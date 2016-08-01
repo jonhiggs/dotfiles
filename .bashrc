@@ -52,6 +52,7 @@ for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
             ${HOME}/etc/dotfiles/bash/java                          \
             ${HOME}/etc/dotfiles/bash/less                          \
             ${HOME}/etc/dotfiles/bash/ls                            \
+            ${HOME}/etc/dotfiles/bash/n                             \
             ${HOME}/etc/dotfiles/bash/rvm                           \
             ${HOME}/etc/dotfiles/bash/ssh                           \
             ${HOME}/etc/dotfiles/bash/tmux                          \
