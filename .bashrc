@@ -41,22 +41,22 @@ for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
             ${HOME}/.bash_environment                               \
             ${HOME}/Repos/rea-as-switcher/rea-as-switcher.inc       \
             ${HOME}/etc/dotfiles/bash/aliases.inc                   \
-            ${HOME}/etc/dotfiles/bash/rvm                           \
-            ${HOME}/etc/dotfiles/bash/virtualenvwrapper             \
-            ${HOME}/etc/dotfiles/bash/golang                        \
-            ${HOME}/etc/dotfiles/bash/java                          \
-            ${HOME}/etc/dotfiles/bash/ssh                           \
-            ${HOME}/etc/dotfiles/bash/bash_completion               \
-            ${HOME}/etc/dotfiles/bash/ls                            \
-            ${HOME}/etc/dotfiles/bash/vim                           \
-            ${HOME}/etc/dotfiles/bash/df                            \
-            ${HOME}/etc/dotfiles/bash/tmux                          \
-            ${HOME}/etc/dotfiles/bash/git                           \
-            ${HOME}/etc/dotfiles/bash/grep                          \
-            ${HOME}/etc/dotfiles/bash/bash-my-aws                   \
             ${HOME}/etc/dotfiles/bash/arduino                       \
-            ${HOME}/etc/dotfiles/bash/less                          \
+            ${HOME}/etc/dotfiles/bash/bash-my-aws                   \
+            ${HOME}/etc/dotfiles/bash/bash_completion               \
+            ${HOME}/etc/dotfiles/bash/df                            \
             ${HOME}/etc/dotfiles/bash/ghost                         \
+            ${HOME}/etc/dotfiles/bash/git                           \
+            ${HOME}/etc/dotfiles/bash/golang                        \
+            ${HOME}/etc/dotfiles/bash/grep                          \
+            ${HOME}/etc/dotfiles/bash/java                          \
+            ${HOME}/etc/dotfiles/bash/less                          \
+            ${HOME}/etc/dotfiles/bash/ls                            \
+            ${HOME}/etc/dotfiles/bash/rvm                           \
+            ${HOME}/etc/dotfiles/bash/ssh                           \
+            ${HOME}/etc/dotfiles/bash/tmux                          \
+            ${HOME}/etc/dotfiles/bash/vim                           \
+            ${HOME}/etc/dotfiles/bash/virtualenvwrapper             \
             ${HOME}/.aws_credentials
 do
   [[ -f ${file} ]] && source ${file}
