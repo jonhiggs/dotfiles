@@ -6,3 +6,8 @@
 fluxbox/apps
 /backgrounds/_default.jpg
 /bin/upgrade_servers.sh
+bin/update_repos.sh
+bin/ghost-staging-network
+bin/egcurl
+bin/dirty_repos.sh
+bin/bash_environment
