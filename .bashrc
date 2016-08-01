@@ -37,12 +37,12 @@ export EDITOR="nvim"
 export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 # SOURCE EXTRAS
-for file in $HOME/.bash_aliases                                   \
-            $HOME/.bash_functions                                 \
+for file in $HOME/etc/dotfiles/bash/functions.inc                 \
             $HOME/.bash_environment                               \
             $HOME/Repos/bash-my-aws/lib/*-functions               \
             $HOME/Repos/bash-my-aws/custom/*                      \
             $HOME/Repos/rea-as-switcher/rea-as-switcher.inc       \
+            $HOME/etc/dotfiles/bash/aliases.inc                   \
             $HOME/etc/dotfiles/bash/rvm                           \
             $HOME/etc/dotfiles/bash/virtualenvwrapper             \
             $HOME/etc/dotfiles/bash/golang                        \
