@@ -27,7 +27,16 @@ fi
 # SSH
 # Start an agent for real terms. Tmux sessions use the parent settings.
 if [[ "${TERM}" =~ ^xterm ]]; then
-  [[ -f ~/.ssh/id_rsa ]] && eval $(ssh-agent)
+  eval $(ssh-agent)
+  for key in ${HOME}/.ssh/*; do
+    [[ ${key} =~ authorized_keys$ ]] && continue
+    [[ ${key} =~ known_hosts$ ]] && continue
+    [[ ${key} =~ config$ ]] && continue
+    [[ ${key} =~ unused ]] && continue
+    [[ ! -f ${key} ]] && continue
+    [[ ${key} =~ \.pub$ ]] && continue
+    ssh-add ${key} &> /dev/null
+  done
 fi
 
 # BASH COMPLETION
@@ -38,9 +47,6 @@ complete -C aws_completer aws
 
 # TMUX
 [[ "${TERM}" =~ ^screen ]] && tmux rename-window 'default'
-
-# SSH CONFIG
-[[ -f ~/.ssh/rea ]] && ssh-add ~/.ssh/rea &> /dev/null
 
 # EC2
 if [[ ${EC2_INSTANCE} ]]; then
