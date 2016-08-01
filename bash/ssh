@@ -1,0 +1,15 @@
+# Start an agent for real terms. Tmux sessions use the parent settings.
+if [[ "${TERM}" =~ ^xterm ]]; then
+  eval $(ssh-agent)
+  for key in ${HOME}/.ssh/*; do
+    [[ ${key} =~ authorized_keys$ ]] && continue
+    [[ ${key} =~ known_hosts$ ]] && continue
+    [[ ${key} =~ config$ ]] && continue
+    [[ ${key} =~ unused ]] && continue
+    [[ ! -f ${key} ]] && continue
+    [[ ${key} =~ \.pub$ ]] && continue
+    ssh-add ${key} &> /dev/null
+  done
+fi
+
+# vim: ft=sh

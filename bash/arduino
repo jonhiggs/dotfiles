@@ -1,0 +1,3 @@
+PATH+=":/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin"
+
+# vim: ft=sh

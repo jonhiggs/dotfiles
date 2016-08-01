@@ -43,15 +43,17 @@ for file in $HOME/.bash_aliases                                   \
             $HOME/Repos/bash-my-aws/lib/*-functions               \
             $HOME/Repos/bash-my-aws/custom/*                      \
             $HOME/Repos/rea-as-switcher/rea-as-switcher.inc       \
-            $HOME/.bash_login                                     \
+            $HOME/etc/dotfiles/bash/rvm                           \
+            $HOME/etc/dotfiles/bash/virtualenvwrapper             \
+            $HOME/etc/dotfiles/bash/golang                        \
+            $HOME/etc/dotfiles/bash/java                          \
+            $HOME/etc/dotfiles/bash/ssh                           \
+            $HOME/etc/dotfiles/bash/bash_completion               \
+            $HOME/etc/dotfiles/bash/tmux                          \
+            $HOME/etc/dotfiles/bash/arduino                       \
+            $HOME/etc/dotfiles/bash/less                          \
+            $HOME/etc/dotfiles/bash/ghost                         \
             $HOME/.aws_credentials
 do
   [[ -f $file ]] && source $file
 done
-
-# WARN WITH HOST ENTRIES
-if which ghost &> /dev/null; then
-  if ! \ghost list | grep 'Listing 0 host' &> /dev/null; then
-    echo "YOU HAVE CUSTOM HOSTFILE ENTRIES (ghost bust)"
-  fi
-fi
