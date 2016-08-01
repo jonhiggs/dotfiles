@@ -6,7 +6,6 @@ case ${OS} in
     alias apt-get='sudo apt-get'
   ;;
   "Darwin")
-    export GREP_COLOR="1;37;41"
     export LANG=C
     alias dnsdomainname='domainname'
 
