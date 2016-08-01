@@ -1,9 +1,9 @@
 function append_to_path() {
-  if [ -d $1 ]; then export PATH=$PATH:$1; fi
+  [[ -d $1 ]] && export PATH="$PATH:$1"
 }
 
 function prepend_to_path() {
-  if [ -d $1 ]; then export PATH=$1:$PATH; fi
+  [[ -d $1 ]] && export PATH="$1:$PATH"
 }
 
 function groot() {
