@@ -1,3 +1,5 @@
+export LESS="-R"
+
 for cmd in /usr/bin/lesspipe /usr/local/bin/lesspipe.sh; do
   [[ -x ${cmd} ]] || continue
   eval "$(SHELL=/bin/sh ${cmd})"
