@@ -19,8 +19,9 @@ if which go &> /dev/null; then
 fi
 
 # JAVA
-if which java_home &> /dev/null; then
+if [[ -x /usr/libexec/java_home ]]; then
   export JAVA_HOME="$(/usr/libexec/java_home)"
+  export PATH="${JAVA_HOME}/bin:${PATH}"
 fi
 
 # SSH
