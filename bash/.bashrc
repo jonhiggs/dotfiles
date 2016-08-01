@@ -61,3 +61,5 @@ for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
 do
   [[ -f ${file} ]] && source ${file}
 done
+
+true
