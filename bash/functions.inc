@@ -10,14 +10,4 @@ function groot() {
   cd $(driller --scm-root ./)
 }
 
-function disconnector() {
-  osascript -e 'quit app "iTunes"'
-  for dir in /Volumes/iTunes; do
-    while [[ -d "${dir}" ]]; do
-      umount "${dir}"
-      sleep 1
-    done
-  done
-}
-
 # vim: ft=sh
