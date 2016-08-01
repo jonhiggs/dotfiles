@@ -15,6 +15,12 @@ XDG_CACHE_HOME="${HOME}/Library/Caches"
 
 PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+export LC_CTYPE="en_US.UTF-8"
+export LESS="-R"
+export TZ="/usr/share/zoneinfo/Australia/Melbourne"
+export EDITOR="nvim"
+export NVIM_LISTEN_ADDRESS="/tmp/nvim"
+
 __my_prompt_command() {
   exit_status=$?
   eval $(bash_environment)
@@ -30,11 +36,6 @@ __my_prompt_command() {
 }
 
 PROMPT_COMMAND="__my_prompt_command"
-export LC_CTYPE="en_US.UTF-8"
-export LESS="-R"
-export TZ="/usr/share/zoneinfo/Australia/Melbourne"
-export EDITOR="nvim"
-export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 # SOURCE EXTRAS
 for file in $HOME/etc/dotfiles/bash/functions.inc                 \
