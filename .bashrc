@@ -18,7 +18,6 @@ PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export LANG=C
 export LC_CTYPE="en_US.UTF-8"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
-export EDITOR="nvim"
 
 __my_prompt_command() {
   exit_status=$?
