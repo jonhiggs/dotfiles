@@ -1,5 +1,6 @@
 if [[ "$(uname)" == "Darwin" ]]; then
   alias dnsdomainname='domainname'
+  alias lock='pmset displaysleepnow'
 
   # DARWIN GNU COREUTILS
   if brew list | grep coreutils &> /dev/null; then
