@@ -6,12 +6,6 @@ function prepend_to_path() {
   if [ -d $1 ]; then export PATH=$1:$PATH; fi
 }
 
-function gitx() {
-  dir=${1:-$(pwd)}
-  gitx_id=$(osascript -e 'id of app "GitX"')
-  open -b ${gitx_id} --args $(driller --absolute ${dir})
-}
-
 function groot() {
   cd $(driller --scm-root ./)
 }
