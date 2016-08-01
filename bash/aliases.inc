@@ -1,7 +1,4 @@
-OS=`uname`
-
-# OS SPECIFIC
-case ${OS} in
+case "$(uname)" in
   "Linux")
     alias apt-get='sudo apt-get'
   ;;
@@ -41,4 +38,4 @@ esac
 
 source ${HOME}/etc/dotfiles/bash/aliases.d/common
 
-# vim: syntax=sh:ts=2:sw=2
+# vim: ft=sh:ts=2:sw=2
