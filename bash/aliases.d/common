@@ -6,8 +6,6 @@ alias sdate='gdate --rfc-3339=date'
 alias tig="tig status"
 alias switch='rea-as-switch'
 alias unswitch='rea-as-unswitch'
-alias vi='nvim'
-alias vim='nvim'
 
 # BMA ALIASES
 alias stack='stacks'
