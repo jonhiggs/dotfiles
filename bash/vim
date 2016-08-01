@@ -1,7 +1,7 @@
 export EDITOR="/usr/local/bin/nvim"
 export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
-vi="${HOME}/bin/nvim"
-vim="${HOME}/bin/nvim"
+alias vi="${HOME}/bin/nvim"
+alias vim="${HOME}/bin/nvim"
 
 # vim: ft=sh
