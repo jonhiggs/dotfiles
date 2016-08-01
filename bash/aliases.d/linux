@@ -1,0 +1,7 @@
+if [[ "$(uname)" == "Linux" ]]; then
+  if which apt-get &> /dev/null; then
+    alias apt-get='sudo apt-get'
+  fi
+fi
+
+# vim: ft=sh
