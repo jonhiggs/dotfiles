@@ -3,6 +3,6 @@
 .*.orig
 .mutt
 
-.fluxbox/apps
+fluxbox/apps
 /backgrounds/_default.jpg
 /bin/upgrade_servers.sh
