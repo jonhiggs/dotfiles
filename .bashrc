@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[ -z "${PS1}" ] && return
 
 HISTCONTROL=ignoreboth
 HISTSIZE=20000
@@ -38,25 +38,26 @@ __my_prompt_command() {
 PROMPT_COMMAND="__my_prompt_command"
 
 # SOURCE EXTRAS
-for file in $HOME/etc/dotfiles/bash/functions.inc                 \
-            $HOME/.bash_environment                               \
-            $HOME/Repos/bash-my-aws/lib/*-functions               \
-            $HOME/Repos/bash-my-aws/custom/*                      \
-            $HOME/Repos/rea-as-switcher/rea-as-switcher.inc       \
-            $HOME/etc/dotfiles/bash/aliases.inc                   \
-            $HOME/etc/dotfiles/bash/rvm                           \
-            $HOME/etc/dotfiles/bash/virtualenvwrapper             \
-            $HOME/etc/dotfiles/bash/golang                        \
-            $HOME/etc/dotfiles/bash/java                          \
-            $HOME/etc/dotfiles/bash/ssh                           \
-            $HOME/etc/dotfiles/bash/bash_completion               \
-            $HOME/etc/dotfiles/bash/ls                            \
-            $HOME/etc/dotfiles/bash/tmux                          \
-            $HOME/etc/dotfiles/bash/grep                          \
-            $HOME/etc/dotfiles/bash/arduino                       \
-            $HOME/etc/dotfiles/bash/less                          \
-            $HOME/etc/dotfiles/bash/ghost                         \
-            $HOME/.aws_credentials
+for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
+            ${HOME}/.bash_environment                               \
+            ${HOME}/Repos/bash-my-aws/lib/*-functions               \
+            ${HOME}/Repos/bash-my-aws/custom/*                      \
+            ${HOME}/Repos/rea-as-switcher/rea-as-switcher.inc       \
+            ${HOME}/etc/dotfiles/bash/aliases.inc                   \
+            ${HOME}/etc/dotfiles/bash/rvm                           \
+            ${HOME}/etc/dotfiles/bash/virtualenvwrapper             \
+            ${HOME}/etc/dotfiles/bash/golang                        \
+            ${HOME}/etc/dotfiles/bash/java                          \
+            ${HOME}/etc/dotfiles/bash/ssh                           \
+            ${HOME}/etc/dotfiles/bash/bash_completion               \
+            ${HOME}/etc/dotfiles/bash/ls                            \
+            ${HOME}/etc/dotfiles/bash/vim                           \
+            ${HOME}/etc/dotfiles/bash/tmux                          \
+            ${HOME}/etc/dotfiles/bash/grep                          \
+            ${HOME}/etc/dotfiles/bash/arduino                       \
+            ${HOME}/etc/dotfiles/bash/less                          \
+            ${HOME}/etc/dotfiles/bash/ghost                         \
+            ${HOME}/.aws_credentials
 do
-  [[ -f $file ]] && source $file
+  [[ -f ${file} ]] && source ${file}
 done
