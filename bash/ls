@@ -18,4 +18,8 @@ case `uname` in
     ;;
 esac
 
+
+# FIXME: This is what was set...
+alias ls='ls -G'
+
 # vim: ft=sh
