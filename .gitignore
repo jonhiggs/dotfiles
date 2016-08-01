@@ -1,13 +1,11 @@
 .DS_Store
 *.sw?
 .*.orig
-.mutt
 
 fluxbox/apps
-/backgrounds/_default.jpg
-/bin/upgrade_servers.sh
-bin/update_repos.sh
-bin/ghost-staging-network
-bin/egcurl
-bin/dirty_repos.sh
-bin/bash_environment
+fluxbox/backgrounds/_default.jpg
+bash/bin/update_repos.sh
+bash/bin/ghost-staging-network
+bash/bin/egcurl
+bash/bin/dirty_repos.sh
+bash/bin/bash_environment
