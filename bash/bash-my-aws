@@ -1,0 +1,13 @@
+for f in                                      \
+  ${HOME}/Repos/bash-my-aws/lib/*-functions   \
+  ${HOME}/Repos/bash-my-aws/custom/*          \
+do
+  source $f
+done
+
+alias stack='stacks'
+alias instance="instances"
+
+
+# vim: ft=sh
+

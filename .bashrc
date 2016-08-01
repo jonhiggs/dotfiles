@@ -39,8 +39,6 @@ PROMPT_COMMAND="__my_prompt_command"
 # SOURCE EXTRAS
 for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
             ${HOME}/.bash_environment                               \
-            ${HOME}/Repos/bash-my-aws/lib/*-functions               \
-            ${HOME}/Repos/bash-my-aws/custom/*                      \
             ${HOME}/Repos/rea-as-switcher/rea-as-switcher.inc       \
             ${HOME}/etc/dotfiles/bash/aliases.inc                   \
             ${HOME}/etc/dotfiles/bash/rvm                           \
@@ -54,6 +52,7 @@ for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
             ${HOME}/etc/dotfiles/bash/tmux                          \
             ${HOME}/etc/dotfiles/bash/git                           \
             ${HOME}/etc/dotfiles/bash/grep                          \
+            ${HOME}/etc/dotfiles/bash/bash-my-aws                   \
             ${HOME}/etc/dotfiles/bash/arduino                       \
             ${HOME}/etc/dotfiles/bash/less                          \
             ${HOME}/etc/dotfiles/bash/ghost                         \

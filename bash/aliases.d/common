@@ -6,8 +6,4 @@ alias sdate='gdate --rfc-3339=date'
 alias switch='rea-as-switch'
 alias unswitch='rea-as-unswitch'
 
-# BMA ALIASES
-alias stack='stacks'
-alias instance="instances"
-
 # vim: ft=sh
