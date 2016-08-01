@@ -21,5 +21,8 @@ esac
 
 # FIXME: This is what was set...
 alias ls='ls -G'
+alias l='ls -lAFh'
+alias la='ls -A'
+alias ll='ls -alF'
 
 # vim: ft=sh
