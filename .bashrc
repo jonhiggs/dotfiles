@@ -19,7 +19,6 @@ export LANG=C
 export LC_CTYPE="en_US.UTF-8"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="nvim"
-export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 __my_prompt_command() {
   exit_status=$?
