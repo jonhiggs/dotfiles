@@ -6,7 +6,6 @@ case ${OS} in
     alias apt-get='sudo apt-get'
   ;;
   "Darwin")
-    export LANG=C
     alias dnsdomainname='domainname'
 
     # DARWIN GNU COREUTILS

@@ -15,6 +15,7 @@ XDG_CACHE_HOME="${HOME}/Library/Caches"
 
 PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+export LANG=C
 export LC_CTYPE="en_US.UTF-8"
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 export EDITOR="nvim"
