@@ -1,0 +1,3 @@
+alias df='df -H'
+
+# vim: ft=sh

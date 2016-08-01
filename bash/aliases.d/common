@@ -1,5 +1,4 @@
 alias cdd='cd ../; ls'
-alias df='df -H'
 alias pwgen="pwgen -s 14 1"
 alias switch='rea-as-switch'
 alias unswitch='rea-as-unswitch'
