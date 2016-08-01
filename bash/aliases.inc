@@ -40,27 +40,6 @@ case ${OS} in
   ;;
 esac
 
-# MY ALIASES
-alias cdd='cd ../; ls'
-alias df='df -H'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias l='ls -lAFh'
-alias la='ls -A'
-alias ll='ls -alF'
-alias lock='pmset displaysleepnow'
-alias ls='ls -G'
-alias pwgen="pwgen -s 14 1"
-alias sdate='gdate --rfc-3339=date'
-alias tig="tig status"
-alias switch='rea-as-switch'
-alias unswitch='rea-as-unswitch'
-alias vi='nvim'
-alias vim='nvim'
-
-# BMA ALIASES
-alias stack='stacks'
-alias instance="instances"
+source ${HOME}/etc/dotfiles/bash/aliases.d/common
 
 # vim: syntax=sh:ts=2:sw=2
