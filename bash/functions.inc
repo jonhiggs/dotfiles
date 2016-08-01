@@ -10,10 +10,6 @@ function groot() {
   cd $(driller --scm-root ./)
 }
 
-function marked() {
-  open -b $(osascript -e 'id of app "Marked 2"') $@
-}
-
 function nvim() {
   if ~/etc/vimfiles/nvim-socket_used ${NVIM_LISTEN_ADDRESS}; then
     ~/etc/vimfiles/nvim-tabedit.py $@

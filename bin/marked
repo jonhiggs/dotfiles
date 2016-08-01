@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+open -b $(osascript -e 'id of app "Marked 2"') $@
