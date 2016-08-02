@@ -7,7 +7,7 @@ PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export TZ="Australia/Melbourne"
 
 # SOURCE EXTRAS
-for file in \
+for file in                                               \
   ${HOME}/etc/dotfiles/bash/include.d/aliases.inc         \
   ${HOME}/etc/dotfiles/bash/include.d/arduino             \
   ${HOME}/etc/dotfiles/bash/include.d/bash-my-aws         \
