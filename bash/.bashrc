@@ -48,6 +48,7 @@ for file in ${HOME}/etc/dotfiles/bash/functions.inc                 \
             ${HOME}/etc/dotfiles/bash/include.d/git                 \
             ${HOME}/etc/dotfiles/bash/include.d/golang              \
             ${HOME}/etc/dotfiles/bash/include.d/grep                \
+            ${HOME}/etc/dotfiles/bash/include.d/homebrew            \
             ${HOME}/etc/dotfiles/bash/include.d/java                \
             ${HOME}/etc/dotfiles/bash/include.d/less                \
             ${HOME}/etc/dotfiles/bash/include.d/ls                  \

@@ -9,3 +9,4 @@ bash/bin/ghost-staging-network
 bash/bin/egcurl
 bash/bin/dirty_repos.sh
 bash/bin/bash_environment
+bash/include.d/homebrew
