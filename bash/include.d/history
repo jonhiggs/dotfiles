@@ -1,0 +1,7 @@
+HISTCONTROL=ignoreboth
+HISTSIZE=20000
+HISTFILESIZE=20000
+shopt -s histappend
+shopt -s checkwinsize
+
+# vim: ft=sh
