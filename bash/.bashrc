@@ -4,7 +4,6 @@
 [ -z "${PS1}" ] && return
 
 PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
 export TZ="/usr/share/zoneinfo/Australia/Melbourne"
 
 # SOURCE EXTRAS
