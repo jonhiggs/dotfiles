@@ -2,7 +2,7 @@
 osascript -e 'quit app "iTunes"'
 for dir in /Volumes/iTunes; do
   while [[ -d "${dir}" ]]; do
-    umount "${dir}"
+    sudo diskutil umount "${dir}"
     sleep 1
   done
 done
