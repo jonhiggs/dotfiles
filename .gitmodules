@@ -7,3 +7,6 @@
 [submodule "bash/src/rea-as-switcher"]
 	path = bash/src/rea-as-switcher
 	url = git@git.realestate.com.au:jon-higgs/rea-as-switcher.git
+[submodule "bash/src/bash-itunes"]
+	path = bash/src/bash-itunes
+	url = https://github.com/illusori/bash-itunes.git
