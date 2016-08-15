@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-status="$(docker-machine status ${DOCKER_MACHINE_NAME})"
-[[ "${status}" != "Running" ]] && docker-machine start ${DOCKER_MACHINE_NAME}
-eval $(docker-machine env ${DOCKER_MACHINE_NAME} 2> /dev/null || exit 1)
