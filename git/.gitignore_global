@@ -3,3 +3,4 @@
 .agignore
 *.pyc
 *.orig
+.byebug_history
