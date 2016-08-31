@@ -10,3 +10,6 @@
 [submodule "bash/src/bash-itunes"]
 	path = bash/src/bash-itunes
 	url = https://github.com/illusori/bash-itunes.git
+[submodule "bash/src/bash-my-aws"]
+	path = bash/src/bash-my-aws
+	url = git@github.com:realestate-com-au/bash-my-aws.git
