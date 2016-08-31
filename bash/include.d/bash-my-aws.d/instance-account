@@ -1,0 +1,15 @@
+function instance-account() {
+  instance_id=$1
+  for account in "devprod rca-dev rca-prod rca-stg gandalf"; do
+    [[ -h ${account} ]] && continue
+    account=$(basename ${account})
+    switch ${account} > /dev/null
+    if instances ${instance_id} &> /dev/null; then
+      echo ${account}
+      return 0
+    fi
+  done
+
+  echo ${instance_id} not found in any of your accounts
+  return 1
+}

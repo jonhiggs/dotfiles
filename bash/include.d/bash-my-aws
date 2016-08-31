@@ -1,6 +1,6 @@
 for f in                                      \
-  ${HOME}/Repos/bash-my-aws/lib/*-functions   \
-  ${HOME}/Repos/bash-my-aws/custom/*
+  ${HOME}/etc/dotfiles/bash/src/bash-my-aws/lib/*-functions   \
+  ${HOME}/etc/dotfiles/bash/include.d/bash-my-aws.d/*
 do
   source $f
 done
