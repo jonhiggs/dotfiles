@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-bin="/usr/bin/ghost"
+bin="${HOME}/.rvm/gems/${RUBY_VERSION}/bin/ghost"
 case $1 in
   "list"|"")  ${bin} $@      ;;
   *)          sudo ${bin} $@ ;;
