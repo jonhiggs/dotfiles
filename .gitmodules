@@ -1,9 +1,6 @@
 [submodule "bash/src/bash_environment"]
 	path = bash/src/bash_environment
 	url = git@github.com:jonhiggs/bash_environment.git
-[submodule "bash/src/osxvpncli"]
-	path = bash/src/osxvpncli
-	url = git@github.com:jonhiggs/osxvpncli.git
 [submodule "bash/src/rea-as-switcher"]
 	path = bash/src/rea-as-switcher
 	url = git@git.realestate.com.au:jon-higgs/rea-as-switcher.git
