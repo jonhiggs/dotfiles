@@ -5,7 +5,10 @@ else
   echo "  brew install bash-completion"
 fi
 
-for f in ${HOME}/etc/dotfiles/bash_completion/*; do
+for f in \
+  ${HOME}/etc/dotfiles/bash_completion/* \
+  /usr/local/bash_completion.d/*
+do
   source $f
 done
 
