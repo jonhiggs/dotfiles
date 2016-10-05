@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-dir=${1:-$(pwd)}
-gitx_id=$(osascript -e 'id of app "GitX"')
-open -b ${gitx_id} --args $(driller --absolute ${dir})
