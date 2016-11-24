@@ -1,6 +1,7 @@
 if [[ "$(uname)" == "Darwin" ]]; then
   alias dnsdomainname='domainname'
   alias lock='pmset displaysleepnow'
+  alias power="pmset -g batt"
 
   # DARWIN GNU COREUTILS
   if brew list | grep coreutils &> /dev/null; then
@@ -8,7 +9,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias cp="gcp"
     alias cut="gcut"
     alias date="gdate"
-    alias sdate='gdate --rfc-3339=date'
     alias echo="gecho"
     alias gnice="ggnice"
     alias groups="ggroups"
@@ -18,6 +18,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias mkdir="gmkdir"
     alias mktemp="gmktemp"
     alias readlink="greadlink"
+    alias sdate='gdate --rfc-3339=date'
     #alias sed="gsed"
     alias sleep="gsleep"
     alias sort="gsort"
