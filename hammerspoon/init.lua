@@ -2,6 +2,7 @@ hs.window.animationDuration = 0
 
 local application = require "hs.application"
 
+-- Apptivate Replacement ---------------------------
 hs.hotkey.bind({"cmd"}, "1", function()
   application.launchOrFocus("iTerm")
 end)
@@ -13,6 +14,96 @@ end)
 hs.hotkey.bind({"cmd"}, "3", function()
   application.launchOrFocus("Slack")
 end)
+----------------------------------------------------
+
+
+-- Moom Replacement --------------------------------
+-- fullscreen
+hs.hotkey.bind({"cmd", "shift"}, "F", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w
+  f.h = max.h
+  win:setFrame(f)
+end)
+
+-- slim
+hs.hotkey.bind({"cmd", "shift"}, "D", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = 200
+  f.y = 0
+  f.w = 800
+  f.h = max.h
+  win:setFrame(f)
+end)
+
+--left
+hs.hotkey.bind({"cmd", "shift"}, "H", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w / 2
+  f.h = max.h
+  win:setFrame(f)
+end)
+
+-- right
+hs.hotkey.bind({"cmd", "shift"}, "L", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.w / 2
+  f.y = max.y
+  f.w = max.w / 2
+  f.h = max.h
+  win:setFrame(f)
+end)
+
+-- top
+hs.hotkey.bind({"cmd", "shift"}, "K", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w
+  f.h = max.h / 2
+  win:setFrame(f)
+end)
+
+-- bottom
+hs.hotkey.bind({"cmd", "shift"}, "J", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.h / 2
+  f.w = max.w
+  f.h = max.h / 2
+  win:setFrame(f)
+end)
+
+
+
 
 -- hs.hotkey.bind({"alt"}, "B", function()
 --   local win = hs.window.focusedWindow()
@@ -40,86 +131,3 @@ end)
 --   end
 -- end)
 
--- position fullscreen
-hs.hotkey.bind({"cmd", "shift"}, "F", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w
-  f.h = max.h
-  win:setFrame(f)
-end)
-
--- position slim
-hs.hotkey.bind({"cmd", "shift"}, "D", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = 200
-  f.y = 0
-  f.w = 800
-  f.h = max.h
-  win:setFrame(f)
-end)
-
---position left
-hs.hotkey.bind({"cmd", "shift"}, "H", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
-  win:setFrame(f)
-end)
-
--- position right
-hs.hotkey.bind({"cmd", "shift"}, "L", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.w / 2
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
-  win:setFrame(f)
-end)
-
--- position top
-hs.hotkey.bind({"cmd", "shift"}, "K", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w
-  f.h = max.h / 2
-  win:setFrame(f)
-end)
-
--- position bottom
-hs.hotkey.bind({"cmd", "shift"}, "J", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.h / 2
-  f.w = max.w
-  f.h = max.h / 2
-  win:setFrame(f)
-end)
