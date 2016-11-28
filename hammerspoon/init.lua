@@ -22,6 +22,10 @@ end)
 hs.hotkey.bind({"cmd"}, "5", function()
   application.launchOrFocus("Calendar")
 end)
+
+hs.hotkey.bind({"cmd"}, "0", function()
+  application.launchOrFocus("Messages")
+end)
 ----------------------------------------------------
 
 
