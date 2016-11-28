@@ -14,6 +14,10 @@ end)
 hs.hotkey.bind({"cmd"}, "3", function()
   application.launchOrFocus("Slack")
 end)
+
+hs.hotkey.bind({"cmd"}, "4", function()
+  application.launchOrFocus("Mail")
+end)
 ----------------------------------------------------
 
 
