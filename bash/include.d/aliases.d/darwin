@@ -2,6 +2,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias dnsdomainname='domainname'
   alias lock='pmset displaysleepnow'
   alias power="pmset -g batt"
+  alias vim="${HOME}/bin/nvim"
 
   # DARWIN GNU COREUTILS
   if brew list | grep coreutils &> /dev/null; then

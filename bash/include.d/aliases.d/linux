@@ -1,7 +1,10 @@
 if [[ "$(uname)" == "Linux" ]]; then
+  alias vim="/usr/local/bin/nvim"
+
   if which apt-get &> /dev/null; then
     alias apt-get='sudo apt-get'
   fi
+
 fi
 
 # vim: ft=sh
