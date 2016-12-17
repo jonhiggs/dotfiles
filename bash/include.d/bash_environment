@@ -1,1 +1,1 @@
-source ${HOME}/.bash_environment
+[[ -f ${HOME}/.bash_environment ]] && source ${HOME}/.bash_environment
