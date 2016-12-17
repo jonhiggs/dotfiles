@@ -1,6 +1,6 @@
 __my_prompt_command() {
   exit_status=$?
-  eval $(bash_environment)
+  which bash_environment &> /dev/null && eval $(bash_environment)
   type rea-as-stick &> /dev/null && rea-as-stick
 
   if [[ ${exit_status} -eq 0 ]]; then
