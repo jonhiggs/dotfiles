@@ -1,11 +1,12 @@
 {
     "profiles": [
         {
+                "f1": "vk_consumer_brightness_down",
             "name": "Default profile",
             "selected": true,
             "simple_modifications": {
                 "caps_lock": "left_control",
-                "fn": "f5",
+                "fn": "f4",
                 "left_control": "fn",
                 "right_command": "right_option"
             }
