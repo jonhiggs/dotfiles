@@ -5,11 +5,16 @@ else
   echo "  brew install bash-completion"
 fi
 
-for f in \
-  ${HOME}/etc/dotfiles/bash_completion/* \
-  /usr/local/bash_completion.d/*
-do
-  source $f
+
+DIRS=( 
+  ${HOME}/etc/dotfiles/bash_completion
+  /usr/local/bash_completion.d
+  /usr/local/Homebrew/completions/bash
+)
+
+for d in ${DIRS[@]}; do
+  [[ -d ${d} ]] || continue
+  for f in ${d}/*; do source $f; done
 done
 
 # vim: ft=sh
