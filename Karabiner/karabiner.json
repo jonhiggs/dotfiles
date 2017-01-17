@@ -23,6 +23,10 @@
                 "fn": "f4",
                 "left_control": "fn",
                 "right_command": "right_option"
+            },
+            "virtual_hid_keyboard": {
+                "caps_lock_delay_milliseconds": 0,
+                "keyboard_type": "ansi"
             }
         }
     ]
