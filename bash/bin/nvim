@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-if ~/etc/vimfiles/nvim-socket_used ${NVIM_LISTEN_ADDRESS}; then
-  ~/etc/vimfiles/nvim-tabedit.py $@
-else
-  rm -f ${NVIM_LISTEN_ADDRESS} # clean up lingering socket
-  /usr/local/bin/nvim -p $@
-fi
