@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Get AWS credentials from ${HOME}/.aws/credentials or the EC2 instance role
+
+function get_value() {
+  parameter=$1
+  get_value_from_config ${parameter} || get_value_from_role ${parameter}
+}
+
+function get_value_from_config() {
+  cat ${HOME}/.aws/* | grep $1 | awk '{ print $3 }'
+}
+
+function get_value_from_instance_role() {
+  echo "not implemented" >&2
+  return 1
+}
+
+export AWS_ACCESS_KEY_ID="$(get_value aws_access_key_id)"
+export AWS_SECRET_ACCESS_KEY="$(get_value aws_secret_access_key)"
+export AWS_DEFAULT_REGION="$(get_value region)"

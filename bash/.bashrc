@@ -10,6 +10,7 @@ export TZ="Australia/Melbourne"
 for file in                                               \
   ${HOME}/etc/dotfiles/bash/include.d/aliases.inc         \
   ${HOME}/etc/dotfiles/bash/include.d/arduino             \
+  ${HOME}/etc/dotfiles/bash/include.d/aws                 \
   ${HOME}/etc/dotfiles/bash/include.d/bash-my-aws         \
   ${HOME}/etc/dotfiles/bash/include.d/bash_completion     \
   ${HOME}/etc/dotfiles/bash/include.d/bash_environment    \
