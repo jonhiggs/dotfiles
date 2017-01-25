@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+packages=(
+	autoconf
+	autogen
+	automake
+	awscli
+	bash
+	bash-completion
+	bdw-gc
+	cmake
+	coreutils
+	git
+	gmp
+	guile
+	libevent
+	libffi
+	libtool
+	libunistring
+	mobile-shell
+	openssl
+	pcre
+	pkg-config
+	protobuf
+	readline
+	reattach-to-user-namespace
+	redis
+	the_silver_searcher
+	tig
+	tmux
+	wget
+	xz
+)
+
+installed_packages=( $(brew list -1) )
+
+for p in ${packages[@]}; do
+	found=false
+	for i in ${installed_packages[@]}; do
+		[[ $p == $i ]] && found=true
+	done
+	$found || brew install ${package}
+done
