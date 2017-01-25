@@ -1,1 +1,1 @@
-HOMEBREW_GITHUB_API_TOKEN="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+export HOMEBREW_GITHUB_API_TOKEN="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
