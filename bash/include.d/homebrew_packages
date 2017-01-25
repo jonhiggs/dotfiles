@@ -11,6 +11,7 @@ packages=(
 	coreutils
 	git
 	gmp
+	gpg
 	guile
 	libevent
 	libffi
