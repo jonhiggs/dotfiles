@@ -3,6 +3,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias lock='pmset displaysleepnow'
   alias power="pmset -g batt"
   alias vim="${HOME}/bin/nvim"
+  alias bash="/usr/local/bin/bash"
 
   # DARWIN GNU COREUTILS
   if brew list | grep coreutils &> /dev/null; then
