@@ -1,7 +1,7 @@
 case `uname` in
   "Darwin")
     which gls &> /dev/null \
-      && alias ls="gls --color=auto"
+      && alias ls="gls --color=auto -h"
     ;;
   *)
     alias ls="ls --color=auto"
