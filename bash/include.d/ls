@@ -1,11 +1,11 @@
 case `uname` in
   "Darwin")
-			which gls &> /dev/null \
-				&& alias ls="gls --color=auto"
-			;;
-		*)
-			alias ls="ls --color=auto"
-			;;
+    which gls &> /dev/null \
+      && alias ls="gls --color=auto"
+    ;;
+  *)
+    alias ls="ls --color=auto"
+    ;;
 esac
 
 # http://geoff.greer.fm/lscolors/
