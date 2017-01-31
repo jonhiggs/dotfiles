@@ -30,6 +30,7 @@ packages=(
   redis
   the_silver_searcher
   tig
+  tree
   tmux
   wget
   xz
