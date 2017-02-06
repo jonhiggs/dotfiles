@@ -19,12 +19,8 @@ hs.hotkey.bind({"cmd"}, "4", function()
   application.launchOrFocus("Mail")
 end)
 
-hs.hotkey.bind({"cmd"}, "5", function()
-  application.launchOrFocus("Calendar")
-end)
-
 hs.hotkey.bind({"cmd"}, "0", function()
-  application.launchOrFocus("Messages")
+  application.launchOrFocus("Calendar")
 end)
 ----------------------------------------------------
 
