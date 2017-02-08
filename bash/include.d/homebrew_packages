@@ -19,7 +19,6 @@ packages=(
   libtool
   libunistring
   mobile-shell
-  mysql
   openssl
   pcre
   pkg-config
