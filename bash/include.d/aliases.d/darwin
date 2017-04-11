@@ -27,6 +27,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias split="gsplit"
     alias stat="gstat"
     alias tail="gtail"
+    alias tac="gtac"
     alias tee="gtee"
     alias touch="gtouch"
     alias uname="guname"
