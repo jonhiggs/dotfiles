@@ -26,7 +26,6 @@
             "simple_modifications": {
                 "caps_lock": "left_control",
                 "fn": "f4",
-                "left_control": "fn",
                 "right_command": "right_option",
                 "right_option": "fn"
             },
