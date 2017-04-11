@@ -22,7 +22,8 @@
                 "caps_lock": "left_control",
                 "fn": "f4",
                 "left_control": "fn",
-                "right_command": "right_option"
+                "right_command": "right_option",
+                "right_option": "fn"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
