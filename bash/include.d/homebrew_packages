@@ -24,7 +24,6 @@ packages=(
   libtool
   libunistring
   mobile-shell
-  mysql
   openssl
   parallel
   pcre
