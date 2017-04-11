@@ -14,23 +14,32 @@ packages=(
   gnu-sed
   gnupg2
   guile
+  htop
+  imagemagick
+  jq
+  jshon
   libevent
   libffi
   libtool
   libunistring
   mobile-shell
+  mysql
   openssl
+  parallel
   pcre
+  pidof
   pkg-config
   protobuf
   python3
   readline
   reattach-to-user-namespace
   redis
+  rename
   the_silver_searcher
   tig
   tmux
   tree
+  watch
   wget
   xz
   zlib
@@ -38,6 +47,7 @@ packages=(
 
 casks=(
   imageoptim
+  java
 )
 
 installed_packages=( $(brew list -1) )
