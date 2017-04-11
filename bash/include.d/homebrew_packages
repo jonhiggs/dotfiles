@@ -9,6 +9,7 @@ packages=(
   bdw-gc
   cmake
   coreutils
+  fzf
   git
   gmp
   gnu-sed
