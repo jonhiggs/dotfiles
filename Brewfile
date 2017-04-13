@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-packages=(
+brews = %w[
   autoconf
   autogen
   automake
@@ -43,28 +42,15 @@ packages=(
   wget
   xz
   zlib
-)
+]
 
-casks=(
+casks = %w[
   imageoptim
   java
-)
+]
 
-installed_packages=( $(brew list -1) )
-installed_casks=( $(brew cask list -1) )
+brews.each {|p| brew p }
+casks.each {|c| cask c }
 
-for p in ${packages[@]}; do
-  found=false
-  for i in ${installed_packages[@]}; do
-    [[ "$p" == "$i" ]] && found=true
-  done
-  $found || brew install $p
-done
 
-for c in ${casks[@]}; do
-  found=false
-  for i in ${installed_casks[@]}; do
-    [[ "$c" == "$i" ]] && found=true
-  done
-  $found || brew cask install $c
-done
+# vim: ft=ruby
