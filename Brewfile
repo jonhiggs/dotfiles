@@ -29,6 +29,7 @@ brews = %w[
   pidof
   pkg-config
   protobuf
+  pwgen
   python3
   readline
   reattach-to-user-namespace
