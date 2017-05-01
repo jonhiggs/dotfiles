@@ -18,6 +18,7 @@ brews = %w[
   imagemagick
   jq
   jshon
+  lastpass-cli
   libevent
   libffi
   libtool
