@@ -19,6 +19,7 @@ brews = %w[
   jq
   jshon
   lastpass-cli
+  lftp
   libevent
   libffi
   libtool
