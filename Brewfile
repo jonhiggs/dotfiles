@@ -1,3 +1,5 @@
+tap 'jmespath/jmespath'
+
 brews = %w[
   autoconf
   autogen
@@ -16,6 +18,7 @@ brews = %w[
   guile
   htop
   imagemagick
+  jp
   jq
   jshon
   lastpass-cli
