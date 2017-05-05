@@ -1,3 +1,7 @@
 # You can get the code of a key by typing ^v<any_key>
+# You can reload initrc with ^x^r
 "\e[7~": beginning-of-line
 "\e[8~": end-of-line
+"∫": backward-word
+"ƒ": forward-word
+"∂": kill-word
