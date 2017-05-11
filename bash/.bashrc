@@ -30,6 +30,7 @@ for file in                                               \
   ${HOME}/etc/dotfiles/bash/include.d/n                   \
   ${HOME}/etc/dotfiles/bash/include.d/ps1                 \
   ${HOME}/etc/dotfiles/bash/include.d/rea-as              \
+  ${HOME}/etc/dotfiles/bash/include.d/rust                \
   ${HOME}/etc/dotfiles/bash/include.d/rvm                 \
   ${HOME}/etc/dotfiles/bash/include.d/ssh                 \
   ${HOME}/etc/dotfiles/bash/include.d/tmux                \
