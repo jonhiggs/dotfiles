@@ -28,6 +28,7 @@ brews = %w[
   libtool
   libunistring
   mobile-shell
+  nmap
   openssl
   parallel
   pcre
