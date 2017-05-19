@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
-bin="${HOME}/.rvm/gems/${RUBY_VERSION}/bin/ghost"
+bin=$(
+  find ${HOME}/.rvm/gems -type f -maxdepth 3 \
+    | grep '/bin/ghost' \
+    | head -n1
+)
+
+export RUBY_VERSION=$(
+  basename $(echo ${bin} | sed -E 's/([^\/]*)\/bin\/ghost/\1\//g')
+)
+
+source "$HOME/.rvm/scripts/rvm"
+rvm use ${RUBY_VERSION} &> /dev/null
+
 case $1 in
   "list"|"")  ${bin} $@      ;;
   *)          sudo ${bin} $@ ;;
