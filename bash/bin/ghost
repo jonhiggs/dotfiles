@@ -5,6 +5,11 @@ bin=$(
     | head -n1
 )
 
+if [[ -z ${bin} ]]; then
+  echo "ghost: command not found" >&2
+  exit 1
+fi
+
 export RUBY_VERSION=$(
   basename $(echo ${bin} | sed -E 's/([^\/]*)\/bin\/ghost/\1\//g')
 )
