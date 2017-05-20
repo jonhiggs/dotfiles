@@ -176,6 +176,7 @@ key_bindings:
   - { key: B,        mods: Alt,     chars: "b"                         }
   - { key: C,        mods: Command, action: Copy                         }
   - { key: F,        mods: Alt,     chars: "f"                         }
+  - { key: D,        mods: Alt,     chars: "d"                         }
   - { key: Q,        mods: Command, action: Quit                         }
   - { key: V,        mods: Command, action: Paste                        }
   - { key: W,        mods: Command, action: Quit                         }
