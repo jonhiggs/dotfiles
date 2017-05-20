@@ -10,6 +10,7 @@ brews = %w[
   bdw-gc
   cmake
   coreutils
+  ffmpeg
   fzf
   git
   gmp
