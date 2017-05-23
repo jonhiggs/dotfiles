@@ -1,2 +1,3 @@
 # You can get the code of a key by typing ^v<any_key>
 # You can reload initrc with ^x^r
+set horizontal-scroll-mode On
