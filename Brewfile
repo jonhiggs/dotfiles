@@ -42,6 +42,7 @@ brews = %w[
   reattach-to-user-namespace
   redis
   rename
+  shellcheck
   the_silver_searcher
   tig
   tmux
