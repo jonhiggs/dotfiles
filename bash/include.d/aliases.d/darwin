@@ -2,7 +2,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias dnsdomainname='domainname'
   alias lock='pmset displaysleepnow'
   alias lcok='lock'
-  alias power="pmset -g batt"
+  alias battery="pmset -g batt"
+  alias power="battery"
   alias tsb="tmux save-buffer - | pbcopy"  # XXX tmux doesn't save the buffer to the system clipboard in Alacritty. This is a temporary work-around.
 
   alias imageoptim='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
