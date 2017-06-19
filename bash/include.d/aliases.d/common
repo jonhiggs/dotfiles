@@ -6,4 +6,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias vitab="nvr --remote-tab"
 
+alias kctl="kubectl"
+alias kumo="${HOME}/src/bin/kumo"
+
 # vim: ft=sh
