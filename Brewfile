@@ -61,5 +61,4 @@ casks = %w[
 brews.each {|p| brew p }
 casks.each {|c| cask c }
 
-
 # vim: ft=ruby
