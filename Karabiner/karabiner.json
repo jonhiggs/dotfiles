@@ -40,6 +40,30 @@
                 "right_command": "right_option",
                 "right_option": "fn"
             },
+            "complex_modifications": {
+              "rules": [
+                {
+                  "manipulators": [
+                    {
+                      "description": "Ctrl-Space to Space",
+                      "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                          "mandatory": [ "control" ]
+                        }
+                      },
+                      "to": [
+                        {
+                          "key_code": "spacebar",
+                          "modifiers": []
+                        }
+                      ],
+                      "type": "basic"
+                    }
+                  ]
+                }
+              ]
+            },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "keyboard_type": "ansi"
