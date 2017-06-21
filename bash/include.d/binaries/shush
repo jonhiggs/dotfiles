@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if [[ ! -f ${HOME}/bin/shush ]]; then
+  URL='https://github.com/realestate-com-au/shush/releases/download/v1.3.2/shush_darwin_amd64'
+  wget ${URL} -O "${HOME}/bin/shush"
+  chmod +x "${HOME}/bin/shush"
+fi
