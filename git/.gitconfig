@@ -19,3 +19,5 @@
 	trustExitCode = true
 [alias]
 	st = status
+[url "git@github.com:"]
+	insteadOf = https://github.com/
