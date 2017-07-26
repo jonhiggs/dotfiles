@@ -12,6 +12,7 @@ brews = %w[
   coreutils
   ffmpeg
   fzf
+  gettext
   git
   gmp
   gnu-sed
