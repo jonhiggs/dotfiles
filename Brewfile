@@ -30,6 +30,7 @@ brews = %w[
   libtool
   libunistring
   mobile-shell
+  netcat
   nmap
   openssl
   parallel
@@ -55,11 +56,25 @@ brews = %w[
 ]
 
 casks = %w[
+  docker
+  dropbox
+  google-chrome
+  hammerspoon
   imageoptim
   java
+  karabiner-elements
+  qcad
+  scapple
 ]
 
-brews.each {|p| brew p }
-casks.each {|c| cask c }
+appstore = {
+  "1Password" => 443987910,
+  "Slack" => 803453959,
+  "Wunderlist" => 410628904,
+}
+
+brews.each {|p| brew p}
+casks.each {|c| cask c}
+appstore.each {|app,id| mas app, id: id}
 
 # vim: ft=ruby
