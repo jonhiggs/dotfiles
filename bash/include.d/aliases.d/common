@@ -1,12 +1,13 @@
 alias cdd='cd ../; ls'
-alias ivm="vim"
+alias grpe="grep"
 alias pwgen="pwgen -s 14 1"
+
 alias v="vitab"
 alias vi="nvim"
 alias vim="nvim"
 alias vitab="nvr --remote-tab"
+alias ivm="vim"
 
 alias kctl="kubectl"
-alias kumo="${HOME}/src/bin/kumo"
 
 # vim: ft=sh
