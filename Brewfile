@@ -10,6 +10,7 @@ brews = %w[
   bdw-gc
   cmake
   coreutils
+  fd
   ffmpeg
   fzf
   gettext
