@@ -49,7 +49,7 @@ hs.hotkey.bind({"cmd", "shift"}, "D", function()
 
   f.x = 200
   f.y = 0
-  f.w = 800
+  f.w = max.w / 2
   f.h = max.h
   win:setFrame(f)
 end)
@@ -109,8 +109,6 @@ hs.hotkey.bind({"cmd", "shift"}, "J", function()
   f.h = max.h / 2
   win:setFrame(f)
 end)
-
-
 
 
 -- hs.hotkey.bind({"alt"}, "B", function()
