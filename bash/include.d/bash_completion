@@ -8,7 +8,6 @@ fi
 DIRS=(
   ${HOME}/etc/dotfiles/bash_completion
   /usr/local/bash_completion.d
-  /usr/local/Cellar/2.13.0/etc/bash_completion.d/git-completion.bash
   /usr/local/Homebrew/completions/bash
 )
 
