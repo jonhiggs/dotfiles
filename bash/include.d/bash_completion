@@ -6,9 +6,9 @@ else
 fi
 
 DIRS=(
-  ${HOME}/etc/dotfiles/bash_completion
   /usr/local/bash_completion.d
   /usr/local/Homebrew/completions/bash
+  ${HOME}/etc/dotfiles/bash_completion
 )
 
 for d in ${DIRS[@]}; do
