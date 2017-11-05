@@ -1,0 +1,11 @@
+{
+  "^b" = moveBackward:;
+  "^d" = deleteForward:;
+  "^f" = moveForward:;
+  "^k" = deleteToEndOfLine:;
+  "^u" = deleteToBeginningOfLine:;
+  "^w" = deleteWordBackward:;
+  "~b" = moveWordBackward:;
+  "~d" = deleteWordForward:;
+  "~f" = moveWordForward:;
+}
