@@ -11,4 +11,9 @@ alias find="echo 'use fd'"
 
 alias kctl="kubectl"
 
+alias aws_default='AWS_DEFAULT_PROFILE="default" AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null) AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null) '
+alias aws_prod='AWS_DEFAULT_PROFILE="prod" AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null) AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null) '
+alias aws_export_default='export AWS_DEFAULT_PROFILE="default" AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null) AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null) '
+alias aws_export_prod='export AWS_DEFAULT_PROFILE="prod" AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null) AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null) '
+
 # vim: ft=sh
