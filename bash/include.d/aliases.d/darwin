@@ -39,4 +39,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias umount="diskutil umount"
 fi
 
+alias route="echo 'try netstat -r'"
+
 # vim: ft=sh
