@@ -7,3 +7,6 @@
 [submodule "bash/src/bash-my-aws"]
 	path = bash/src/bash-my-aws
 	url = git@github.com:realestate-com-au/bash-my-aws.git
+[submodule "bash/src/bash-preexec"]
+	path = bash/src/bash-preexec
+	url = git@github.com:rcaloras/bash-preexec.git
