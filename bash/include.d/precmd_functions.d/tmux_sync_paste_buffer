@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 # XXX tmux doesn't save the buffer to the system clipboard in Alacritty. This
 # is a temporary work-around.
-tmux save-buffer - | pbcopy
+
+_my_tmux_save_buffer() {
+  tmux save-buffer - | pbcopy
+}
+
+precmd_functions+=(_my_tmux_save_buffer)
