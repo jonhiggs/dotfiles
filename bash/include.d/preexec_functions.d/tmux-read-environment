@@ -1,0 +1,16 @@
+_my_tmux_read_environment() {
+  echo "working" >> /tmp/out
+  original_ifs=${IFS}
+  IFS=$'\n'
+  for line in $(tmux show-environment); do
+    [[ $line =~ ^- ]] && continue
+    k=$(echo ${line} | cut -d= -f1)
+    v=$(echo ${line} | cut -d= -f2-)
+    export ${k}=${v}
+  done
+  IFS=${original_ifs}
+}
+
+preexec_functions+=(_my_tmux_read_environment)
+
+# vim: ft=sh
