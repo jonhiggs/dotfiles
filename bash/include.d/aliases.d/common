@@ -7,7 +7,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias vitab="nvr --remote-tab"
 alias ivm="vim"
-alias find="echo 'use fd'"
+alias find="echo 'use fd' >&2"
 
 alias kctl="kubectl"
 
