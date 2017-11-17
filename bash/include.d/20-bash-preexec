@@ -1,0 +1,8 @@
+source ${HOME}/etc/dotfiles/bash/src/bash-preexec/bash-preexec.sh
+unset precmd_functions
+
+for file in ${HOME}/etc/dotfiles/bash/include.d/precmd_functions.d/*; do
+  [[ -f ${file} ]] && source ${file}
+done
+
+# vim: ft=sh

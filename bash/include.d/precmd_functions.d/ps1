@@ -1,0 +1,10 @@
+_my_ps1() {
+  case $? in
+    0) PS1='\[\e[0;33m\]\w\$\[\e[0m\] ' ;; # yellow
+    *) PS1='\[\e[0;31m\]\w\$\[\e[0m\] ' ;; # red
+  esac
+}
+
+precmd_functions+=(_my_ps1)
+
+# vim: ft=sh
