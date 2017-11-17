@@ -1,14 +1,10 @@
 #!/usr/bin/env bash -e
-trap "echo 'Failed to get secrets for ${AWS_DEFAULT_PROFILE}'" ERR
-
-AWS_DEFAULT_PROFILE=${AWS_DEFAULT_PROFILE:-default}
+AWS_DEFAULT_PROFILE=${1:-default}
 AWS_DEFAULT_REGION=$(aws configure get region 2> /dev/null)
 AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null)
 AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null)
 
-cat <<EOF
-export AWS_DEFAULT_PROFILE=${AWS_DEFAULT_PROFILE}
-export AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
-export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
-EOF
+tmux set-environment AWS_DEFAULT_PROFILE "${AWS_DEFAULT_PROFILE}"
+tmux set-environment AWS_DEFAULT_REGION "${AWS_DEFAULT_REGION}"
+tmux set-environment AWS_SECRET_ACCESS_KEY "${AWS_SECRET_ACCESS_KEY}"
+tmux set-environment AWS_ACCESS_KEY_ID "${AWS_ACCESS_KEY_ID}"
