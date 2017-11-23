@@ -2,7 +2,7 @@ source ${HOME}/etc/dotfiles/bash/src/bash-preexec/bash-preexec.sh
 unset preexec_functions
 unset precmd_functions
 
-if ! ${IGNORE_PREEXEC}; then
+if ! ${IGNORE_PREEXEC:-false}; then
   for file in ${HOME}/etc/dotfiles/bash/include.d/preexec_functions.d/*; do
     [[ -f ${file} ]] && source ${file}
   done
