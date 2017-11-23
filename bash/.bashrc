@@ -9,8 +9,9 @@ export TZ="Australia/Melbourne"
 
 # SOURCE EXTRAS
 for file in ${HOME}/etc/dotfiles/bash/include.d/*; do
-  [[ ${file} =~ .disabled$ ]] && continue
-  [[ -f ${file} ]] && source ${file}
+  [[ ! -f ${file} ]]            && continue
+  [[ ${file} =~ .disabled$ ]]   && continue
+  source ${file}
 done
 
 true
