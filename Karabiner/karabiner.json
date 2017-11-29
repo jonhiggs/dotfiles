@@ -160,7 +160,7 @@
                 }
             ],
             "name": "Default profile",
-            "selected": false,
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": {
@@ -472,8 +472,16 @@
                 }
             ],
             "name": "Cameron and Paul's Keyboards",
-            "selected": true,
+            "selected": false,
             "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": {
+                        "key_code": "left_control"
+                    }
+                },
                 {
                     "from": {
                         "key_code": "delete_forward"
@@ -512,14 +520,6 @@
                     },
                     "to": {
                         "key_code": "right_option"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "caps_lock"
-                    },
-                    "to": {
-                        "key_code": "left_control"
                     }
                 }
             ],
