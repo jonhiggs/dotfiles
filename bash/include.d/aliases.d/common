@@ -16,4 +16,7 @@ alias aws_prod='AWS_DEFAULT_PROFILE="prod" AWS_SECRET_ACCESS_KEY=$(aws configure
 alias aws_export_default='export AWS_DEFAULT_PROFILE="default" AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null) AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null) '
 alias aws_export_prod='export AWS_DEFAULT_PROFILE="prod" AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null) AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null) '
 
+hash -p ${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma bma
+hash -p ${HOME}/src/kumo/bin/kumo kumo
+
 # vim: ft=sh
