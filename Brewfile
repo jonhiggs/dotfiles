@@ -7,6 +7,7 @@ brews = %w[
   awscli
   bash
   bash-completion
+  bats
   bdw-gc
   cmake
   coreutils
@@ -24,6 +25,7 @@ brews = %w[
   jp
   jq
   jshon
+  lame
   lastpass-cli
   lftp
   libevent
@@ -46,6 +48,7 @@ brews = %w[
   redis
   rename
   shellcheck
+  socat
   the_silver_searcher
   tig
   tmux
