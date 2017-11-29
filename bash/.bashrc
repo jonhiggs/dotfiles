@@ -11,6 +11,7 @@ export TZ="Australia/Melbourne"
 for file in ${HOME}/etc/dotfiles/bash/include.d/*; do
   [[ ! -f ${file} ]]            && continue
   [[ ${file} =~ .disabled$ ]]   && continue
+  [[ ${file} =~ .example$ ]]    && continue
   source ${file}
 done
 
