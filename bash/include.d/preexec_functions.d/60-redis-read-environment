@@ -1,0 +1,27 @@
+export REDIS_SOCKET=$(tmux show-environment REDIS_SOCKET | cut -d= -f2-)
+
+REDIS_ENVIRONMENT_KEYS=(
+  AWS_DEFAULT_PROFILE
+  AWS_DEFAULT_REGION
+  AWS_SECRET_ACCESS_KEY
+  AWS_ACCESS_KEY_ID
+)
+
+_my_redis_read_environment() {
+  if [[ -z ${REDIS_SOCKET} ]]; then
+    echo "Redis is not running" >&2
+    return 1
+  fi
+
+  local data
+  data=$(redis-cli -s ${REDIS_SOCKET} mget ${REDIS_ENVIRONMENT_KEYS[@]})
+  for i in $(seq 1 ${#REDIS_ENVIRONMENT_KEYS[@]}); do
+    key=${REDIS_ENVIRONMENT_KEYS[$i-1]}
+    value=$(echo "${data}" | sed "${i}q;d")
+    export ${key}="${value}"
+  done
+}
+
+preexec_functions+=(_my_redis_read_environment)
+
+# vim: ft=sh

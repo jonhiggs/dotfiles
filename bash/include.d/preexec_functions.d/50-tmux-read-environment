@@ -1,4 +1,4 @@
-TMUX_READ_ENVIRONMENT_FREQUENCY=2
+TMUX_READ_ENVIRONMENT_FREQUENCY=60
 
 _my_tmux_read_environment_cache_expired() {
   [[ -z ${TMUX_READ_ENVIRONMENT_TIME} ]] && return 0
