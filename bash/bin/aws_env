@@ -1,6 +1,5 @@
 #!/usr/bin/env bash -e
-REDIS_SOCKET=$(tmux show-environment REDIS_SOCKET | cut -d= -f2-)
-REDIS_CMD="redis-cli -s ${REDIS_SOCKET}"
+REDIS_CMD="redis-cli"
 CACHE_DURATION=$(( 60 * 60 )) # 1h
 
 AWS_DEFAULT_PROFILE=${1:-staging}
