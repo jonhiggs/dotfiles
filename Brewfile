@@ -1,3 +1,4 @@
+tap 'homebrew/services'
 tap 'jmespath/jmespath'
 
 brews = %w[
