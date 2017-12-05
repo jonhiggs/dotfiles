@@ -61,6 +61,7 @@ brews = %w[
 ]
 
 casks = %w[
+  android-platform-tools
   docker
   dropbox
   google-chrome
