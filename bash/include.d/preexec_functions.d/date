@@ -1,0 +1,9 @@
+_my_date() {
+  echo -n -e "\e[90m" # Dark gray Normal \e[8mHidden"
+  echo -n ""; date +%H:%M:%S\ %d/%m
+  echo -n -e "\e[0m"  # Reset
+}
+
+preexec_functions+=(_my_date)
+
+# vim: ft=sh
