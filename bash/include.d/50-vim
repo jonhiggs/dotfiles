@@ -1,5 +1,11 @@
-export EDITOR="/usr/local/bin/nvim"
+export EDITOR="/usr/local/bin/nvim-0.2.2"
 export NVIM_LISTEN_ADDRESS="/tmp/nvim"
+
+hash -p ${EDITOR} nvim
+
 alias v="nvr --remote-tab"
+alias ivm="${EDITOR}"
+alias vi="${EDITOR}"
+alias vim="${EDITOR}"
 
 # vim: ft=sh
