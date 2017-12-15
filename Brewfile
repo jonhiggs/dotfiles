@@ -26,6 +26,7 @@ brews = %w[
   jp
   jq
   jshon
+  kubectl
   lame
   lastpass-cli
   lftp
