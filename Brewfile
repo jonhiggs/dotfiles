@@ -20,6 +20,7 @@ brews = %w[
   gmp
   gnu-sed
   gnupg2
+  gpg
   guile
   htop
   imagemagick
@@ -51,6 +52,7 @@ brews = %w[
   rename
   shellcheck
   socat
+  telnet
   the_silver_searcher
   tig
   tmux
