@@ -2,7 +2,10 @@
 REDIS_CMD="redis-cli -s /tmp/redis.sock"
 CACHE_DURATION=$(( 60 * 60 )) # 1h
 
-AWS_DEFAULT_PROFILE=${1:-staging}
+AWS_DEFAULT_PROFILE=${1:-non-prod}
+aws configure get aws_access_key_id &> /dev/null \
+  || echo "Invalid profile" >&1
+
 AWS_DEFAULT_REGION=$(aws configure get region 2> /dev/null)
 AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null)
 AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null)
