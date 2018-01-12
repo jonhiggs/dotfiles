@@ -1,3 +1,0 @@
-[[ "${TERM}" =~ ^screen ]] && tmux rename-window 'default'
-
-# vim: ft=sh
