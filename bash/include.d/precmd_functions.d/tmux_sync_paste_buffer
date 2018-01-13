@@ -3,6 +3,7 @@
 # is a temporary work-around.
 
 _my_tmux_save_buffer() {
+  [[ "${TERM}" =~ ^screen ]] || return 0
   tmux save-buffer - | pbcopy
 }
 
