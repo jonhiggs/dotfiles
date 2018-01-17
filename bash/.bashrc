@@ -12,7 +12,14 @@ for file in ${HOME}/etc/dotfiles/bash/include.d/*; do
   [[ ! -f ${file} ]]            && continue
   [[ ${file} =~ .disabled$ ]]   && continue
   [[ ${file} =~ .example$ ]]    && continue
-  source ${file}
+
+  if ${TIME_BASH:-false}; then
+    echo "sourcing ${file}"
+    time source "${file}"
+  else
+    source "${file}"
+  fi
+
 done
 
 true
