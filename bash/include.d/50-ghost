@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 which ghost &> /dev/null || exit 0
 
-if ! \ghost list | grep 'Listing 0 host' &> /dev/null; then
+if grep 'ghost start' /etc/hosts &> /dev/null; then
   echo "YOU HAVE CUSTOM HOSTFILE ENTRIES (ghost bust)"
 fi
