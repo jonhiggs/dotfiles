@@ -44,6 +44,7 @@ brews = %w[
   pidof
   pkg-config
   protobuf
+  pv
   pwgen
   python3
   readline
