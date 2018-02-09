@@ -1,0 +1,9 @@
+_aws_env_completion() {
+    local command="$1"
+    local word="$2"
+    local options=$(grep -e '^\[.*\]$' ${HOME}/.aws/credentials | tr -d '[]')
+    COMPREPLY=($(compgen -W "${options}" -- ${word}))
+    return 0
+}
+
+complete -F _aws_env_completion aws_env
