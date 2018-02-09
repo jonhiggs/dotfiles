@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+function files() {
+  find . -type f -name \'
+  find . -type f -name \*.bak
+  find . -type f -name \*.orig
+}
+
+for f in $(files); do
+  rm -i $f
+done
