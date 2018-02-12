@@ -2,6 +2,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias dnsdomainname='domainname'
   alias lock='pmset displaysleepnow'
   alias lcok='lock'
+  alias lokc='lock'
   alias battery="pmset -g batt"
   alias power="battery"
 
