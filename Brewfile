@@ -10,6 +10,7 @@ brews = %w[
   bash-completion
   bats
   bdw-gc
+  cabal-install
   cmake
   coreutils
   fd
@@ -70,6 +71,7 @@ casks = %w[
   dropbox
   google-chrome
   hammerspoon
+  haskell-platform
   imageoptim
   java
   karabiner-elements
