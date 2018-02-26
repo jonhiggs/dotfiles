@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+PROJECT_DIR=${1:-$(pwd)}
+TMUX_WINDOW=9
+tmux new-window -t ${TMUX_WINDOW} -n tmux -- bash --noprofile --norc
+tmux send-keys -t:${TMUX_WINDOW} C-z "cd ${PROJECT_DIR}; tig status; nvr --remote-send ':GitGutterAll<CR>'; exit" Enter
+tmux select-window -t:${TMUX_WINDOW}
