@@ -19,5 +19,6 @@
 	trustExitCode = true
 [alias]
 	st = status
+	master-rebaser = !git fetch && git rebase origin/master
 [url "git@github.com:"]
 	insteadOf = https://github.com/
