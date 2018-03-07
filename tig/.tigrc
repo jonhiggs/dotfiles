@@ -3,8 +3,7 @@ set line-graphics		= utf-8
 bind status C         none
 bind status <Ctrl-G>  !git commit
 bind status P         !git push origin
-bind status A         !git commit --amend
-bind status R         !git reset --soft HEAD~1
+bind status R         !git rebase -i HEAD~5
 
 color default         white black
 color author          default default normal
@@ -20,8 +19,6 @@ color stat-unstaged   red default
 color stat-untracked  red default
 color title-blur      white 025 bold
 color title-focus     white 236
-
-
 
 # VIM STUFF
 bind generic    F       view-grep       # Rebind the grep view
