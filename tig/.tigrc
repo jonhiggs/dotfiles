@@ -1,7 +1,7 @@
 set line-graphics		= utf-8
 
 bind status C         none
-bind status <Ctrl-G>  !git commit
+bind status <Ctrl-G>  !git commit -v
 bind status P         !git push origin
 bind status R         !git rebase -i HEAD~5
 
