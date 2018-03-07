@@ -15,7 +15,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   hash -p /usr/local/bin/shush-v1.3.4 shush
 
   # DARWIN GNU COREUTILS
-  if [[ -d /usr/local/Cellar/corutils ]]; then
+  if [[ -d /usr/local/Cellar/coreutils ]]; then
     alias cat="gcat"
     alias cp="gcp"
     alias cut="gcut"
