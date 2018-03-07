@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-open -b $(osascript -e 'id of app "Marked 2"') $@
+file=${@:-README.md}
+if [[ -f ${file} ]]; then
+  open -b $(osascript -e 'id of app "Marked 2"') ${file}
+else
+  exit 1
+fi
