@@ -7,5 +7,6 @@ alias v="nvr --remote-tab"
 alias ivm="${EDITOR}"
 alias vi="${EDITOR}"
 alias vim="${EDITOR}"
+alias vf="nvr --remote-tab \$(fzf)"
 
 # vim: ft=sh
