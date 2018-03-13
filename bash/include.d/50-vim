@@ -14,5 +14,6 @@ alias v="nvr --remote-tab"
 alias ivm="${EDITOR}"
 alias vi="${EDITOR}"
 alias vim="${EDITOR}"
+alias vims="while true; do vim; sleep 0.3; done"
 
 # vim: ft=sh
