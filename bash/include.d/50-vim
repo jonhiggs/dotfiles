@@ -3,10 +3,16 @@ export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 hash -p ${EDITOR} nvim
 
+function vf() {
+  root_dir=$(project_root $0)
+  cd "${root_dir}"
+  file=$(fzf)
+  [[ -f ${file} ]] && nvr --remote-tab "${file}"
+}
+
 alias v="nvr --remote-tab"
 alias ivm="${EDITOR}"
 alias vi="${EDITOR}"
 alias vim="${EDITOR}"
-alias vf="nvr --remote-tab \$(fzf)"
 
 # vim: ft=sh
