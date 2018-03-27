@@ -1,4 +1,5 @@
 alias cdd='cd ../; ls'
+alias cdr="cd \$(project_root ./)"
 alias grpe="grep"
 alias pwgen="pwgen -s 14 1"
 
