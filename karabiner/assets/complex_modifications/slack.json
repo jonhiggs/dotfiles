@@ -1,0 +1,63 @@
+{
+  "title": "Slack",
+  "rules": [
+    {
+      "description": "Slack Page Up",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.tinyspeck\\.slackmacgap$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Slack Page Down",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.tinyspeck\\.slackmacgap$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
