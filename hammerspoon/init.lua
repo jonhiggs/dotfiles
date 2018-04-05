@@ -8,7 +8,7 @@ hs.hotkey.bind({"cmd"}, "1", function()
 end)
 
 hs.hotkey.bind({"cmd"}, "2", function()
-  application.launchOrFocus("Google Chrome")
+  application.launchOrFocus("Firefox")
 end)
 
 hs.hotkey.bind({"cmd"}, "3", function()
