@@ -121,21 +121,22 @@
       ]
     },
     {
-      "description": "Firefox Up",
+      "description": "Firefox Back",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "k",
+            "key_code": "o",
             "modifiers": {
               "mandatory": [
-                "control"
+                "command"
               ]
             }
           },
           "to": [
             {
-              "key_code": "up_arrow"
+              "key_code": "left_arrow",
+              "modifiers": ["command"]
             }
           ],
           "conditions": [
@@ -150,21 +151,22 @@
       ]
     },
     {
-      "description": "Firefox Page Down",
+      "description": "Firefox Forward",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "d",
+            "key_code": "i",
             "modifiers": {
               "mandatory": [
-                "function"
+                "command"
               ]
             }
           },
           "to": [
             {
-              "key_code": "down_arrow"
+              "key_code": "right_arrow",
+              "modifiers": ["command"]
             }
           ],
           "conditions": [

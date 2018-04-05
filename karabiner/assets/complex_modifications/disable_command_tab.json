@@ -1,0 +1,25 @@
+{
+  "title": "Command Tab",
+  "rules": [
+    {
+      "description": "Disable",
+      "type": "basic",
+      "from": {
+        "key_code": "tab",
+        "modifiers": {
+          "manditory": [
+            "command"
+          ],
+          "optional": [
+            "shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "mission_control"
+        }
+      ]
+    }
+  ]
+}
