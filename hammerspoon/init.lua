@@ -54,6 +54,20 @@ hs.hotkey.bind({"cmd", "shift"}, "D", function()
   win:setFrame(f)
 end)
 
+-- extra-slim
+hs.hotkey.bind({"cmd", "shift"}, "S", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = 200
+  f.y = 0
+  f.w = max.w / 3
+  f.h = max.h
+  win:setFrame(f)
+end)
+
 --left
 hs.hotkey.bind({"cmd", "shift"}, "H", function()
   local win = hs.window.focusedWindow()
