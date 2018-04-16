@@ -10,7 +10,7 @@
 [merge]
 	tool = opendiff
 [push]
-	default = simple
+	default = current
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
