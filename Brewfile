@@ -15,6 +15,7 @@ brews = %w[
   coreutils
   fd
   ffmpeg
+  findutils
   fzf
   gettext
   git
