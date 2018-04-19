@@ -21,5 +21,6 @@
 	st = status
 	master-rebaser = !git fetch && git rebase origin/master
 	branch-cleanlocal = "!for b in $(git branch | grep -v '^*'); do git branch -d $b; done"
+	rbi = rebase -i HEAD~10
 [url "git@github.com:"]
 	insteadOf = https://github.com/
