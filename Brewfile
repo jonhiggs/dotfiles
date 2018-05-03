@@ -1,5 +1,6 @@
 tap 'homebrew/services'
 tap 'jmespath/jmespath'
+tap 'redbubble/yak'
 
 brews = %w[
   autoconf
@@ -63,6 +64,7 @@ brews = %w[
   watch
   wget
   xz
+  yak
   zlib
 ]
 

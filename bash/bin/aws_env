@@ -1,16 +1,45 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+set -e
+fetch_from_aws_config() {
+  aws configure get aws_access_key_id &> /dev/null \
+    || echo "Invalid profile" >&1
+
+  AWS_DEFAULT_REGION=$(aws configure get region 2> /dev/null)
+  AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null)
+  AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null)
+  unset AWS_SESSION_TOKEN
+}
+
+fetch_from_okta() {
+  source <(yak ${AWS_DEFAULT_PROFILE})
+  export AWS_DEFAULT_REGION="us-east-1"
+}
+
+AWS_VARIABLES=(
+  AWS_ACCESS_KEY_ID
+  AWS_DEFAULT_PROFILE
+  AWS_DEFAULT_REGION
+  AWS_SECRET_ACCESS_KEY
+  AWS_SESSION_TOKEN
+)
+
 REDIS_CMD="redis-cli -s /tmp/redis.sock"
 CACHE_DURATION=$(( 60 * 60 )) # 1h
 
-AWS_DEFAULT_PROFILE=${1:-non-prod}
-aws configure get aws_access_key_id &> /dev/null \
-  || echo "Invalid profile" >&1
+unset ${AWS_VARIABLES[@]}
+${REDIS_CMD} del ${AWS_VARIABLES[@]} &> /dev/null
+export AWS_DEFAULT_PROFILE=${1:-non-prod}
 
-AWS_DEFAULT_REGION=$(aws configure get region 2> /dev/null)
-AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null)
-AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id 2> /dev/null)
+case ${AWS_DEFAULT_PROFILE} in
+  personal) fetch_from_aws_config ;;
+  *)        fetch_from_okta       ;;
+esac
 
-for var in AWS_DEFAULT_PROFILE AWS_DEFAULT_REGION AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID; do
-  ${REDIS_CMD} set ${var} "${!var}" &> /dev/null
-  ${REDIS_CMD} expire ${var} ${CACHE_DURATION} &> /dev/null
+for var in ${AWS_VARIABLES[@]}; do
+  if [[ -v ${var} ]]; then
+    ${REDIS_CMD} set ${var} "${!var}" &> /dev/null
+    ${REDIS_CMD} expire ${var} ${CACHE_DURATION} &> /dev/null
+  else
+    unset ${var}
+  fi
 done
