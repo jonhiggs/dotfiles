@@ -20,6 +20,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias cp="gcp"
     alias cut="gcut"
     alias date="gdate"
+    alias dd="gdd"
     alias echo="gecho"
     alias gnice="ggnice"
     alias groups="ggroups"
