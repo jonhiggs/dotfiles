@@ -2,7 +2,7 @@
 set -e
 fetch_from_aws_config() {
   aws configure get aws_access_key_id &> /dev/null \
-    || echo "Invalid profile" >&1
+    || drop_cache && return 1
 
   AWS_DEFAULT_REGION=$(aws configure get region 2> /dev/null)
   AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key 2> /dev/null)
@@ -15,6 +15,12 @@ fetch_from_okta() {
   export AWS_DEFAULT_REGION="us-east-1"
 }
 
+drop_cache() {
+  unset ${AWS_VARIABLES[@]}
+  ${REDIS_CMD} del ${AWS_VARIABLES[@]} &> /dev/null
+}
+
+REDIS_CMD="redis-cli -s /tmp/redis.sock"
 AWS_VARIABLES=(
   AWS_ACCESS_KEY_ID
   AWS_DEFAULT_PROFILE
@@ -23,15 +29,16 @@ AWS_VARIABLES=(
   AWS_SESSION_TOKEN
 )
 
-REDIS_CMD="redis-cli -s /tmp/redis.sock"
-CACHE_DURATION=$(( 60 * 60 )) # 1h
+trap "drop_cache" SIGINT SIGTERM SIGQUIT
+drop_cache
 
 unset ${AWS_VARIABLES[@]}
-${REDIS_CMD} del ${AWS_VARIABLES[@]} &> /dev/null
+CACHE_DURATION=$(( 60 * 60 )) # 1h
 export AWS_DEFAULT_PROFILE=${1:-non-prod}
 
 case ${AWS_DEFAULT_PROFILE} in
   personal) fetch_from_aws_config ;;
+  drop)     drop_cache            ;;
   *)        fetch_from_okta       ;;
 esac
 
