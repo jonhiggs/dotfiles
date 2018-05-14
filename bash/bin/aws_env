@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 fetch_from_aws_config() {
+  AWS_DEFAULT_PROFILE=${AWS_PROFILE}
+
   aws configure get aws_access_key_id &> /dev/null \
     || drop_cache && return 1
 
@@ -11,7 +13,8 @@ fetch_from_aws_config() {
 }
 
 fetch_from_okta() {
-  source <(yak ${AWS_DEFAULT_PROFILE})
+  source <(yak ${AWS_PROFILE})
+  unset AWS_DEFAULT_PROFILE
   export AWS_DEFAULT_REGION="us-east-1"
 }
 
@@ -25,6 +28,7 @@ AWS_VARIABLES=(
   AWS_ACCESS_KEY_ID
   AWS_DEFAULT_PROFILE
   AWS_DEFAULT_REGION
+  AWS_PROFILE
   AWS_SECRET_ACCESS_KEY
   AWS_SESSION_TOKEN
 )
@@ -34,9 +38,9 @@ drop_cache
 
 unset ${AWS_VARIABLES[@]}
 CACHE_DURATION=$(( 60 * 60 )) # 1h
-export AWS_DEFAULT_PROFILE=${1:-non-prod}
+export AWS_PROFILE=${1:-non-prod}
 
-case ${AWS_DEFAULT_PROFILE} in
+case ${AWS_PROFILE} in
   personal) fetch_from_aws_config ;;
   drop)     drop_cache            ;;
   *)        fetch_from_okta       ;;
