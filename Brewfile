@@ -61,6 +61,7 @@ brews = %w[
   tig
   tmux
   tree
+  unrar
   watch
   wget
   xz
