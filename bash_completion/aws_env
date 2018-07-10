@@ -1,7 +1,7 @@
 _aws_env_completion() {
     local command="$1"
     local word="$2"
-    local options=$(yak --list-roles)
+    local options=$(yak --list-roles --cache-only 2> /dev/null)
     if [[ -f ${HOME}/.aws/credentials ]]; then
       local options+=$(grep -e '^\[.*\]$' ${HOME}/.aws/credentials | tr -d '[]')
     fi
