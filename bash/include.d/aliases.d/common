@@ -9,6 +9,7 @@ alias kctl="kubectl"
 
 alias dict="cat ${HOME}/etc/vimfiles/data/site/spell/custom-dictionary.utf-8.add ${HOME}/etc/vimfiles/data/site/spell/en_au-words.txt | sort -f"
 alias weather="redis-cli get weather_data | jq"
+alias wttr="curl wttr.in/~Melbourne"
 
 hash -p ${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma bma
 hash -p ${HOME}/src/kumo/bin/kumo kumo
