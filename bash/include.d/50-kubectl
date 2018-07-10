@@ -1,0 +1,5 @@
+KUBECONFIG=${KUBECONFIG:-${HOME}/.kube/config}
+for c in ${HOME}/.kube/rb-k8s-auth-pkg/*.yml; do
+  echo ${KUBECONFIG} | tr ':' '\n' | grep -q $c || KUBECONFIG+=":$c"
+done
+export KUBECONFIG
