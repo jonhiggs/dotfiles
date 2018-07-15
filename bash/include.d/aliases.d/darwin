@@ -44,6 +44,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias uniq="guniq"
     alias uptime="guptime"
     alias xargs="gxargs"
+    alias zcat="gzcat"
+    alias zgrep="gzgrep"
+    alias zless="gzless"
   fi
 fi
 
