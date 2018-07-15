@@ -24,7 +24,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^org\\.mozilla\\.firefoxdeveloperedition$"
               ]
             }
           ]
@@ -54,7 +55,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^org\\.mozilla\\.firefoxdeveloperedition$"
               ]
             }
           ]
@@ -84,7 +86,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^org\\.mozilla\\.firefoxdeveloperedition$"
               ]
             }
           ]
@@ -113,7 +116,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^org\\.mozilla\\.firefoxdeveloperedition$"
               ]
             }
           ]
@@ -143,7 +147,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^org\\.mozilla\\.firefoxdeveloperedition$"
               ]
             }
           ]
@@ -173,7 +178,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^org\\.mozilla\\.firefoxdeveloperedition$"
               ]
             }
           ]

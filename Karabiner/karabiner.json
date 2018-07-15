@@ -43,6 +43,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -75,6 +76,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -108,6 +110,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -140,6 +143,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -169,6 +173,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -198,6 +203,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -230,6 +236,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefoxdeveloperedition$",
                                             "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
