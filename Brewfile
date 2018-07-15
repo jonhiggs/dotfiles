@@ -55,6 +55,7 @@ brews = %w[
   redis
   rename
   shellcheck
+  shfmt
   socat
   telnet
   the_silver_searcher
