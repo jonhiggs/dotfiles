@@ -40,30 +40,30 @@ hs.hotkey.bind({"cmd", "shift"}, "F", function()
   win:setFrame(f)
 end)
 
--- slim
+-- slim 2/3
 hs.hotkey.bind({"cmd", "shift"}, "D", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = 200
+  f.x = max.w / 6           -- 1/6
   f.y = 0
-  f.w = max.w / 2
+  f.w = ( max.w / 3 ) * 2   -- 2/3
   f.h = max.h
   win:setFrame(f)
 end)
 
--- extra-slim
+-- extra-slim 1/3
 hs.hotkey.bind({"cmd", "shift"}, "S", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = 200
+  f.x = max.w / 3           -- 1/3
   f.y = 0
-  f.w = max.w / 3
+  f.w = max.w / 3           -- 1/3
   f.h = max.h
   win:setFrame(f)
 end)
