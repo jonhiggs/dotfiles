@@ -1,17 +1,23 @@
 #!/usr/bin/env bash
 function _help() {
-  echo "$0 <hostname>" >&2
+  echo "$0 <address> [host_header]" >&2
 }
 
-[[ $# -ne 1 ]] && _help && exit 1
-server_name=$1
+if [[ $# -eq 0 ]] || [[ $# -gt 2 ]]; then
+  _help
+  exit 1
+fi
 
-echo \
-  | openssl s_client \
-      -showcerts \
-      -servername ${server_name} \
-      -connect ${server_name}:443 \
-      2>/dev/null \
+address=$1
+server_name=${2:-$1}
+
+# the echo stops it waiting for stdin
+echo | \
+  openssl s_client \
+    -showcerts \
+    -servername ${server_name} \
+    -connect ${address}:443 \
+    2>/dev/null \
   | openssl x509 \
       -inform pem \
       -noout \
