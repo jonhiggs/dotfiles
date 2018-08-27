@@ -16,4 +16,6 @@ hash -p ${HOME}/src/kumo/bin/kumo kumo
 
 alias t="${HOME}/bin/tig_selector"
 
+alias aws_auth="aws_env non-prod; aws_env prod; aws_env drop"
+
 # vim: ft=sh
