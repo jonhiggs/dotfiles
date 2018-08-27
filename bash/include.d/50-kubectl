@@ -4,7 +4,7 @@ for c in ${HOME}/.kube/rb-k8s-auth-pkg/*.yml; do
 done
 export KUBECONFIG
 
-alias k=kubectl
-
+alias kubectl="echo 'use k'"
+alias k="/usr/local/bin/kubectl"
 
 # vim: ft=sh
