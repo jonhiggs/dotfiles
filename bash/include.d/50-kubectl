@@ -4,4 +4,7 @@ for c in ${HOME}/.kube/rb-k8s-auth-pkg/*.yml; do
 done
 export KUBECONFIG
 
-alias kubectx='kubectl config use-context $(kubectl config get-contexts -o name | sort -r | FZF)'
+alias k=kubectl
+
+
+# vim: ft=sh
