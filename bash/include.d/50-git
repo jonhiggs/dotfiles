@@ -2,4 +2,6 @@ alias tig="tig status"
 alias git="echo 'use g'"
 alias g="/usr/local/bin/git"
 
+__git_complete g _git
+
 # vim: ft=sh

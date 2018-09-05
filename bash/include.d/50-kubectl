@@ -6,5 +6,6 @@ export KUBECONFIG
 
 alias kubectl="echo 'use k'"
 alias k="/usr/local/bin/kubectl"
+complete -o default -F __start_kubectl k
 
 # vim: ft=sh
