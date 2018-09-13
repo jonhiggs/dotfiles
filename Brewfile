@@ -57,6 +57,7 @@ brews = %w[
   shellcheck
   shfmt
   socat
+  source-highlight
   telnet
   the_silver_searcher
   tig
