@@ -18,7 +18,9 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
-	st = status
+	p = pull
+	s = status
+	co = checkout
 	master-rebaser = !git fetch && git rebase origin/master
 	branch-cleanlocal = "!for b in $(git branch | grep -v '^*'); do git branch -d $b; done"
 	rbi = !git rebase -i HEAD~10
