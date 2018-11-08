@@ -270,4 +270,7 @@ hide_cursor_when_typing: true
 live_config_reload: true
 
 window:
-  decorations: false
+  decorations: none
+
+scrolling:
+  history: 0
