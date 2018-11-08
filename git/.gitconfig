@@ -4,11 +4,11 @@
 [help]
 	autocorrect = 1
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/etc/dotfiles/git/.gitignore_global
 [commit]
 	template = ~/etc/dotfiles/git/.git_commit_template
 [diff]
-  tool = opendiff
+	tool = opendiff
 [merge]
 	tool = opendiff
 [push]
