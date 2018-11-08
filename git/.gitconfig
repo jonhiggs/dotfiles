@@ -15,10 +15,6 @@
 	default = current
 [difftool "opendiff"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "opendiff"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [alias]
 	p = pull
 	s = status
