@@ -24,6 +24,7 @@ brews = %w[
   gnu-sed
   gnupg2
   gpg
+  graphviz
   guile
   htop
   imagemagick
@@ -87,7 +88,7 @@ casks = %w[
 
 appstore = {
   "1Password" => 443987910,
-  "Slack" => 803453959,
+  # "Slack" => 803453959, # Appstore version don't do keyboard shortcuts right.
   "Wunderlist" => 410628904,
 }
 
