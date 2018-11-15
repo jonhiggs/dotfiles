@@ -4,19 +4,17 @@
 [help]
 	autocorrect = 1
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/etc/dotfiles/git/.gitignore_global
+[commit]
+	template = ~/etc/dotfiles/git/.git_commit_template
 [diff]
-  tool = opendiff
+	tool = opendiff
 [merge]
 	tool = opendiff
 [push]
 	default = current
-[difftool "sourcetree"]
+[difftool "opendiff"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [alias]
 	p = pull
 	s = status
