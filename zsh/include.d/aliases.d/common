@@ -1,0 +1,22 @@
+alias cdd='cd ../; ls'
+alias cdr="cd \$(project_root ./)"
+alias grpe="grep"
+alias pwgen="pwgen -s 14 1"
+
+alias find="echo 'use fd' >&2"
+
+alias kctl="kubectl"
+
+alias dict="cat ${HOME}/etc/vimfiles/data/site/spell/custom-dictionary.utf-8.add ${HOME}/etc/vimfiles/data/site/spell/en_au-words.txt | sort -f"
+alias weather="redis-cli get weather_data | jq"
+alias wttr="curl wttr.in/~Melbourne"
+
+hash bma=${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma
+
+alias aws_auth="aws_env non-prod; aws_env prod; aws_env drop"
+
+alias uuid="ruby -e \"require 'securerandom'; puts SecureRandom.uuid\""
+
+alias week="date +%V"
+
+# vim: ft=sh

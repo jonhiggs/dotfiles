@@ -1,0 +1,7 @@
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+  export WORKON_HOME="$HOME/VirtualEnvs"
+  [[ -d ${WORKON_HOME} ]] || mkdir ${WORKON_HOME}
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# vim: ft=sh

@@ -1,0 +1,53 @@
+if [[ "$(uname)" == "Darwin" ]]; then
+  alias dnsdomainname='domainname'
+  alias lock='pmset displaysleepnow'
+  alias lcok='lock'
+  alias lokc='lock'
+  alias battery="pmset -g batt"
+  alias power="battery"
+
+  alias imageoptim='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
+  alias umount="diskutil umount"
+  alias route="echo 'try netstat -r'"
+
+  hash itunes="${HOME}/etc/dotfiles/bash/src/bash-itunes/itunes"
+  hash avr-gcc="/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/bin/gcc"
+  hash shush="/usr/local/bin/shush-v1.3.4"
+
+  # DARWIN GNU COREUTILS AND FINDUTILS
+  if [[ -d /usr/local/Cellar/coreutils ]]; then
+    alias cat="gcat"
+    alias cp="gcp"
+    alias cut="gcut"
+    alias date="gdate"
+    alias dd="gdd"
+    alias echo="gecho"
+    alias gnice="ggnice"
+    alias groups="ggroups"
+    alias head="ghead"
+    alias ln="gln"
+    alias ls="gls --color=auto"
+    alias mkdir="gmkdir"
+    alias mktemp="gmktemp"
+    alias readlink="greadlink"
+    alias sdate='gdate --rfc-3339=date'
+    alias sed="gsed"
+    alias sleep="gsleep"
+    alias sort="gsort"
+    alias split="gsplit"
+    alias stat="gstat"
+    alias tac="gtac"
+    alias tail="gtail"
+    alias tee="gtee"
+    alias touch="gtouch"
+    alias uname="guname"
+    alias uniq="guniq"
+    alias uptime="guptime"
+    alias xargs="gxargs"
+    alias zcat="gzcat"
+    alias zgrep="gzgrep"
+    alias zless="gzless"
+  fi
+fi
+
+# vim: ft=sh

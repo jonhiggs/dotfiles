@@ -1,0 +1,13 @@
+KUBECONFIG=${KUBECONFIG:-${HOME}/.kube/config}
+for c in ${HOME}/.kube/rb-k8s-auth-pkg/*.yml; do
+  echo ${KUBECONFIG} | tr ':' '\n' | grep -q $c || KUBECONFIG+=":$c"
+done
+export KUBECONFIG
+
+alias kubectl="echo 'use k'"
+alias k="/usr/local/bin/kubectl"
+
+# FIXME
+#complete -o default -F __start_kubectl k
+
+# vim: ft=sh

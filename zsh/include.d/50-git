@@ -1,0 +1,9 @@
+alias tig="tig status"
+alias git="echo 'use g'"
+alias t="${HOME}/bin/tig_selector"
+alias g="/usr/local/bin/git"
+
+# FIXME: completion
+#__git_complete g _git
+
+# vim: ft=sh

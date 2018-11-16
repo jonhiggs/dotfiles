@@ -1,0 +1,3 @@
+export LESS="-R"
+
+# vim: ft=sh

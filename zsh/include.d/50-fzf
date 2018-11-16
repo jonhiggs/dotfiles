@@ -1,0 +1,2 @@
+export FZF_DEFAULT_COMMAND='ag --hidden -l -g ""'
+export FZF_DEFAULT_OPTS='--bind ctrl-d:page-down,ctrl-u:page-up'

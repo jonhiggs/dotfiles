@@ -1,0 +1,60 @@
+PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+zle_highlight+=(paste:none)                         # No white background when you paste text
+unsetopt ALWAYS_LAST_PROMPT                         # List completions above PS1
+zstyle ':completion:*' insert-unambiguous true      # First tab completes unambiguous
+bindkey -e                                          # Enable emacs mode
+
+case $(uname) in
+  Darwin) alias ls="ls -G" ;;
+  Linux)  alias ls="ls --color=auto" ;;
+esac
+
+autoload -U colors && colors
+PS1="%{$fg[blue]%}%~$%{$reset_color%} "
+
+###############################################################################
+## Key Bindings
+
+unix-word-rubout () {
+    local WORDCHARS="*?_-.[]~=/&;!#$%^(){}<>"
+    zle backward-kill-word
+}
+zle -N unix-word-rubout
+
+backward-kill-word-new () {
+    local WORDCHARS=""
+    zle backward-kill-word
+}
+zle -N backward-kill-word-new
+
+emacs-forward-word-new () {
+    local WORDCHARS=""
+    zle emacs-forward-word
+}
+zle -N emacs-forward-word-new
+
+emacs-backward-word-new () {
+    local WORDCHARS=""
+    zle emacs-backward-word
+}
+zle -N emacs-backward-word-new
+
+bindkey '^[^?' backward-kill-word-new       # stops at non-alphanumeric
+bindkey '^W'   unix-word-rubout             # stops at whitespace
+bindkey '\ef'  emacs-forward-word-new       # stops at non-alphanumeric
+bindkey '\eb'  emacs-backward-word-new      # stops at non-alphanumeric
+
+###############################################################################
+# Includes
+for f in ~/etc/dotfiles/zsh/include.d/*; do
+  [[ $f =~ example$ ]] && continue
+  [[ $f =~ disabled$ ]] && continue
+  if [[ -f $f ]]; then
+    source $f
+  else
+    true
+  fi
+done
+
+# vim: ft=sh
