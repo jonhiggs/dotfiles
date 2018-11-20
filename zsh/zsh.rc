@@ -2,6 +2,7 @@ PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 zle_highlight+=(paste:none)                         # No white background when you paste text
 unsetopt ALWAYS_LAST_PROMPT                         # List completions above PS1
+unsetopt histverify                                 # echo !! should not verify before exec
 zstyle ':completion:*' insert-unambiguous true      # First tab completes unambiguous
 bindkey -e                                          # Enable emacs mode
 
