@@ -1,6 +1,7 @@
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=20000
 SAVEHIST=20000
+unsetopt histverify              # echo !! should not verify before exec
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
