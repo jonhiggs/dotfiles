@@ -1,4 +1,2 @@
-autoload -Uz compinit
-zmodload -i zsh/complist
 fpath=(/usr/local/share/zsh-completions $fpath)
-compinit
+autoload -Uz compinit
