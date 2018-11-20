@@ -21,7 +21,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias cut="gcut"
     alias date="gdate"
     alias dd="gdd"
-    alias echo="gecho"
+    #alias echo="gecho" # builtin is way faster
     alias gnice="ggnice"
     alias groups="ggroups"
     alias head="ghead"
