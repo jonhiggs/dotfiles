@@ -7,8 +7,7 @@ brews = %w[
   autogen
   automake
   awscli
-  bash
-  bash-completion
+  bat
   bats
   bdw-gc
   cabal-install
@@ -70,6 +69,8 @@ brews = %w[
   xz
   yak
   zlib
+  zsh
+  zsh-completions
 ]
 
 casks = %w[
