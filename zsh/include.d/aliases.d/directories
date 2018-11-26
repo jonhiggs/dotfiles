@@ -1,0 +1,5 @@
+hash -d dotfiles=~/etc/dotfiles
+hash -d rb-deploy=~/src/redbubble-deploy
+hash -d rb=~/src/redbubble
+hash -d tmuxfiles=~/etc/tmuxfiles
+hash -d vimfiles=~/etc/vimfiles
