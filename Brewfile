@@ -49,6 +49,7 @@ brews = %w[
   protobuf
   pv
   pwgen
+  pyenv
   python3
   readline
   reattach-to-user-namespace
