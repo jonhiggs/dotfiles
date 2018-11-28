@@ -12,6 +12,7 @@ alias weather="redis-cli get weather_data | jq"
 alias wttr="curl wttr.in/~Melbourne"
 
 hash bma=${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma
+hash imdb_rename=${HOME}/src/imdb_renamer/bin/imdb_rename
 
 alias aws_auth="aws_env non-prod; aws_env prod; aws_env drop"
 
