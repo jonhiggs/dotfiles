@@ -261,6 +261,38 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Messages Ctrl-W",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.iChat$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -399,14 +431,6 @@
                     },
                     "to": {
                         "key_code": "left_control"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "fn"
-                    },
-                    "to": {
-                        "key_code": "f4"
                     }
                 },
                 {
@@ -624,6 +648,38 @@
                                         "key_code": "right_arrow",
                                         "modifiers": [
                                             "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Messages Ctrl-W",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.iChat$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "right_option"
                                         ]
                                     }
                                 ],
@@ -1209,6 +1265,38 @@
                                         "key_code": "right_arrow",
                                         "modifiers": [
                                             "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Messages Ctrl-W",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.iChat$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "right_option"
                                         ]
                                     }
                                 ],
