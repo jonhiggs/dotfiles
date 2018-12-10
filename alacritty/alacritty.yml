@@ -1,10 +1,6 @@
 env:
   TERM: xterm-256color
 
-window.dimensions:
-  columns: 80
-  lines: 24
-
 dpi:
   x: 109.0
   y: 109.0
@@ -25,7 +21,7 @@ font:
     family: Terminus (TTF)
     style: Italic
 
-  size: 16.5
+  size: 16.0
 
   offset:
     x: 1
@@ -162,7 +158,13 @@ selection:
 live_config_reload: true
 
 window:
+  dimensions:
+    columns: 80
+    lines: 24
   decorations: none
+  padding:
+    x: 0
+    y: 0
   dynamic_padding: false
   start_maximized: true
 
