@@ -41,32 +41,32 @@ render_timer: false
 colors:
   primary:
     background: '0x000000'
-    foreground: '0xeaeaea'
+    foreground: '0xEAEAEA'
 
   cursor:
-    text: '0x000000'
-    cursor: '0xc7c400'
+    text:       '0x000000'
+    cursor:     '0xC7C400'
 
   normal:
-    black:   '0x000000'
-    red:     '0xc91b00'
-    green:   '0x00c200'
-    yellow:  '0xc7c400'
-    blue:    '0x4c4cbb'
-    magenta: '0xca30c7'
-    cyan:    '0x00c5c7'
-    white:   '0xc7c7c7'
+    black:      '0x000000'
+    red:        '0xC91B00'
+    green:      '0x00C200'
+    yellow:     '0xC7C400'
+    blue:       '0x4C4CBB'
+    magenta:    '0xCA30C7'
+    cyan:       '0x00C5C7'
+    white:      '0xC7C7C7'
 
   # Bright colors
   bright:
-    black:   '0x686868'
-    red:     '0xff6e67'
-    green:   '0x5ffa68'
-    yellow:  '0xfffc67'
-    blue:    '0x6871ff'
-    magenta: '0xff77ff'
-    cyan:    '0x60fdff'
-    white:   '0xffffff'
+    black:      '0x686868'
+    red:        '0xFF6E67'
+    green:      '0x5FFA68'
+    yellow:     '0xFFFC67'
+    blue:       '0x6871FF'
+    magenta:    '0xFF77FF'
+    cyan:       '0x60FDFF'
+    white:      '0xFFFFFF'
 
 visual_bell:
   animation: EaseOutExpo
