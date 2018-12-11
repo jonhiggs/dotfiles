@@ -423,7 +423,7 @@
                 }
             ],
             "name": "Default profile",
-            "selected": true,
+            "selected": false,
             "simple_modifications": [
                 {
                     "from": {
@@ -431,6 +431,14 @@
                     },
                     "to": {
                         "key_code": "left_control"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "fn"
+                    },
+                    "to": {
+                        "key_code": "f4"
                     }
                 },
                 {
@@ -1406,7 +1414,7 @@
                 }
             ],
             "name": "ML67",
-            "selected": false,
+            "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0
