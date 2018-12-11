@@ -4,7 +4,7 @@ local application = require "hs.application"
 
 -- Apptivate Replacement ---------------------------
 hs.hotkey.bind({"cmd"}, "1", function()
-  application.launchOrFocus("Alacritty")
+  application.launchOrFocus("iTerm")
 end)
 
 hs.hotkey.bind({"cmd"}, "2", function()
