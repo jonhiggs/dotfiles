@@ -55,6 +55,14 @@ hs.hotkey.bind({"cmd", "shift"}, "D", function()
   f.y = 0
   f.w = ( max.w / 3 ) * 2   -- 2/3
   f.h = max.h
+
+  local app = win:application()
+  if string.find(app:title(), "^iTerm") then
+    print("is iterm")
+    f.x = (f.x - 8)
+    f.w = (f.w + (8 * 2))
+  end
+
   win:setFrame(f)
 end)
 
