@@ -26,6 +26,10 @@ end)
 hs.hotkey.bind({"cmd"}, "6", function()
   application.launchOrFocus("Scapple")
 end)
+
+hs.hotkey.bind({"cmd"}, "7", function()
+  application.launchOrFocus("Messages")
+end)
 ----------------------------------------------------
 
 
