@@ -10,7 +10,7 @@ hs.hotkey.bind({"cmd"}, "1", function()
     local bad_term = hs.application.get("com.googlecode.iterm2")
     local good_term = "Alacritty"
 
-    if bad_term then
+    if bad_term ~= nil then
       bad_term:kill()
     end
 
@@ -19,7 +19,7 @@ hs.hotkey.bind({"cmd"}, "1", function()
     local bad_term = hs.application.get("io.alacritty")
     local good_term = "iTerm"
 
-    if bad_term then
+    if bad_term ~= nil then
       bad_term:kill()
     end
 
