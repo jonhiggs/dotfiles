@@ -7,9 +7,23 @@ require "hs.screen"
 hs.hotkey.bind({"cmd"}, "1", function()
   local mode = hs.screen.mainScreen():currentMode()
   if string.find(mode['scale'], "^2.0") then
-    application.launchOrFocus("Alacritty")
+    local bad_term = hs.application.get("com.googlecode.iterm2")
+    local good_term = "Alacritty"
+
+    if bad_term then
+      bad_term:kill()
+    end
+
+    application.launchOrFocus(good_term)
   else
-    application.launchOrFocus("iTerm")
+    local bad_term = hs.application.get("io.alacritty")
+    local good_term = "iTerm"
+
+    if bad_term then
+      bad_term:kill()
+    end
+
+    application.launchOrFocus(good_term)
   end
 end)
 
