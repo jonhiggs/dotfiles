@@ -1,10 +1,16 @@
 hs.window.animationDuration = 0
 
 local application = require "hs.application"
+require "hs.screen"
 
 -- Apptivate Replacement ---------------------------
 hs.hotkey.bind({"cmd"}, "1", function()
-  application.launchOrFocus("iTerm")
+  local mode = hs.screen.mainScreen():currentMode()
+  if string.find(mode['scale'], "^2.0") then
+    application.launchOrFocus("Alacritty")
+  else
+    application.launchOrFocus("iTerm")
+  end
 end)
 
 hs.hotkey.bind({"cmd"}, "2", function()
