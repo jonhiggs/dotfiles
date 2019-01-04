@@ -82,7 +82,6 @@ hs.hotkey.bind({"cmd", "shift"}, "D", function()
 
   local app = win:application()
   if string.find(app:title(), "^iTerm") then
-    print("is iterm")
     f.x = (f.x - 8)
     f.w = (f.w + (8 * 2))
   end
@@ -187,3 +186,16 @@ end)
 --   end
 -- end)
 
+
+-- Select keyboard in karabiner when it's connected/disconnected.
+hs.usb.watcher.new(function(dataTable)
+  print(dataTable['eventType'] .. " " .. dataTable['productName'])
+  if dataTable['productName'] == 'ML67' then
+     if dataTable['eventType'] == 'added' then
+       hs.execute [["/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli" "--select-profile" "ML67"]]
+     elseif dataTable['eventType'] == 'removed' then
+       hs.execute [["/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli" "--select-profile" "Default profile"]]
+     end
+  end
+
+end):start()
