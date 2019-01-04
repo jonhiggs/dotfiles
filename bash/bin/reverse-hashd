@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+function reverse-hashd() {
+  kv=( $(hash -dL | cut -d\  -f3 | tr '=' ' ' | sort -k2 -u | sort | tr ' ' '=') )
+
+  data=$1
+
+  for a in ${kv}; do
+    k="$(echo $a | cut -d= -f1)"
+    v="$(echo $a | cut -d= -f2)"
+
+    if [[ ${data} =~ ^$v ]]; then
+      data=$(echo ${data} | sed "s#^$v#~$k#")
+    fi
+  done
+
+  echo ${data} | sed "s#^~${USER}#~#"
+}
+
+hash -d ${USER}=${HOME}
+source /Users/jonhiggs/etc/dotfiles/zsh/include.d/aliases.d/directories
+reverse-hashd $1
