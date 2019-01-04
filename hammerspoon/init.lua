@@ -160,33 +160,6 @@ hs.hotkey.bind({"cmd", "shift"}, "J", function()
 end)
 
 
--- hs.hotkey.bind({"alt"}, "B", function()
---   local win = hs.window.focusedWindow()
---   local app = win:application()
--- 
---   if not string.find(app:title(), "^iTerm2$") then
---     print("sending alt")
---     hs.eventtap.keyStroke({'alt'}, 'left')
---   else
---     print("sending real")
---     hs.eventtap.keyStroke({'alt'}, 'B')
---   end
--- end)
--- 
--- hs.hotkey.bind({"alt"}, "F", function()
---   local win = hs.window.focusedWindow()
---   local app = win:application()
--- 
---   if not string.find(app:title(), "^iTerm2$") then
---     print("sending alt")
---     hs.eventtap.keyStroke({'alt'}, 'right')
---   else
---     print("sending real")
---     hs.eventtap.keyStroke({'alt'}, 'F')
---   end
--- end)
-
-
 -- Select keyboard in karabiner when it's connected/disconnected.
 hs.usb.watcher.new(function(dataTable)
   print(dataTable['eventType'] .. " " .. dataTable['productName'])
