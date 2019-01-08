@@ -158,8 +158,8 @@ live_config_reload: true
 
 window:
   dimensions:
-    columns: 180
-    lines: 55
+    columns: 80
+    lines: 20
   decorations: none
   padding:
     x: 0
