@@ -2,8 +2,8 @@ env:
   TERM: xterm-256color
 
 dpi:
-  x: 109.0
-  y: 109.0
+  x: 220.0
+  y: 220.0
 
 tabspaces: 8
 
