@@ -1,5 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-[[ ${BASH_VERSION} =~ ^4 ]] || echo "You are not running bash 4."
+[[ ${BASH_VERSION} =~ ^5 ]] || echo "You are not running bash 5."
 
 # If not running interactively, don't do anything
 [[ -z "${PS1}" ]] && return
