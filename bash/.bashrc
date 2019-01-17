@@ -1,8 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-[[ ${BASH_VERSION} =~ ^5 ]] || echo "You are not running bash 5."
-
 # If not running interactively, don't do anything
 [[ -z "${PS1}" ]] && return
+
+[[ ${BASH_VERSION} =~ ^5 ]] || echo "You are not running bash 5."
 
 PATH="${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export TZ="Australia/Melbourne"
