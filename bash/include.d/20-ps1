@@ -5,6 +5,6 @@ _my_ps1() {
   esac
 }
 
-precmd_functions+=(_my_ps1)
+PROMPT_COMMAND='_my_ps1'
 
 # vim: ft=sh
