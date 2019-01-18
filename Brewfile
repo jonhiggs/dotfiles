@@ -7,6 +7,8 @@ brews = %w[
   autogen
   automake
   awscli
+  bash
+  bash-completion@2
   bat
   bats
   bdw-gc

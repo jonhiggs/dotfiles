@@ -1,12 +1,12 @@
-if [[ -f /usr/local/etc/bash_completion ]]; then
-  source /usr/local/etc/bash_completion
+if [[ -f /usr/local/etc/profile.d/bash_completion.sh ]]; then
+  source /usr/local/etc/profile.d/bash_completion.sh
 else
   echo "The bash_completion script isn't found. To fix, do this:"
-  echo "  brew install bash-completion"
+  echo "  brew install bash-completion@2"
 fi
 
 DIRS=(
-  /usr/local/bash_completion.d
+  /usr/local/etc/bash_completion.d
   /usr/local/Homebrew/completions/bash
   ${HOME}/etc/dotfiles/bash_completion
 )
