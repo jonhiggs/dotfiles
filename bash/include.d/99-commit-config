@@ -7,3 +7,4 @@ for d in ${HOME}/etc/*; do
     [[ $c -gt 0 ]] && echo "There are $c changes to your $(basename $d)"
   )
 done
+true
