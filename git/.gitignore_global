@@ -4,3 +4,4 @@
 *.pyc
 *.orig
 .byebug_history
+.env
