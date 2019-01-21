@@ -1,0 +1,3 @@
+PROMPT_COMMAND='_my_ps1; _my_dotenv'
+
+# vim: ft=sh

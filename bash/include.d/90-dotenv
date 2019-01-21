@@ -1,0 +1,5 @@
+_my_dotenv() {
+  if [[ -f ${PWD}/.env ]]; then
+    source ${PWD}/.env
+  fi
+}

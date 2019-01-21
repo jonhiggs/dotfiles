@@ -5,6 +5,4 @@ _my_ps1() {
   esac
 }
 
-PROMPT_COMMAND='_my_ps1'
-
 # vim: ft=sh
