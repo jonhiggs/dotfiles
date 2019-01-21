@@ -112,8 +112,9 @@ hs.hotkey.bind({"cmd", "shift"}, "H", function()
 
   f.x = max.x
   f.y = max.y
-  f.w = max.w / 2
+  f.w = 1750
   f.h = max.h
+
   win:setFrame(f)
 end)
 
@@ -124,9 +125,9 @@ hs.hotkey.bind({"cmd", "shift"}, "L", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.w / 2
+  f.x = 1750
   f.y = max.y
-  f.w = max.w / 2
+  f.w = max.w - 1750
   f.h = max.h
   win:setFrame(f)
 end)
