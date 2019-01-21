@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+changes=0
+for d in ${HOME}/etc/*; do
+  (
+    cd $d
+    c=$(git --no-pager diff --numstat origin/master | awk ' BEGIN { c=0 } { c+=$1+$2 } END { print c }')
+    [[ $c -gt 0 ]] && echo "There are $c changes to your $(basename $d)"
+  )
+done
