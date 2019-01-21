@@ -9,6 +9,7 @@ DIRS=(
   /usr/local/etc/bash_completion.d
   /usr/local/Homebrew/completions/bash
   ${HOME}/etc/dotfiles/bash_completion
+  /usr/local/opt/nvm/etc/bash_completion.d
 )
 
 for d in ${DIRS[@]}; do

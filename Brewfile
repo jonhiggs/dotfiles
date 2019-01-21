@@ -43,6 +43,7 @@ brews = %w[
   mobile-shell
   netcat
   nmap
+  nvm
   openssl
   parallel
   pcre
