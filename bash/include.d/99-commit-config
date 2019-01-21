@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-changes=0
 for d in ${HOME}/etc/*; do
   (
     cd $d
