@@ -62,6 +62,7 @@ brews = %w[
   shfmt
   socat
   source-highlight
+  tcpdump
   telnet
   the_silver_searcher
   tig
@@ -89,6 +90,7 @@ casks = %w[
   karabiner-elements
   qcad
   scapple
+  wireshark
 ]
 
 appstore = {
