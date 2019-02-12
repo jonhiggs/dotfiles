@@ -1,7 +1,7 @@
 alias cdd='cd ../; ls'
 alias cdr="cd \$(project_root ./)"
 alias grpe="grep"
-alias pwgen="pwgen -s 14 1"
+alias pwgen="pwgen --secure --symbols 14 1"
 
 alias find="echo 'use fd' >&2"
 
