@@ -17,6 +17,28 @@
                     {
                         "manipulators": [
                             {
+                                "description": "Option-Space to Space",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": []
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
                                 "description": "Ctrl-Space to Space",
                                 "from": {
                                     "key_code": "spacebar",
@@ -516,7 +538,7 @@
                 }
             ],
             "name": "Default profile",
-            "selected": false,
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": {
@@ -1017,7 +1039,7 @@
                 }
             ],
             "name": "ML67",
-            "selected": true,
+            "selected": false,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0
