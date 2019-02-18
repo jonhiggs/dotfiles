@@ -1,13 +1,13 @@
-for f in                                      \
-  ${HOME}/etc/dotfiles/bash/src/bash-my-aws/lib/*-functions   \
-  ${HOME}/etc/dotfiles/bash/include.d/bash-my-aws.d/*
-do
+files=(
+  ${HOME}/src/bash-my-aws/lib/*-functions
+  ${HOME}/src/bash-my-aws/bash_completion.sh
+)
+
+for f in ${files[@]}; do
   source $f
 done
 
 alias stack='stacks'
 alias instance="instances"
 
-
 # vim: ft=sh
-
