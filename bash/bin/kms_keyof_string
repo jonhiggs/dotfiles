@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+key_arn() {
+  aws kms decrypt \
+    --ciphertext-blob fileb://<(echo $1 | base64 -D) \
+    --query KeyId \
+    --output text
+}
+
+aws kms list-aliases \
+  --key-id $(key_arn $1) \
+  --query 'Aliases[][AliasName]' \
+  --output text

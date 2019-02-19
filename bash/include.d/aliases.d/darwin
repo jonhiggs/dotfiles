@@ -12,7 +12,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
   hash -p ${HOME}/etc/dotfiles/bash/src/bash-itunes/itunes itunes
   hash -p /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/bin/gcc avr-gcc
-  hash -p /usr/local/bin/shush-v1.3.4 shush
 
   # DARWIN GNU COREUTILS AND FINDUTILS
   if [[ -d /usr/local/Cellar/coreutils ]]; then
