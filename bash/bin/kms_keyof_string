@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
+
 key_arn() {
   aws kms decrypt \
-    --ciphertext-blob fileb://<(echo $1 | base64 -D) \
+    --ciphertext-blob fileb://<(echo $1 | base64 --decode) \
     --query KeyId \
     --output text
 }
