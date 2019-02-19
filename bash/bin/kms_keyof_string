@@ -6,7 +6,13 @@ key_arn() {
     --output text
 }
 
+if [[ -t 0 ]]; then
+  string=$@
+else
+  string=$(cat /dev/stdin)
+fi
+
 aws kms list-aliases \
-  --key-id $(key_arn $1) \
+  --key-id $(key_arn "${string}") \
   --query 'Aliases[][AliasName]' \
   --output text
