@@ -30,5 +30,3 @@ region=${2:-us-east-1}
 
 set_role "${role}"
 set_region "${region}"
-
-#fetch $1
