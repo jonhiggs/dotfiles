@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+REDIS_CMD="redis-cli -s /tmp/redis.sock"
+CURRENT_ROLE=$(${REDIS_CMD} --raw get yak_role)
+CURRENT_REGION=$(${REDIS_CMD} --raw get yak_region)
+
+_help() {
+  echo "$0 <role>:<region>"
+}
+
+set_role() {
+  ${REDIS_CMD} set yak_role $1 > /dev/null
+}
+
+set_region() {
+  ${REDIS_CMD} set yak_region $1 > /dev/null
+}
+
+fetch() {
+  if [[ -z $1 ]]; then
+    yak ${CURRENT_ROLE}
+  else
+    yak $1 && set_role $1
+  fi
+}
+
+role=${1:-${CURRENT_ROLE}}
+region=${2:-us-east-1}
+
+[[ -z ${role} ]] && _help
+
+set_role "${role}"
+set_region "${region}"
+
+#fetch $1

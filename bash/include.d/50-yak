@@ -1,0 +1,8 @@
+y() {
+  role=$(redis-cli -s /tmp/redis.sock --raw get yak_role)
+  region=$(redis-cli -s /tmp/redis.sock --raw get yak_region)
+  eval $(yak ${role})
+  export AWS_DEFAULT_REGION="${region}"
+}
+
+# vim: ft=sh b:is_bash=1
