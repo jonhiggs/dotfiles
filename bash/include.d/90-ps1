@@ -1,7 +1,7 @@
 _my_ps1() {
   case $? in
-    0) PS1='\[\e[0;33m\]\w\$\[\e[0m\] ' ;; # yellow
-    *) PS1='\[\e[0;31m\]\w\$\[\e[0m\] ' ;; # red
+    0) PS1='\[\e[0;33m\]\w\n\$\[\e[0m\] ' ;; # yellow
+    *) PS1='\[\e[0;31m\]\w\n\$\[\e[0m\] ' ;; # red
   esac
 }
 
