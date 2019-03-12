@@ -1,7 +1,8 @@
 export LESS="-R"
 
 _lessc() {
-  /usr/local/Cellar/source-highlight/3.1.8_9/bin/src-hilite-lesspipe.sh $1 | less
+  cmd=$(\find /usr/local/Cellar/source-highlight -name src-hilite-lesspipe.sh | tail -n1)
+  ${cmd} $1 | less
 }
 
 alias lessc="_lessc"

@@ -35,6 +35,7 @@ brews = %w[
   kubectl
   lame
   lastpass-cli
+  lesspipe
   lftp
   libevent
   libffi
