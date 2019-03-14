@@ -10,6 +10,10 @@ function vf() {
   [[ -f ${file} ]] && nvr --remote-tab "${file}"
 }
 
+function vl() {
+  /opt/nvim/share/nvim/runtime/macros/less.sh $@
+}
+
 alias v="nvr --remote-tab"
 alias ivm="${EDITOR}"
 alias vi="${EDITOR}"
