@@ -1,11 +1,12 @@
 export LESS="-R"
 
 _lessc() {
-  cmd=$(\find /usr/local/Cellar/source-highlight -name src-hilite-lesspipe.sh | tail -n1)
-  ${cmd} $1 | less
+  tmux resize-pane -Z
+  /usr/local/Cellar/source-highlight/3.1.8_10/bin/src-hilite-lesspipe.sh $1 | less
+  tmux resize-pane -Z
 }
 
-alias lessc="_lessc"
+alias l="_lessc"
 
 for cmd in /usr/bin/lesspipe /usr/local/bin/lesspipe.sh; do
   [[ -x ${cmd} ]] || continue
