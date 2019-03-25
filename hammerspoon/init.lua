@@ -1,3 +1,8 @@
+function bluetooth(power)
+  print("Setting bluetooth to " .. power)
+  hs.execute("/usr/local/bin/blueutil --power " .. power)
+end
+
 hs.window.animationDuration = 0
 
 local application = require "hs.application"
@@ -166,9 +171,11 @@ hs.usb.watcher.new(function(dataTable)
   print(dataTable['eventType'] .. " " .. dataTable['productName'])
   if dataTable['productName'] == 'ML67' then
      if dataTable['eventType'] == 'added' then
+       bluetooth("on")
        hs.execute [["/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli" "--select-profile" "ML67"]]
      elseif dataTable['eventType'] == 'removed' then
        hs.execute [["/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli" "--select-profile" "Default profile"]]
+       bluetooth("off")
      end
   end
 
