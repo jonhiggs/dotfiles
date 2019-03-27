@@ -4,7 +4,6 @@ for c in ${HOME}/.kube/rb-k8s-auth-pkg/*.yml; do
 done
 export KUBECONFIG
 
-alias kubectl="echo 'use k'"
 alias k="/usr/local/bin/kubectl -n \${KUBE_NAMESPACE}"
 complete -o default -F __start_kubectl k
 
