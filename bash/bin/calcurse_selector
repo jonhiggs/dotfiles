@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+TMUX_WINDOW=8
+tmux new-window -t ${TMUX_WINDOW} -n calcurse -- bash --noprofile --norc
+tmux send-keys -t:${TMUX_WINDOW} C-z "calcurse; exit" Enter
+tmux select-window -t:${TMUX_WINDOW}
