@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
+BRANCH=${1:-$(git rev-parse --abbrev-ref HEAD)}
 REPO=$(
   git config --get remote.origin.url \
     | awk '
         {
           sub(/.*github.com:?/, "", $0)
           sub(/\.git$/,"",$0)
+          gsub(/_/,"-",$0)
           print $0
         }
       '
