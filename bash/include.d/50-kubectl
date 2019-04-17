@@ -4,7 +4,7 @@ for c in ${HOME}/.kube/rb-k8s-auth-pkg/*.yml; do
 done
 export KUBECONFIG
 
-alias k="/usr/local/bin/kubectl -n \${KUBE_NAMESPACE}"
+alias k="/usr/local/bin/kubectl -n \${KUBE_NAMESPACE:-default}"
 complete -o default -F __start_kubectl k
 
 # vim: ft=sh
