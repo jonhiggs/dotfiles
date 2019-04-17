@@ -22,4 +22,7 @@ alias uuid="ruby -e \"require 'securerandom'; puts SecureRandom.uuid\""
 
 alias week="date +%V"
 
+alias gho="${HOME}/bin/ghopen"
+alias bko="${HOME}/bin/bkopen"
+
 # vim: ft=sh
