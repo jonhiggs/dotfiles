@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+REPO=$(
+  git config --get remote.origin.url \
+    | awk '
+        {
+          sub(/.*github.com:?/, "", $0)
+          sub(/\.git$/,"",$0)
+          gsub(/_/,"-",$0)
+          print $0
+        }
+      '
+)
+
+open "https://github.com/${REPO}"
