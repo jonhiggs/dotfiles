@@ -1,5 +1,5 @@
 {
-  "title": "Firefox Vim",
+  "title": "Firefox",
   "rules": [
     {
       "description": "Firefox Next Tab",
@@ -17,7 +17,9 @@
           "to": [
             {
               "key_code": "tab",
-              "modifiers": ["control"]
+              "modifiers": [
+                "control"
+              ]
             }
           ],
           "conditions": [
@@ -48,7 +50,10 @@
           "to": [
             {
               "key_code": "tab",
-              "modifiers": ["control", "shift"]
+              "modifiers": [
+                "control",
+                "shift"
+              ]
             }
           ],
           "conditions": [
@@ -79,7 +84,9 @@
           "to": [
             {
               "key_code": "w",
-              "modifiers": ["command"]
+              "modifiers": [
+                "command"
+              ]
             }
           ],
           "conditions": [
@@ -140,7 +147,9 @@
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["command"]
+              "modifiers": [
+                "command"
+              ]
             }
           ],
           "conditions": [
@@ -171,7 +180,9 @@
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["command"]
+              "modifiers": [
+                "command"
+              ]
             }
           ],
           "conditions": [
@@ -183,6 +194,145 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "description": "Firefox Honour Option-D",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.iChat$",
+                "^com\\.apple\\.mail$",
+                "^org\\.mozilla\\.firefox$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "right_option",
+                "right_shift"
+              ]
+            },
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Firefox Honour Ctrl-W",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.iChat$",
+                "^com\\.apple\\.mail$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "right_option"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Firefox Honour Option-B",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.iChat$",
+                "^com\\.apple\\.mail$",
+                "^org\\.mozilla\\.firefox$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "right_option"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Firefox Honour Option-F",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.apple\\.iChat$",
+                "^com\\.apple\\.mail$",
+                "^org\\.mozilla\\.firefox$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "right_option"
+              ]
+            }
+          ],
+          "type": "basic"
         }
       ]
     }
