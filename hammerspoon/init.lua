@@ -80,9 +80,9 @@ hs.hotkey.bind({"cmd", "shift"}, "D", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.w / 6           -- 1/6
+  f.x = max.w / 8           -- 1/8
   f.y = 0
-  f.w = ( max.w / 3 ) * 2   -- 2/3
+  f.w = ( max.w / 4 ) * 3   -- 3/4
   f.h = max.h
 
   local app = win:application()
