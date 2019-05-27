@@ -2,7 +2,9 @@
     "type": "script",
     "description": "save",
     "store": {},
-    "modes": [],
+    "modes": [
+        3
+    ],
     "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
@@ -16,11 +18,13 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [],
-        "hotKey": null
+        "modifiers": [
+            "<super>"
+        ],
+        "hotKey": "s"
     },
     "filter": {
-        "regex": "autokey-gtk.Autokey-gtk",
+        "regex": null,
         "isRecursive": false
     }
 }
