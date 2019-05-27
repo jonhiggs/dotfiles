@@ -1,1 +1,1 @@
-keyboard.send_keys("<ctrl>-<backspace>")
+keyboard.send_keys("<ctrl>+<backspace>")

@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "backward-char",
+    "description": "backward-word",
     "store": {},
     "modes": [
         3
@@ -19,12 +19,12 @@
     },
     "hotkey": {
         "modifiers": [
-            "<ctrl>"
+            "<alt>"
         ],
         "hotKey": "b"
     },
     "filter": {
-        "regex": "Navigator.Firefox",
+        "regex": null,
         "isRecursive": false
     }
 }

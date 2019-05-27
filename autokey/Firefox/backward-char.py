@@ -1,1 +1,1 @@
-# Enter script codeh
+keyboard.send_key("<left>")
