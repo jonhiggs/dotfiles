@@ -5,7 +5,7 @@ xset -b # turn off beeps
 autokey-gtk &
 
 # APPS
-urxvt &
+/usr/local/bin/st &
 firefox &
 
 exec /usr/bin/fluxbox
