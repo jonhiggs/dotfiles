@@ -1,2 +1,1 @@
-# Enter script code
-system.exec_command()
+system.exec_command("rofi -theme Arc-Dark -show run")
