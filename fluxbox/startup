@@ -2,18 +2,10 @@
 
 # ENVIRONMENT
 xset -b # turn off beeps
-xcompmgr &
-numlockx on &
-unclutter -root &
-~/dotfiles/bin/clipboard-sync.sh
+autokey-gtk &
 
 # APPS
-pidgin &
-audacious2 &
-gnome-do &
-tomboy &
-chrome &
-urxvtd &
-/opt/dropbox/dropboxd &
+urxvt &
+firefox &
 
 exec /usr/bin/fluxbox

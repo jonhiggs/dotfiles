@@ -26,17 +26,6 @@ OnDesktop Mouse3  :RootMenu
 OnDesktop Mouse4  :PrevWorkspace
 OnDesktop Mouse5  :NextWorkspace
 
-! moving and resizing
-Mod1 Shift 113    :ResizeHorizontal -2
-Mod1 Shift 114    :ResizeHorizontal 2
-Mod1 Shift 111    :ResizeVertical -2
-Mod1 Shift 116    :ResizeVertical 2
-
-Mod1 113          :MoveLeft 20
-Mod1 114          :MoveRight 20
-Mod1 111          :MoveUp 20
-Mod1 116          :MoveDown 20
-
 ! switch workspaces
 Mod1 1            :Workspace 1
 Mod1 2            :Workspace 2
@@ -48,35 +37,17 @@ Mod1 Tab          :NextGroup 5
 Mod1 Shift Tab    :PrevGroup 5
 
 ! switch between tabs
-Control Tab       :NextTab
-Control Shift Tab :PrevTab
-Mod1    n         :NextTab
-Mod1    p         :PrevTab
+Mod4    n         :NextTab
+Mod4    p         :PrevTab
 
 ! control the focused application
 Mod1 q            :Close
-Mod1 s            :Shade
-Mod1 t            :Stick
-Mod1 d            :ToggleDecor
-Mod1 j            :Lower
-Mod1 k            :Raise
+Mod4 d            :ToggleDecor
 Mod1 Return       :Fullscreen
 
 ! command shortcuts
-Mod1 F1	          :execCommand urxvtc
-Mod1 F2	          :execCommand gitg
-
-Mod1 F12	        :execCommand audacious2 --play-pause
-
-! I don't have any special keys anymore.
-!None XF86Tools            :execCommand audacious2
-!None XF86Prev		          :execCommand audacious2 -r
-!None XF86Play		          :execCommand audacious2 -t
-!None XF86Next		          :execCommand audacious2 -f
-!
-!None XF86AudioRaiseVolume :execCommand amixer -q set PCM 20+ unmute
-!None XF86AudioLowerVolume :execCommand amixer -q set PCM 20- unmute
-!None XF86AudioMute				:execCommand amixer -q set Master toggle
+Mod1 F1	          :execCommand urxvt
+Mod1 F2	          :execCommand firefox
 
 ! this will stop me from accidentaly printing my shell buffer.
 Shift 107                  :execCommand true
