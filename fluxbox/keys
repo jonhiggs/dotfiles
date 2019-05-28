@@ -52,3 +52,7 @@ Mod1 space        :execCommand rofi -theme Arc-Dark -show run
 
 ! this will stop me from accidentaly printing my shell buffer.
 Shift 107                  :execCommand true
+
+none XF86AudioMute         :execCommand pamixer -t
+none XF86AudioLowerVolume  :execCommand pamixer -d 10
+none XF86AudioRaiseVolume  :execCommand pamixer -i 10
