@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "forward-word",
+    "description": "backward-delete-char",
     "store": {},
     "modes": [
         3
@@ -19,9 +19,9 @@
     },
     "hotkey": {
         "modifiers": [
-            "<alt>"
+            "<ctrl>"
         ],
-        "hotKey": "f"
+        "hotKey": "h"
     },
     "filter": {
         "regex": null,

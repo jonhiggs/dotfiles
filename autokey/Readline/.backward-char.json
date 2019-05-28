@@ -5,8 +5,8 @@
     "modes": [
         3
     ],
-    "usageCount": 0,
-    "prompt": false,
+    "usageCount": 6,
+    "prompt": true,
     "omitTrigger": false,
     "showInTrayMenu": false,
     "abbreviation": {
@@ -24,7 +24,7 @@
         "hotKey": "b"
     },
     "filter": {
-        "regex": "Navigator.Firefox",
+        "regex": null,
         "isRecursive": false
     }
 }

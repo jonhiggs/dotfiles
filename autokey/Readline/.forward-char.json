@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "unix-word-rubout",
+    "description": "forward-char",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 30,
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -21,10 +21,10 @@
         "modifiers": [
             "<ctrl>"
         ],
-        "hotKey": "w"
+        "hotKey": "f"
     },
     "filter": {
-        "regex": "Navigator.Firefox",
+        "regex": null,
         "isRecursive": false
     }
 }
