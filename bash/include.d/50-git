@@ -1,5 +1,5 @@
 alias tig="tig status"
-alias g="/usr/local/bin/git"
+alias g="/usr/bin/git"
 
 __git_complete g _git
 

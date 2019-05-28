@@ -14,7 +14,7 @@ alias wttr="curl wttr.in/~Melbourne"
 hash -p ${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma bma
 hash -p ${HOME}/src/kumo/bin/kumo kumo
 
-alias t="${HOME}/bin/tig_selector"
+alias t="${HOME}/.local/bin2/tig_selector"
 
 alias aws_auth="aws_env non-prod; aws_env prod; aws_env drop"
 
