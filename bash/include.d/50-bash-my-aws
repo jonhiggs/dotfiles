@@ -1,6 +1,6 @@
 files=(
-  ${HOME}/src/bash-my-aws/lib/*-functions
-  ${HOME}/src/bash-my-aws/bash_completion.sh
+  ${HOME}/.local/src/dotfiles/bash/src/bash-my-aws/lib/*-functions
+  ${HOME}/.local/src/dotfiles/bash/src/bash-my-aws/bash_completion.sh
 )
 
 for f in ${files[@]}; do

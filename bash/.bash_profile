@@ -1,3 +1,5 @@
-[[ -s ~/.bashrc ]] && source ~/.bashrc
+#
+# ~/.bash_profile
+#
 
-# This file should be mostly empty. Use ~/.bash_login rather than this file.
+[[ -f ~/.bashrc ]] && . ~/.bashrc

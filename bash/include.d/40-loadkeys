@@ -1,5 +1,5 @@
 sudo loadkeys -d \
-   ${HOME}/.config/dotfiles/loadkeys/capslock-to-ctrl.inc \
-   ${HOME}/.config/dotfiles/loadkeys/esc-f1-tilde.inc \
-   ${HOME}/.config/dotfiles/loadkeys/two-alts.inc
+   ${HOME}/.local/src/dotfiles/loadkeys/capslock-to-ctrl.inc \
+   ${HOME}/.local/src/dotfiles/loadkeys/esc-f1-tilde.inc \
+   ${HOME}/.local/src/dotfiles/loadkeys/two-alts.inc
 

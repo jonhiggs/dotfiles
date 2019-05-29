@@ -2,7 +2,7 @@
 
 # ENVIRONMENT
 xset -b # turn off beeps
-/usr/bin/xmodmap ${HOME}/.config/dotfiles/.Xmodmap
+/usr/bin/xmodmap ${HOME}/.local/src/dotfiles/.Xmodmap
 autokey-gtk &
 
 # APPS

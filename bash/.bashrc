@@ -8,7 +8,7 @@ PATH="${HOME}/.local/bin:${HOME}/.local/bin2:/usr/local/bin:/usr/bin:/bin:/usr/s
 export TZ="Australia/Melbourne"
 
 # SOURCE EXTRAS
-for file in ${HOME}/.config/dotfiles/bash/include.d/*; do
+for file in ${HOME}/.local/src/dotfiles/bash/include.d/*; do
   [[ ! -f ${file} ]]            && continue
   [[ ${file} =~ .disabled$ ]]   && continue
   [[ ${file} =~ .example$ ]]    && continue

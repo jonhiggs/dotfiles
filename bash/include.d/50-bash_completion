@@ -4,20 +4,20 @@ else
   echo "The bash_completion script isn't found."
 fi
 
-DIRS=(
-  /usr/local/etc/bash_completion.d
-  /usr/local/Homebrew/completions/bash
-  /usr/share/bash-completion/completions
-  ${HOME}/.config/dotfiles/bash_completion
-  /usr/local/opt/nvm/etc/bash_completion.d
-)
-
-for d in ${DIRS[@]}; do
-  [[ -d ${d} ]] || continue
-  for f in ${d}/*; do
-    [[ $(basename $f) = "grub" ]] && continue
-    source $f;
-  done
-done
+#DIRS=(
+#  /usr/local/etc/bash_completion.d
+#  /usr/local/Homebrew/completions/bash
+#  /usr/share/bash-completion/completions
+#  ${HOME}/.local/src/dotfiles/bash_completion
+#  /usr/local/opt/nvm/etc/bash_completion.d
+#)
+#
+#for d in ${DIRS[@]}; do
+#  [[ -d ${d} ]] || continue
+#  for f in ${d}/*; do
+#    [[ $(basename $f) = "grub" ]] && continue
+#    source $f
+#  done
+#done
 
 # vim: ft=sh
