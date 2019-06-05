@@ -1,0 +1,24 @@
+set mbox_type=Maildir
+set folder="~/Mail"
+set mask="!^\\.[^.]"
+set mbox="~/Mail"
+set record=+.sent
+set postponed=+.drafts
+set spoolfile=+INBOX
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+set sort = reverse-date-received
+set wrap=80
+
+bind index g  noop
+bind index gg first-entry
+bind index G  last-entry
+
+bind pager k previous-line
+bind pager j next-line
+
+bind pager d half-down
+bind pager u half-up
