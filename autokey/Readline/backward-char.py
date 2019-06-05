@@ -5,3 +5,4 @@ if winClass not in exceptions:
     keyboard.send_key("<left>")
 else:
     keyboard.send_keys("<ctrl>+b")
+x

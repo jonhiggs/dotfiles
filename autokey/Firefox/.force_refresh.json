@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "backward-char",
+    "description": "force_refresh",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 12,
+    "usageCount": 35,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,9 +19,10 @@
     },
     "hotkey": {
         "modifiers": [
-            "<ctrl>"
+            "<shift>",
+            "<super>"
         ],
-        "hotKey": "b"
+        "hotKey": "r"
     },
     "filter": {
         "regex": null,
