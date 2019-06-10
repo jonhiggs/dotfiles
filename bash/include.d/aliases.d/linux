@@ -1,8 +1,7 @@
 if [[ "$(uname)" == "Linux" ]]; then
-  if which apt-get &> /dev/null; then
-    alias apt-get='sudo apt-get'
-  fi
-
+  alias lock="xscreensaver-command -lock; xset dpms force off"
+  alias battery="acpi"
+  alias pacman="sudo pacman"
 fi
 
 # vim: ft=sh
