@@ -57,3 +57,5 @@ Shift 107                  :execCommand true
 none XF86AudioMute         :execCommand pamixer -t
 none XF86AudioLowerVolume  :execCommand pamixer -d 10
 none XF86AudioRaiseVolume  :execCommand pamixer -i 10
+
+none Print                 :execCommand flameshot gui
