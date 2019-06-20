@@ -11,7 +11,7 @@ set color_win_bg=black
 set color_win_cur=11
 
 set color_win_inactive_cur_sel_fg=11
-set color_win_inactive_cur_sel_bg=black
+set color_win_inactive_cur_sel_bg=232
 set color_win_inactive_sel_bg=232
 set color_win_inactive_sel_fg=7
 
