@@ -8,7 +8,7 @@ window_exists() {
 }
 
 create_window() {
-  tmux new-window -t ${CMUS_WINDOW} -n cmus -- cmus
+  tmux new-window -c ${HOME}/Music -t ${CMUS_WINDOW} -n cmus -- cmus
 }
 
 select_window() {
