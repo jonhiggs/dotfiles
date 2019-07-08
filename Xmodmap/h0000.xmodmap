@@ -1,0 +1,10 @@
+clear lock
+clear control
+clear shift
+clear mod1
+clear mod4
+
+add shift = Shift_L Shift_R
+add control = Control_L Control_R
+add mod1 = Super_L
+add mod4 = XF86Tools
