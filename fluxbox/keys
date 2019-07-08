@@ -45,6 +45,7 @@ Mod4    p         :PrevTab
 Mod1 q            :Close
 Mod4 d            :ToggleDecor
 Mod4 f            :Fullscreen
+Mod4 s            :MacroCmd {MaximizeVertical} {MoveTo 0% 0% Center}
 
 ! command shortcuts
 Mod1 F1	          :execCommand st
