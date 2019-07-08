@@ -4,6 +4,8 @@ else
   echo "The bash_completion script isn't found."
 fi
 
+complete -C "$(which aws_completer)" aws
+
 #DIRS=(
 #  /usr/local/etc/bash_completion.d
 #  /usr/local/Homebrew/completions/bash
