@@ -74,7 +74,7 @@ session.screen0.focusSameHead:	false
 session.screen0.maxDisableResize:	false
 session.screen0.windowScrollReverse:	false
 session.screen0.edgeSnapThreshold:	0
-session.screen0.allowRemoteActions:	false
+session.screen0.allowRemoteActions:	true
 session.screen0.opaqueMove:	true
 session.screen0.defaultDeco:	NORMAL
 session.screen0.rowPlacementDirection:	LeftToRight
