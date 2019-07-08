@@ -10,6 +10,7 @@ sudo /bin/bash -c "echo 120 > /sys/devices/platform/i8042/serio1/serio2/sensitiv
 ~/.dropbox-dist/dropbox &
 autokey-gtk &
 flameshot &
+unclutter &
 
 # APPS
 /usr/local/bin/st &
