@@ -46,6 +46,14 @@ Mod1 q            :Close
 Mod4 d            :ToggleDecor
 Mod4 f            :Fullscreen
 Mod4 s            :MacroCmd {MaximizeVertical} {MoveTo 0% 0% Center}
+Mod4 Left         :MacroCmd {ResizeHorizontal -10}
+Mod4 Right        :MacroCmd {ResizeHorizontal 10}
+Mod4 h            :MoveTo 0% 0% TopLeft
+Mod4 l            :MoveTo 0% 0% TopRight
+Mod4 1            :TakeToWorkspace 1
+Mod4 2            :TakeToWorkspace 2
+Mod4 3            :TakeToWorkspace 3
+Mod4 4            :TakeToWorkspace 4
 
 ! command shortcuts
 Mod1 F1	          :execCommand st
