@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+_error() {
+  echo "must provide m4a file(s) as an argument" >&2
+  exit 1
+}
+
+[[ $# -eq 0 ]] && _error
+
+for f in $@; do
+  file=$f
+  ext=$(echo "$f" | awk -F. '{ print tolower($NF) }')
+  [[ "${ext}" = "m4a" ]] || _error
+
+  ffmpeg \
+    -i "${file}" \
+    -codec:v copy \
+    -codec:a libmp3lame \
+    -b:a 320k \
+    "${file%.m4a}.mp3"
+done
