@@ -23,8 +23,8 @@ OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing BottomRight}
 OnDesktop Mouse1  :HideMenus
 OnDesktop Mouse2  :WorkspaceMenu
 OnDesktop Mouse3  :RootMenu
-OnDesktop Mouse4  :PrevWorkspace
-OnDesktop Mouse5  :NextWorkspace
+!OnDesktop Mouse4  :PrevWorkspace
+!OnDesktop Mouse5  :NextWorkspace
 
 ! switch workspaces
 Mod1 1            :Workspace 1
