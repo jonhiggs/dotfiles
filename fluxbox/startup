@@ -8,6 +8,7 @@ sudo /bin/bash -c "echo 120 > /sys/devices/platform/i8042/serio1/serio2/sensitiv
 
 # DAEMONS
 ~/.dropbox-dist/dropbox &
+~/.local/bin2/ssh_agent &
 autokey-gtk &
 flameshot &
 unclutter &

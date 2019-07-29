@@ -1,15 +1,5 @@
-# Start an agent for real terms. Tmux sessions use the parent settings.
-if [[ "${TERM}" =~ ^xterm ]] && [[ $(tty) =~ ^\/dev\/tty ]]; then
-  eval $(ssh-agent)
-  for key in ${HOME}/.ssh/*; do
-    [[ ${key} =~ authorized_keys$ ]] && continue
-    [[ ${key} =~ known_hosts$ ]] && continue
-    [[ ${key} =~ config$ ]] && continue
-    [[ ${key} =~ unused ]] && continue
-    [[ ! -f ${key} ]] && continue
-    [[ ${key} =~ \.pub$ ]] && continue
-    ssh-add ${key} &> /dev/null
-  done
-fi
+# expects ssh_agent to be ran first.
+SETTINGS_FILE="/tmp/ssh_agent_${USER}"
+[[ -f "${SETTINGS_FILE}" ]] && source "${SETTINGS_FILE}"
 
 # vim: ft=sh
