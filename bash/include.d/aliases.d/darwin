@@ -9,6 +9,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias imageoptim='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
   alias umount="diskutil umount"
   alias route="echo 'try netstat -r'"
+  alias sync_music="b2 sync b2://jhiggs-music/ ${HOME}/Music/files"
 
   hash -p ${HOME}/etc/dotfiles/bash/src/bash-itunes/itunes itunes
   hash -p /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/bin/gcc avr-gcc
