@@ -44,7 +44,7 @@ Mod4    p         :PrevTab
 ! control the focused application
 Mod1 q            :Close
 Mod4 d            :ToggleDecor
-Mod4 f            :Fullscreen
+Mod4 f            :Maximize
 Mod4 s            :MacroCmd {MaximizeVertical} {MoveTo 0% 0% Center}
 Mod4 Left         :MacroCmd {ResizeHorizontal -10}
 Mod4 Right        :MacroCmd {ResizeHorizontal 10}
