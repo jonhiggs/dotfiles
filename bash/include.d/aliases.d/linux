@@ -6,6 +6,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   alias sync_buffer="tmux save-buffer - | xclip -i"
   alias cm="cmus_selector"
   alias ssid="echo -e \$(iw wlp2s0 info | awk '/\t*ssid/ { sub(\".*ssid \",\"\",\$0); print \$0 }')"
+  alias rtor="rtorrent -b \$(ip address show dev tun0 | awk '/inet / { print \$2 }')"
 fi
 
 # vim: ft=sh
