@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+_usage() {
+  echo "usage: $0 <vendor_id>:<product_id>"
+  exit 1
+}
+
+vendor=$(echo $1 | cut -d: -f1)
+product=$(echo $1 | cut -d: -f2)
+
+[[ $# -ne 1 ]] && _usage
+[[ -z "${vendor}" ]] && _usage
+[[ -z "${product}" ]] && _usage
+
+for d in /sys/bus/usb/devices/*; do
+  [[ -f $d/idVendor ]] || continue
+  [[ -f $d/idProduct ]] || continue
+  [[ "$(cat $d/idVendor)" == "${vendor}" ]] || continue
+  [[ "$(cat $d/idProduct)" == "${product}" ]] || continue
+  echo $d
+  exit 0
+done
+
+exit 1
