@@ -6,6 +6,22 @@ xset dpms 120 120 120 # turn off display after 2 minutes
 #/usr/bin/xmodmap ${HOME}/.local/src/dotfiles/.Xmodmap
 sudo /bin/bash -c "echo 120 > /sys/devices/platform/i8042/serio1/serio2/sensitivity"
 
+if xrandr | grep -q "DP1 connected"; then
+  xrandr --newmode "1920x1200_60.00"  193.16  1920 2048 2256 2592  1200 1201 1204 1242  -HSync +Vsync
+  xrandr --addmode DP1 1920x1200_60.00
+  xrandr --output DP1 --mode 1920x1200_60.00
+  xrandr --output DP1 --primary
+fi
+
+mouse_dev=$(usb_device_by_product 045e:00cb) # microsoft mouse
+[[ -d ${mouse_dev} ]] && echo on > ${mouse_dev}/power/control
+
+keyboard_dev=$(usb_device_by_product feed:6061) # h0000 keyboard
+if [[ -d ${keyboard_dev} ]]; then
+  setxkbmap -layout 'us'
+  xmodmap /home/jon/.local/src/dotfiles/Xmodmap/h0000.xmodmap
+fi
+
 # DAEMONS
 ~/.dropbox-dist/dropbox &
 ~/.local/bin2/ssh_agent &
