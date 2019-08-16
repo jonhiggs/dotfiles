@@ -1,4 +1,5 @@
 set replaygain=album
+set continue_album=false
 
 ### COLOR ################################
 set color_win_title_bg=025
