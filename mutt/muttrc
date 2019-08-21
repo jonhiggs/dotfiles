@@ -1,14 +1,24 @@
 set mbox_type=Maildir
+set mbox="~/Mail"
+set spoolfile=+INBOX
 set folder="~/Mail"
 set mask="!^\\.[^.]"
-set mbox="~/Mail"
-set record=+.sent
-set postponed=+.drafts
-set spoolfile=+INBOX
+#set mask="^\\.[^.]"
+#set mask=".*"
+set record=+Sent\ Mail
+set postponed=+Drafts
+set editor=nvim
+set from="jon.higgs@redbubble.com"
 
 set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
+
+# User Accounts
+set from = "jon.higgs@redbubble.com"
+set realname = "Jon Higgs"
+set sendmail = "msmtp -a default"
+set sendmail_wait = 0
 
 set sort = reverse-date-received
 set wrap=80
