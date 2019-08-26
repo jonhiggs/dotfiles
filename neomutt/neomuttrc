@@ -33,15 +33,20 @@ hdr_order Date Subject From To Cc
 
 set wrap=80
 
-bind index g  noop
-bind index gg first-entry
-bind index G  last-entry
+bind index,pager  g  noop
+bind index        !  noop
+bind index        d  noop             # delete
+bind index        gg first-entry
+bind index        G  last-entry
+bind index        !  delete-thread
 
-bind pager k previous-line
-bind pager j next-line
-
-bind pager d half-down
-bind pager u half-up
+bind pager        k  previous-line
+bind pager        j  next-line
+bind pager        gg top
+bind pager        G  bottom
+bind pager        d  half-down
+bind pager        u  half-up
+bind pager,index  R  group-reply
 
 ###############################################################################
 # Options can be seen at https://github.com/altercation/mutt-colors-solarized/blob/master/mutt-colors-solarized-dark-256.muttrc#
@@ -51,7 +56,7 @@ color indicator     brightwhite     color234
 color normal        white           color0
 color markers       yellow          color234
 color status        white           color025
-color tree          color012             color0                 # arrow in threads
+color tree          color012        color0                 # arrow in threads
 
 #color error         red             color0
 #color tilde         color235        color0
@@ -60,7 +65,7 @@ color tree          color012             color0                 # arrow in threa
 #color search        color61         color0
 
 ## messages
-color index         brightwhite     color242      "~U"         # unread messages
+color index         brightyellow    color0        "~U"         # unread messages
 color index         brightred       color234      "~F"         # flagged
 color index         color242        color234      "~D(!~p|~p)" # deleted
 color index         color208        color234      "~P"         # messages from me
