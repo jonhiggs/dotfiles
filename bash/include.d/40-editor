@@ -1,0 +1,4 @@
+case "$(uname)" in
+  "Darwin") export EDITOR="/opt/nvim/bin/nvim" ;;
+  "Linux")  export EDITOR="/usr/local/bin/nvim" ;;
+esac
