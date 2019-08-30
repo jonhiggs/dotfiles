@@ -1,7 +1,7 @@
 set mbox_type=Maildir
 set spoolfile=+INBOX
 set mask="!^\\.[^.]"
-set record=+Sent\ Mail
+set record=+[Gmail].Sent\ Mail
 set postponed=+Drafts
 set editor=${EDITOR}
 set from="jon.higgs@redbubble.com"
@@ -21,10 +21,11 @@ set virtual_spoolfile = yes
 set nm_default_uri = "notmuch://${HOME}/Mail"
 
 virtual-mailboxes "Inbox" "notmuch://?query=folder:INBOX"
-virtual-mailboxes "DE-Discussion" "notmuch://?query=folder:DE-Discussion"
-virtual-mailboxes "GitHub" "notmuch://?query=folder:GitHub"
-virtual-mailboxes "Confluence" "notmuch://?query=folder:Confluence"
-virtual-mailboxes "Trello" "notmuch://?query=folder:Trello"
+virtual-mailboxes "  DE-Discussion" "notmuch://?query=folder:DE-Discussion"
+virtual-mailboxes "  GitHub" "notmuch://?query=folder:GitHub"
+virtual-mailboxes "  Confluence" "notmuch://?query=folder:Confluence"
+virtual-mailboxes "  Trello" "notmuch://?query=folder:Trello"
+virtual-mailboxes "Sent" "notmuch://?query=folder:[Gmail].Sent Mail"
 
 set sidebar_width   = 24
 color sidebar_new color221 color233
