@@ -1,18 +1,36 @@
 set mbox_type=Maildir
-set mbox="~/Mail"
 set spoolfile=+INBOX
-set folder="~/Mail"
 set mask="!^\\.[^.]"
-#set mask="^\\.[^.]"
-#set mask=".*"
 set record=+Sent\ Mail
 set postponed=+Drafts
-set editor=nvim
+set editor=${EDITOR}
 set from="jon.higgs@redbubble.com"
+set date_format = "%m/%d"
 
-set sidebar_visible=no
+set pager_stop = yes
+
+# sidebar
+set sidebar_visible=yes
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
-set mail_check_stats
+set mail_check_stats = yes
+set sidebar_new_mail_only = no
+set mail_check_stats = yes
+set sidebar_sort_method = 'unsorted'
+
+set virtual_spoolfile = yes
+set nm_default_uri = "notmuch://${HOME}/Mail"
+
+virtual-mailboxes "Inbox" "notmuch://?query=folder:INBOX"
+virtual-mailboxes "DE-Discussion" "notmuch://?query=folder:DE-Discussion"
+virtual-mailboxes "GitHub" "notmuch://?query=folder:GitHub"
+virtual-mailboxes "Confluence" "notmuch://?query=folder:Confluence"
+virtual-mailboxes "Trello" "notmuch://?query=folder:Trello"
+
+set sidebar_width   = 24
+color sidebar_new color221 color233
+
+set sidebar_short_path
+set sidebar_folder_indent
 
 # User Accounts
 set from = "jon.higgs@redbubble.com"
@@ -33,12 +51,21 @@ hdr_order Date Subject From To Cc
 
 set wrap=80
 
+# noops
 bind index,pager  g  noop
 bind index        !  noop
 bind index        d  noop             # delete
+bind index,pager \Cd noop             # delete
+bind index,pager \Co noop             # delete
+
 bind index        gg first-entry
 bind index        G  last-entry
 bind index        !  delete-thread
+bind index       \Cd half-down
+bind index       \Cu half-up
+bind index        J  next-thread
+bind index        K  previous-thread
+bind index        o  select-entry
 
 bind pager        k  previous-line
 bind pager        j  next-line
@@ -47,6 +74,10 @@ bind pager        G  bottom
 bind pager        d  half-down
 bind pager        u  half-up
 bind pager,index  R  group-reply
+
+bind index,pager \Ck sidebar-prev
+bind index,pager \CO sidebar-open
+bind index,pager \Cj sidebar-next
 
 ###############################################################################
 # Options can be seen at https://github.com/altercation/mutt-colors-solarized/blob/master/mutt-colors-solarized-dark-256.muttrc#
@@ -76,3 +107,19 @@ color header        color245        color0        "^(To)"
 color header        color245        color0        "^(From)"
 color header        brightyellow    color0        "^(Subject)"
 color header        color7          color0        "^(Date)"
+
+## body
+color quoted        color33         color234
+color quoted1       color37         color234
+color quoted2       color136        color234
+color quoted3       color160        color234
+color quoted4       color166        color234
+
+## sidebar
+color sidebar_indicator brightyellow  color234        # Dark blue background
+color sidebar_highlight brightwhite   color234        # Grey background
+color sidebar_spoolfile default       default         # Yellow
+color sidebar_new       color214      default         # Green
+color sidebar_ordinary  default       default         # Default colors
+color sidebar_flagged   red           default         # Red
+color sidebar_divider   color234      color234        # Dark grey
