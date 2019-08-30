@@ -53,19 +53,19 @@ hdr_order Date Subject From To Cc
 set wrap=80
 
 # noops
+bind index,pager  o  noop
 bind index,pager  g  noop
 bind index        !  noop
 bind index        d  noop             # delete
 bind index,pager \Cd noop             # delete
-bind index,pager \Co noop             # delete
 
 bind index        gg first-entry
 bind index        G  last-entry
 bind index        !  delete-thread
 bind index       \Cd half-down
 bind index       \Cu half-up
-bind index        J  next-thread
-bind index        K  previous-thread
+bind index       \Cj next-thread
+bind index       \Ck previous-thread
 bind index        o  select-entry
 
 bind pager        k  previous-line
@@ -76,9 +76,9 @@ bind pager        d  half-down
 bind pager        u  half-up
 bind pager,index  R  group-reply
 
-bind index,pager \Ck sidebar-prev
-bind index,pager \CO sidebar-open
-bind index,pager \Cj sidebar-next
+bind index,pager  K sidebar-prev
+bind index,pager  J sidebar-next
+bind index,pager  O sidebar-open
 
 ###############################################################################
 # Options can be seen at https://github.com/altercation/mutt-colors-solarized/blob/master/mutt-colors-solarized-dark-256.muttrc#
