@@ -1,6 +1,8 @@
 alias tig="tig status"
-alias g="/usr/local/bin/git"
+alias g="git"
 
+[[ -f "/usr/share/bash-completion/completions/git" ]] \
+  && source /usr/share/bash-completion/completions/git
 __git_complete g _git
 
 # vim: ft=sh

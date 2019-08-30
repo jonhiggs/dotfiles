@@ -1,0 +1,6 @@
+if which loadkeys &> /dev/null; then
+  sudo loadkeys -d \
+     ${HOME}/.local/src/dotfiles/loadkeys/capslock-to-ctrl.inc \
+     ${HOME}/.local/src/dotfiles/loadkeys/esc-f1-tilde.inc \
+     ${HOME}/.local/src/dotfiles/loadkeys/two-alts.inc
+fi

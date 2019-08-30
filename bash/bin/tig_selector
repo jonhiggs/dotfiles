@@ -4,5 +4,5 @@ PROJECT_DIR=$(project_root ${FILE})
 
 TMUX_WINDOW=9
 tmux new-window -t ${TMUX_WINDOW} -n tig -- bash --noprofile --norc
-tmux send-keys -t:${TMUX_WINDOW} C-z "cd ${PROJECT_DIR}; tig status; nvr --remote-send ':GitGutterAll<CR>'; exit" Enter
+tmux send-keys -t:${TMUX_WINDOW} C-z "source /tmp/ssh_agent_${USER}; cd ${PROJECT_DIR}; tig status; nvr --remote-send ':GitGutterAll<CR>'; exit" Enter
 tmux select-window -t:${TMUX_WINDOW}

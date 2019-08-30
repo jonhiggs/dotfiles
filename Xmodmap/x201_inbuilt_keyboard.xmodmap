@@ -1,0 +1,25 @@
+clear lock
+clear control
+clear shift
+clear mod1
+clear mod4
+
+keycode 133 = Menu
+keycode 64 = Super_L
+!space
+keycode 108 = Alt_L
+
+keycode 66 = Control_L
+
+add shift = Shift_L Shift_R
+add control = Control_L Control_R
+
+keycode 49 = Escape asciitilde
+keycode 9 = grave
+
+keycode 37 = F4
+
+!keysym Alt_L = Super_L
+!keysym Super_L = Alt_L
+add mod1 = Super_L
+add mod4 = Menu

@@ -1,0 +1,30 @@
+{
+    "type": "script",
+    "description": "location_bar",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 16,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<super>"
+        ],
+        "hotKey": "l"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}

@@ -1,10 +1,14 @@
 if [[ "$(uname)" == "Linux" ]]; then
-  alias vim="/usr/local/bin/nvim"
-
-  if which apt-get &> /dev/null; then
-    alias apt-get='sudo apt-get'
-  fi
-
+  alias lock="xscreensaver-command -lock; systemctl suspend"
+  alias battery="acpi"
+  alias pacman="sudo pacman"
+  alias rename="perl-rename"
+  alias sync_buffer="tmux save-buffer - | xclip -i"
+  alias cm="cmus_selector"
+  alias ssid="echo -e \$(iw wlp2s0 info | awk '/\t*ssid/ { sub(\".*ssid \",\"\",\$0); print \$0 }')"
+  alias rtor="rtorrent -b \$(ip address show dev tun0 | awk '/inet / { print \$2 }')"
+  alias desktop_configuration="sudo /home/jon/.local/bin/desktop_configuration"
+  alias laptop_configuration="sudo /home/jon/.local/bin/laptop_configuration"
 fi
 
 # vim: ft=sh

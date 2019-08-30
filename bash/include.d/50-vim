@@ -1,7 +1,10 @@
-export EDITOR="/opt/nvim/bin/nvim"
-export NVIM_LISTEN_ADDRESS="/tmp/nvim"
+if [[ -z "${EDITOR}" ]]; then
+  "EDITOR is not yet defined"
+fi
 
 hash -p ${EDITOR} nvim
+
+export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 function vf() {
   root_dir=$(project_root $0)

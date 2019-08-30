@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+SETTINGS_FILE="/tmp/ssh_agent_${USER}"
+
+pid() {
+  awk -F= '/^SSH_AGENT_PID/ { sub(/;.*/,"",$2); print $2 }' "${SETTINGS_FILE}"
+}
+
+running() {
+  [[ -f "${SETTINGS_FILE}" ]] || return 1
+  [[ -d "/proc/$(pid)" ]]
+  return $?
+}
+
+running || ssh-agent > ${SETTINGS_FILE}
+
+for k in ${HOME}/.local/src/secrets/ssh/*.pub; do
+  ssh-add ~/.local/src/secrets/ssh/$(basename $k .pub) 2> /dev/null
+done

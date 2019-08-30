@@ -12,17 +12,17 @@ alias weather="redis-cli get weather_observation_data | jq"
 alias wttr="curl wttr.in/~Melbourne"
 
 hash -p ${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma bma
-hash -p ${HOME}/src/kumo/bin/kumo kumo
 
-alias t="${HOME}/bin/tig_selector"
-
-alias aws_auth="aws_env non-prod; aws_env prod; aws_env drop"
+alias t="${HOME}/.local/bin2/tig_selector"
 
 alias uuid="ruby -e \"require 'securerandom'; puts SecureRandom.uuid\""
-
 alias week="date +%V"
 
 alias gho="${HOME}/bin/ghopen"
 alias bko="${HOME}/bin/bkopen"
+
+alias power="battery"
+alias lcok='lock'
+alias lokc='lock'
 
 # vim: ft=sh

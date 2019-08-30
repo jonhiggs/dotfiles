@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+CMUS_WINDOW=8
+
+window_exists() {
+  tmux list-windows \
+    | grep -q ^${CMUS_WINDOW}
+  return $?
+}
+
+create_window() {
+  tmux new-window -c ${HOME}/Music -t ${CMUS_WINDOW} -n cmus -- cmus
+}
+
+select_window() {
+  tmux select-window -t:${CMUS_WINDOW}
+}
+
+window_exists || create_window
+select_window

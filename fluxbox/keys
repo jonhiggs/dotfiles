@@ -23,60 +23,52 @@ OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing BottomRight}
 OnDesktop Mouse1  :HideMenus
 OnDesktop Mouse2  :WorkspaceMenu
 OnDesktop Mouse3  :RootMenu
-OnDesktop Mouse4  :PrevWorkspace
-OnDesktop Mouse5  :NextWorkspace
-
-! moving and resizing
-Mod1 Shift 113    :ResizeHorizontal -2
-Mod1 Shift 114    :ResizeHorizontal 2
-Mod1 Shift 111    :ResizeVertical -2
-Mod1 Shift 116    :ResizeVertical 2
-
-Mod1 113          :MoveLeft 20
-Mod1 114          :MoveRight 20
-Mod1 111          :MoveUp 20
-Mod1 116          :MoveDown 20
+!OnDesktop Mouse4  :PrevWorkspace
+!OnDesktop Mouse5  :NextWorkspace
 
 ! switch workspaces
 Mod1 1            :Workspace 1
 Mod1 2            :Workspace 2
 Mod1 3            :Workspace 3
 Mod1 4            :Workspace 4
+Mod1 5            :Workspace 5
 
 ! switch between applications
-Mod1 Tab          :NextGroup 5
-Mod1 Shift Tab    :PrevGroup 5
+Mod1 Tab          :NextWindow {groups} (workspace=[current])
+Mod1 Shift Tab    :PrevWindow {groups} (workspace=[current])
 
 ! switch between tabs
-Control Tab       :NextTab
-Control Shift Tab :PrevTab
-Mod1    n         :NextTab
-Mod1    p         :PrevTab
+Mod4    n         :NextTab
+Mod4    p         :PrevTab
 
 ! control the focused application
 Mod1 q            :Close
-Mod1 s            :Shade
-Mod1 t            :Stick
-Mod1 d            :ToggleDecor
-Mod1 j            :Lower
-Mod1 k            :Raise
-Mod1 Return       :Fullscreen
+Mod4 d            :ToggleDecor
+Mod4 f            :Maximize
+Mod4 s            :MacroCmd {MaximizeVertical} {MoveTo 0% 0% Center}
+Mod4 Left         :MacroCmd {ResizeHorizontal -10}
+Mod4 Right        :MacroCmd {ResizeHorizontal 10}
+Mod4 h            :MoveTo 0% 0% TopLeft
+Mod4 l            :MoveTo 0% 0% TopRight
+Mod4 1            :TakeToWorkspace 1
+Mod4 2            :TakeToWorkspace 2
+Mod4 3            :TakeToWorkspace 3
+Mod4 4            :TakeToWorkspace 4
 
 ! command shortcuts
-Mod1 F1	          :execCommand urxvtc
-Mod1 F2	          :execCommand gitg
-
-Mod1 F12	        :execCommand audacious2 --play-pause
-
-! I don't have any special keys anymore.
-!None XF86Tools            :execCommand audacious2
-!None XF86Prev		          :execCommand audacious2 -r
-!None XF86Play		          :execCommand audacious2 -t
-!None XF86Next		          :execCommand audacious2 -f
-!
-!None XF86AudioRaiseVolume :execCommand amixer -q set PCM 20+ unmute
-!None XF86AudioLowerVolume :execCommand amixer -q set PCM 20- unmute
-!None XF86AudioMute				:execCommand amixer -q set Master toggle
+Mod1 F1	          :execCommand st
+Mod1 F2	          :execCommand firefox
+Mod1 space        :execCommand rofi -theme Arc-Dark -show run
 
 ! this will stop me from accidentaly printing my shell buffer.
 Shift 107                  :execCommand true
+
+none XF86AudioMute         :execCommand pamixer -t
+none XF86AudioNext         :execCommand cmus-remote --next
+none XF86AudioPlay         :execCommand cmus-remote --pause
+none XF86AudioPrev         :execCommand cmus-remote --prev
+none XF86AudioStop         :execCommand cmus-remote --stop
+none XF86AudioLowerVolume  :execCommand pamixer -d 10
+none XF86AudioRaiseVolume  :execCommand pamixer -i 10
+
+none Print                 :execCommand flameshot gui
