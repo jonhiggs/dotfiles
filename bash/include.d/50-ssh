@@ -1,5 +1,3 @@
-# expects ssh_agent to be ran first.
-SETTINGS_FILE="/tmp/ssh_agent_${USER}"
-[[ -f "${SETTINGS_FILE}" ]] && source "${SETTINGS_FILE}"
+${HOME}/.local/bin2/ssh_agent
 
 # vim: ft=sh

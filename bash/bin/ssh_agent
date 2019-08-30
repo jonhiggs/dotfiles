@@ -13,8 +13,6 @@ running() {
 
 running || ssh-agent > ${SETTINGS_FILE}
 
-source "${SETTINGS_FILE}"
-
-for k in ~/.local/src/secrets/ssh/*.pub; do
+for k in ${HOME}/.local/src/secrets/ssh/*.pub; do
   ssh-add ~/.local/src/secrets/ssh/$(basename $k .pub)
 done
