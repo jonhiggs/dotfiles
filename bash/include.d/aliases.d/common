@@ -4,6 +4,7 @@ alias grpe="grep"
 alias pwgen="pwgen --secure --symbols 14 1"
 
 alias find="echo 'use fd' >&2"
+alias bc="echo 'use insect' >&2"
 
 alias kctl="kubectl"
 
