@@ -72,3 +72,6 @@ none XF86AudioLowerVolume  :execCommand pamixer -d 10
 none XF86AudioRaiseVolume  :execCommand pamixer -i 10
 
 none Print                 :execCommand flameshot gui
+
+none XF86MonBrightnessDown :execCommand sudo /home/jon/.local/bin/adjust_brightness -10 &> /tmp/out
+none XF86MonBrightnessUp   :execCommand sudo /home/jon/.local/bin/adjust_brightness  10 &> /tmp/out
