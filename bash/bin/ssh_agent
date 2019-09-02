@@ -16,3 +16,5 @@ running || ssh-agent > ${SETTINGS_FILE}
 for k in ${HOME}/.local/src/secrets/ssh/*.pub; do
   ssh-add ~/.local/src/secrets/ssh/$(basename $k .pub) 2> /dev/null
 done
+
+cat ${SETTINGS_FILE}
