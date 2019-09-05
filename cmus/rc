@@ -2,8 +2,11 @@ set replaygain=album
 set continue_album=false
 
 ### COLOR ################################
-set color_win_title_bg=025
-set color_win_title_fg=015
+set color_win_title_bg=236
+set color_win_title_fg=008
+
+set color_titleline_bg=025
+set color_titleline_fg=015
 
 set color_separator=black
 
@@ -20,8 +23,6 @@ set color_win_sel_fg=15
 set color_win_cur_sel_bg=234
 set color_win_cur_sel_fg=11
 
-set color_titleline_bg=088
-set color_titleline_fg=015
-set color_statusline_fg=242
-set color_statusline_bg=232
+set color_statusline_bg=236
+set color_statusline_fg=008
 
