@@ -5,20 +5,21 @@ bind status <Ctrl-G>  !git commit -v
 bind status P         !git push origin
 bind status R         !git rebase -i HEAD~10
 
-color default         white black
-color author          default default normal
-color cursor          default 242 bold
-color date            yellow default normal
-color diff-chunk      white 052 normal
-color graph-commit    green default
-color header          white 025 bold
-color overflow        green red
-color stat-none       red default
-color stat-staged     green default
-color stat-unstaged   red default
-color stat-untracked  red default
-color title-blur      white 025 bold
-color title-focus     white 236
+color header          yellow  236 bold
+color default         white   black
+
+color author          default default     normal
+color cursor          default 236         bold
+color date            yellow  default     normal
+color diff-chunk      white   052         normal
+color graph-commit    green   default
+color overflow        green   red
+color stat-none       red     default
+color stat-staged     green   default
+color stat-unstaged   red     default
+color stat-untracked  red     default
+color title-blur      white   025         bold
+color title-focus     white   236
 
 # VIM STUFF
 bind generic    F       view-grep       # Rebind the grep view
