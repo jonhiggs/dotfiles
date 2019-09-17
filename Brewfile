@@ -3,66 +3,104 @@ tap 'jmespath/jmespath'
 tap 'redbubble/yak'
 
 brews = %w[
+  adr-tools
   autoconf
   autogen
   automake
   awscli
+  b2-tools
   bash
+  bash-completion
   bash-completion@2
-  bat
-  bats
   bdw-gc
   cabal-install
+  cairo
+  calcurse
   cmake
+  cmus
   coreutils
+  curl
+  dirmngr
+  dnsmasq
+  docker
+  exa
+  faad2
   fd
   ffmpeg
   findutils
+  flac
   fzf
+  gawk
+  gd
   gettext
   git
   gmp
   gnu-sed
+  gnupg
   gnupg2
+  gnutls
+  go
   gpg
   graphviz
+  grep
   guile
   htop
+  httest
   imagemagick
+  insect
+  isync
+  jansson
   jp
+  jpeg
   jq
   jshon
   kubectl
+  kubernetes-cli
   lame
-  lastpass-cli
   lesspipe
   lftp
   libevent
   libffi
   libtool
   libunistring
-  mobile-shell
+  links
+  lua
+  lynx
+  mp4v2
+  msmtp
+  mysql
+  neomutt
   netcat
+  nginx
   nmap
+  node
+  notmuch
   nvm
+  openjpeg
   openssl
+  pandoc
   parallel
   pcre
+  pcre2
   pidof
   pkg-config
   protobuf
   pv
   pwgen
   pyenv
+  python
   python3
+  python@2
   readline
   reattach-to-user-namespace
   redis
   rename
+  ripgrep
   shellcheck
   shfmt
   socat
   source-highlight
+  sqlite
   tcpdump
   telnet
   the_silver_searcher
@@ -71,12 +109,15 @@ brews = %w[
   tree
   unrar
   watch
+  webp
   wget
+  x264
+  x265
+  xsv
+  xvid
   xz
   yak
   zlib
-  zsh
-  zsh-completions
 ]
 
 casks = %w[
