@@ -122,6 +122,7 @@ brews = %w[
 
 casks = %w[
   android-platform-tools
+  crossback-avr
   docker
   dropbox
   google-chrome
