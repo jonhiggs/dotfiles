@@ -171,11 +171,11 @@ hs.usb.watcher.new(function(dataTable)
   print(dataTable['eventType'] .. " " .. dataTable['productName'])
   if dataTable['productName'] == 'H0001' then
      if dataTable['eventType'] == 'added' then
-       bluetooth("on")
+       -- bluetooth("on")
        hs.execute [["/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli" "--select-profile" "ML67"]]
      elseif dataTable['eventType'] == 'removed' then
        hs.execute [["/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli" "--select-profile" "Default profile"]]
-       bluetooth("off")
+       -- bluetooth("off")
      end
   end
 
