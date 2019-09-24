@@ -7,6 +7,7 @@ alias find="echo 'use fd' >&2"
 alias bc="echo 'use insect' >&2"
 
 alias sd="make -C ${HOME}/Dropbox/docs/redbubble/standdown edit"
+alias cm="cmus_selector"
 
 alias kctl="kubectl"
 
