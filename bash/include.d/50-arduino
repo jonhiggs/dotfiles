@@ -1,3 +1,11 @@
-PATH+=":/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin"
+paths=(
+  /Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin
+  /usr/local/CrossPack-AVR/bin
+)
+
+for p in ${paths[@]}; do
+  [[ -d $p ]] || continue
+  PATH+=":$p"
+done
 
 # vim: ft=sh
