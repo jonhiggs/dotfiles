@@ -20,26 +20,23 @@ toolbar.clock:                  flat crossdiagonal gradient
 toolbar.clock.color:            grey40
 toolbar.clock.colorTo:          grey20
 toolbar.clock.textColor:        grey85
-toolbar.justify:               	left 
-toolbar.font:                   dejavusans-10
+toolbar.justify:                left
 
 menu.title:                     flat vertical gradient
 menu.title.color:               rgb:ff/8c/1c
 menu.title.colorTo:             rgb:ba/64/10
 menu.title.textColor:           white
-menu.title.font:                dejavusans-10
-menu.title.justify:            	left 
+menu.title.justify:             left
 
 menu.frame:                     flat crossdiagonal gradient
 menu.frame.color:               grey40
 menu.frame.colorTo:             grey20
 menu.frame.textColor:           grey85
 menu.frame.disableColor:        rgb:4/2/2
-menu.frame.font:                dejavusans-10
-menu.frame.justify:            	right	
+menu.frame.justify:             right
 
-menu.bullet.position:          	right	
-menu.bullet:                   	justify 
+menu.bullet.position:           right
+menu.bullet:                    justify
 
 menu.hilite:                    flat vertical gradient
 menu.hilite.color:              rgb:ff/8c/1c
@@ -55,7 +52,7 @@ window.title.unfocus.color:     grey30
 # ACROSS TOP OF WINDOWS
 window.label.focus:             flat vertical gradient
 window.label.focus.color:       rgb:cf/6c/0b
-window.label.focus.colorTo:     rgb:ba/64/10 
+window.label.focus.colorTo:     rgb:ba/64/10
 window.label.focus.textColor:   white
 window.label.unfocus:           flat crossdiagonal gradient
 window.label.unfocus.color:     grey30
@@ -89,8 +86,7 @@ window.grip.unfocus.colorTo:    grey20
 window.frame.focusColor:        rgb:c/6/6
 window.frame.unfocusColor:      grey30
 
-window.font:                    dejavusans-10
-window.justify:                	left 
+window.justify:                 left
 
 borderColor:                    grey10
 
@@ -99,8 +95,7 @@ borderWidth:                    2
 handleWidth:                    4
 
 *textColor:                     grey85
-*Font:                          dejavusans-10
+*.font:Terminus:file=/usr/share/fonts/misc/ter-x14n.pcf.gz:pixelsize=14";
 
 background: flat
 background.color: grey20
-
