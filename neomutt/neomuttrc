@@ -25,6 +25,7 @@ virtual-mailboxes "  DE-Discussion" "notmuch://?query=folder:DE-Discussion"
 virtual-mailboxes "  GitHub" "notmuch://?query=folder:GitHub"
 virtual-mailboxes "  Confluence" "notmuch://?query=folder:Confluence"
 virtual-mailboxes "  Trello" "notmuch://?query=folder:Trello"
+virtual-mailboxes "Drafts" "notmuch://?query=folder:Drafts"
 virtual-mailboxes "Sent" "notmuch://?query=folder:/[Gmail].*Sent.Mail/"
 
 set sidebar_width   = 24
