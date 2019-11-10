@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "location_bar",
+    "description": "zoom_reset",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 51,
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -21,7 +21,7 @@
         "modifiers": [
             "<super>"
         ],
-        "hotKey": "l"
+        "hotKey": "0"
     },
     "filter": {
         "regex": null,
