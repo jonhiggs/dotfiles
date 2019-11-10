@@ -71,8 +71,10 @@ window.button.pressed.color:    rgb:cf/6c/0b
 window.button.pressed.colorTo:  rgb:ff/8c/1c
 
 window.handle.focus:            flat crossdiagonal gradient
-window.handle.focus.color:      rgb:ff/8c/1c
-window.handle.focus.colorTo:    rgb:cf/6c/0b
+#window.handle.focus.color:      rgb:ff/8c/1c
+#window.handle.focus.colorTo:    rgb:cf/6c/0b
+window.handle.focus:          flat solid
+window.handle.focus.color:    grey30
 window.handle.unfocus:          flat solid
 window.handle.unfocus.color:    grey30
 
@@ -83,8 +85,11 @@ window.grip.unfocus:            flat crossdiagonal gradient
 window.grip.unfocus.color:      grey30
 window.grip.unfocus.colorTo:    grey20
 
-window.frame.focusColor:        rgb:c/6/6
 window.frame.unfocusColor:      grey30
+window.frame.focusColor:        rgb:c/6/6
+
+window.frame.focus.color:      rgb:ff/8c/1c
+window.frame.focus.colorTo:    rgb:cf/6c/0b
 
 window.justify:                 left
 
@@ -92,10 +97,10 @@ borderColor:                    grey10
 
 bevelWidth:                     1
 borderWidth:                    2
-handleWidth:                    4
+handleWidth:                    0
 
 *textColor:                     grey85
-*.font:Terminus:file=/usr/share/fonts/misc/ter-x14n.pcf.gz:pixelsize=14";
+*.font:Terminus:file=/usr/share/fonts/misc/ter-x12n.pcf.gz:pixelsize=12;
 
 background: flat
 background.color: grey20
