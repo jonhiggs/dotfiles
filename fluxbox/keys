@@ -58,7 +58,7 @@ Mod4 4            :TakeToWorkspace 4
 ! command shortcuts
 Mod1 F1	          :execCommand st
 Mod1 F2	          :execCommand firefox
-Mod1 space        :execCommand rofi -theme Arc-Dark -show run
+Mod1 space        :execCommand rofi -show run
 
 ! this will stop me from accidentaly printing my shell buffer.
 Shift 107                  :execCommand true
