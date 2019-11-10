@@ -26,10 +26,15 @@
 [end]
 [submenu] (Net)
 [submenu] (Browsers)
+      [exec]   (chromium) {chromium} 
       [exec]   (firefox) {firefox} 
+      [exec]   (links-graphic) {links -driver x fluxbox.org} 
+      [exec]   (links) {urxvt -e links fluxbox.org} 
+      [exec]   (w3m) {urxvt -e w3m fluxbox.org} 
 [end]
 [submenu] (FTP)
       [exec]   (ftp) {urxvt -e ftp} 
+      [exec]   (lftp) {urxvt -e lftp} 
 [end]
 [end]
 [submenu] (Editors)
@@ -37,9 +42,25 @@
       [exec]   (vi) {urxvt -e vi} 
 [end]
 [submenu] (Multimedia)
+[submenu] (Graphics)
+      [exec]   (xscreensaver-demo) {xscreensaver-demo} 
+      [exec] (Mesa gears) {gears} 
+      [exec] (Mesa morph) {morph3d} 
+      [exec] (Mesa reflect) {reflect} 
+[end]
+[submenu] (Audio)
+      [exec]   (easytag) {easytag} 
+      [exec]   (audacity) {audacity} 
+      [exec]   (alsamixer) {urxvt -e alsamixer} 
+[end]
 [submenu] (X-utils)
+      [exec]   (xclock) {xclock} 
+      [exec]   (gkrellm) {gkrellm} 
       [exec] (Reload .Xdefaults) {xrdb -load $HOME/.Xdefaults} 
 [end]
+[end]
+[submenu] (Office)
+      [exec]   (xclock) {xclock} 
 [end]
 [submenu] (System Tools)
       [exec]   (top) {urxvt -e top} 
@@ -55,9 +76,13 @@
 [end]
       [workspaces] (Workspace List) 
 [submenu] (Tools)
+      [exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center} 
+      [exec] (Screenshot - JPG) {import screenshot.jpg && display -resize 50% screenshot.jpg} 
+      [exec] (Screenshot - PNG) {import screenshot.png && display -resize 50% screenshot.png} 
       [exec] (Run) {fbrun} 
       [exec] (Regen Menu) {fluxbox-generate_menu} 
 [end]
+      [exec] (Lock screen) {xscreensaver-command -lock} 
       [commanddialog] (Fluxbox Command) 
       [reconfig] (Reload config) 
       [restart] (Restart) 
