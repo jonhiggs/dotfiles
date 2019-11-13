@@ -1,0 +1,36 @@
+[app] (Class=URxvt)
+  [Workspace]   {0}
+  [Fullscreen]  {true}
+[end]
+
+[app] (Class=st-256color)
+  [Workspace]   {0}
+  [Dimensions]  {100% 100%}
+  [Jump]        {yes}
+  [Deco]        {NONE}
+[end]
+
+[app] (Class=Firefox)
+  [Fullscreen]  {true}
+  [Workspace]   {1}
+  [Jump]        {yes}
+  [Deco]        {NONE}
+[end]
+
+[app] (Class=Slack)
+  [Workspace]   {2}
+  [Jump]        {yes}
+  [Deco]        {NONE}
+[end]
+
+[app] (Class=Autokey-gtk)
+  [Workspace]   {3}
+  [Deco]        {NONE}
+  [Jump]        {yes}
+[end]
+
+[app] (Class=Easytag)
+  [Workspace]   {3}
+  [Fullscreen]  {true}
+  [Jump]        {yes}
+[end]
