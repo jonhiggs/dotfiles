@@ -2,13 +2,4 @@
 *.sw?
 .*.orig
 
-fluxbox/apps
-fluxbox/backgrounds/_default.jpg
-bash/bin/update_repos.sh
-bash/bin/ghost-staging-network
-bash/bin/egcurl
-bash/bin/dirty_repos.sh
-bash/bin/bash_environment
-bash/include.d/homebrew
-bash/bin/shush
 karabiner/automatic_backups/
