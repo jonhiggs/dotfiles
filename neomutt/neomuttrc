@@ -3,7 +3,7 @@ set spoolfile=+INBOX
 set mask="!^\\.[^.]"
 set record=+[Gmail].Sent\ Mail
 set postponed=+Drafts
-set editor=${EDITOR}
+set editor=~/.local/src/dotfiles/neomutt/editor_wrapper
 set from="jon.higgs@redbubble.com"
 set date_format = "%m/%d"
 

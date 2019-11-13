@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# i have no idea why this is needed, but sometimes the editor exits
+# immediately and this seems to fix it.
+
+${EDITOR} $@
