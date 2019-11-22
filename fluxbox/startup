@@ -14,6 +14,7 @@ fi
 # DAEMONS
 ~/.dropbox-dist/dropbox &
 ~/.local/bin2/ssh_agent &
+dunst &
 autokey-gtk &
 flameshot &
 unclutter &
