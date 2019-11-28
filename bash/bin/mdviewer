@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+tmp_md=$(mktemp XXXXXXX.md)
+tmp_html=$(mktemp XXXXXXXX.html)
+tmp_pdf=$(mktemp XXXXXXXX.pdf)
+
+if [[ $# -eq 1 ]]; then
+  title=$(basename $1)
+  cp $1 ${tmp_md}
+else
+  cat /dev/stdin > ${tmp_md}
+fi
+
+
+pandoc ${tmp_md} \
+  --output=${tmp_html} \
+  --to=html5 \
+  --metadata pagetitle="${title}" \
+  --css=/home/jon/.local/src/dotfiles/bash/lib/github.css \
+  --highlight-style=haddock \
+  --self-contained
+
+#pandoc ${tmp_html} \
+#  --pdf-engine wkhtmltopdf \
+#  --output=${tmp_pdf}
+
+firefox ${tmp_html}
+#evince ${tmp_pdf}
+
+#rm -f ${tmp_md} ${tmp_html} ${tmp_pdf}
