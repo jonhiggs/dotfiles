@@ -432,4 +432,9 @@
     format = "<b>%s</b>\n%b"
     new_icon = /usr/share/icons/Adwaita/256x256/legacy/user-available.png
 
+[taskwarrior]
+    appname = taskwarrior
+    format = "<b>%s</b>\n%b"
+    new_icon = /usr/share/pixmaps/taskwarrior.ico
+
 # vim: ft=cfg
