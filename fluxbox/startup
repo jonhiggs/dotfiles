@@ -19,8 +19,4 @@ autokey-gtk &
 flameshot &
 unclutter &
 
-# APPS
-/usr/local/bin/st &
-firefox &
-
 exec /usr/bin/fluxbox
