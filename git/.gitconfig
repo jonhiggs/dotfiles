@@ -23,6 +23,7 @@
 	branch-cleanlocal = "!for b in $(git branch | grep -v '^*'); do git branch -d $b; done"
 	rbi = !git rebase -i origin/master
 	amend = commit -v --amend
+	reword = commit -v --amend
 	fixup = !git reset --soft HEAD~ && git commit --amend --no-edit
 
 #[url "git@github.com:"]
