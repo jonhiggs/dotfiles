@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+account=$1
+region=$2
+type=$3
+date=$4
+dest=$5
+
+if [[ $# -ne 5 ]]; then
+  echo "invalid number of parameters"
+  exit 1
+fi
+
+case ${account} in
+  "production") account_id=202808813459            ;;
+  *)            echo "invalid account"; exit 1     ;;
+esac
+
+year=$(gdate --date=${date} +%Y)
+month=$(gdate --date=${date} +%m)
+day=$(gdate --date=${date} +%d)
+
+path="s3://redbubble-logs-${account}-${region}/${type}/AWSLogs/${account_id}/elasticloadbalancing/${region}/${year}/${month}/${day}/"
+
+aws s3 ls ${path} \
+  | awk -v date=${date} '$0~date { print $4 }' \
+  | xargs -I{} aws s3 cp ${path}{} ${dest}
