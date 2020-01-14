@@ -9,8 +9,6 @@ alias bc="echo 'use insect' >&2"
 alias sd="make -C ${HOME}/Dropbox/docs/redbubble/standdown edit"
 alias cm="cmus_selector"
 
-alias kctl="kubectl"
-
 alias dict="cat ${HOME}/etc/vimfiles/data/site/spell/custom-dictionary.utf-8.add ${HOME}/etc/vimfiles/data/site/spell/en_au-words.txt | sort -f"
 alias weather="redis-cli get weather_observation_data | jq"
 alias wttr="curl wttr.in/~Melbourne"
@@ -18,6 +16,8 @@ alias wttr="curl wttr.in/~Melbourne"
 hash -p ${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma bma
 
 alias t="${HOME}/.local/bin2/tig_selector"
+
+alias ta="task"
 
 alias uuid="ruby -e \"require 'securerandom'; puts SecureRandom.uuid\""
 alias week="date +%V"
