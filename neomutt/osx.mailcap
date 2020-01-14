@@ -1,4 +1,3 @@
-#text/html; /Applications/Firefox.app/Contents/MacOS/firefox %s
 text/html; w3m -T text/html -cols 72 -dump -o display_image=false -o display_link_number=true %s | less
 image/gif; xv %s
 image/jpg; xv %s
