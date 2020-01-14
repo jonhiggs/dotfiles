@@ -57,12 +57,10 @@ set wrap=80
 bind index,pager  o  noop
 bind index,pager  g  noop
 bind index        !  noop
-bind index        d  noop             # delete
 bind index,pager \Cd noop             # delete
 
 bind index        gg first-entry
 bind index        G  last-entry
-bind index        !  delete-thread
 bind index       \Cd half-down
 bind index       \Cu half-up
 bind index       \Cj next-thread
