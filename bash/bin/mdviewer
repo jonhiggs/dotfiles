@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-tmp_md=$(mktemp XXXXXXX.md)
-tmp_html=$(mktemp XXXXXXXX.html)
-tmp_pdf=$(mktemp XXXXXXXX.pdf)
+tmp_md=$(mktemp /tmp/XXXXXXX.md)
+tmp_html=$(mktemp /tmp/XXXXXXXX.html)
+#tmp_pdf=$(mktemp /tmp/XXXXXXXX.pdf)
 
 if [[ $# -eq 1 ]]; then
   title=$(basename $1)
@@ -26,4 +26,5 @@ pandoc ${tmp_md} \
 firefox ${tmp_html}
 #evince ${tmp_pdf}
 
-#rm -f ${tmp_md} ${tmp_html} ${tmp_pdf}
+sleep 2
+rm -f ${tmp_md} ${tmp_html} ${tmp_pdf}
