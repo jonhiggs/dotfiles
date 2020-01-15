@@ -3,12 +3,11 @@
 # ENVIRONMENT
 xset -b # turn off beeps
 xset dpms 120 120 120 # turn off display after 2 minutes
-#/usr/bin/xmodmap ${HOME}/.local/src/dotfiles/.Xmodmap
 
 if xrandr | grep -q "DP1 connected"; then
-  sudo desktop_configuration
+  sudo ~/.local/bin/desktop_configuration
 else
-  sudo laptop_configuration
+  sudo ~/.local/bin/laptop_configuration
 fi
 
 # DAEMONS
