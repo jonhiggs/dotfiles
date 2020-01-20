@@ -7,8 +7,8 @@ _error() {
 
 [[ $# -eq 0 ]] && _error
 
-for f in $@; do
-  file=$f
+for f in "$@"; do
+  file="$f"
   ext=$(echo "$f" | awk -F. '{ print tolower($NF) }')
   [[ "${ext}" = "m4a" ]] || _error
 
