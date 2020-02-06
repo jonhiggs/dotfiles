@@ -8,6 +8,7 @@ alias bc="echo 'use insect' >&2"
 
 alias sd="make -C ${HOME}/Dropbox/docs/redbubble/standdown edit"
 alias cm="cmus_selector"
+alias pa="pass"
 
 alias dict="cat ${HOME}/etc/vimfiles/data/site/spell/custom-dictionary.utf-8.add ${HOME}/etc/vimfiles/data/site/spell/en_au-words.txt | sort -f"
 alias weather="redis-cli get weather_observation_data | jq"
