@@ -23,8 +23,8 @@ alias ta="task"
 alias uuid="ruby -e \"require 'securerandom'; puts SecureRandom.uuid\""
 alias week="date +%V"
 
-alias gho="${HOME}/bin/ghopen"
-alias bko="${HOME}/bin/bkopen"
+alias gho="ghopen"
+alias bko="bkopen"
 
 alias power="battery"
 alias lcok='lock'

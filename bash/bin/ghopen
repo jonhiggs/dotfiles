@@ -11,4 +11,9 @@ REPO=$(
       '
 )
 
-open "https://github.com/${REPO}"
+url="https://github.com/${REPO}"
+if command -v open; then
+  open "${url}"
+else
+  firefox "${url}"
+fi
