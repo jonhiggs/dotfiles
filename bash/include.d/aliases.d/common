@@ -19,6 +19,8 @@ hash -p ${HOME}/etc/dotfiles/bash/src/bash-my-aws/bin/bma bma
 alias t="${HOME}/.local/bin2/tig_selector"
 
 alias ta="task"
+alias taa="task active"
+alias taw="task waiting"
 
 alias uuid="ruby -e \"require 'securerandom'; puts SecureRandom.uuid\""
 alias week="date +%V"
