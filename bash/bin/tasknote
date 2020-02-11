@@ -54,7 +54,8 @@
 NOTEMSG="See Notes File"
 SELECT_WRONG_OPTION_MESSAGE="Please type the option number not name."
 
-EDITOR=${TASKNOTE_EDITOR:-nvim}
+EDITOR=${EDITOR:-nvim}
+EDITOR=${TASKNOTE_EDITOR:-${EDITOR}}
 VIEWER=${TASKNOTE_VIEWER:-cat}
 EXT=${TASKNOTE_FILE_EXT:-md}
 TASKBIN=task
