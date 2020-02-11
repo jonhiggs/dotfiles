@@ -1,6 +1,6 @@
 if [[ "$(uname)" == "Darwin" ]]; then
   alias dnsdomainname='domainname'
-  alias lock='pmset displaysleepnow'
+  alias lock='task sync; pass git push; pmset displaysleepnow'
   alias battery="pmset -g batt"
 
   alias imageoptim='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
