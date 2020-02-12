@@ -27,9 +27,9 @@
 rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
 
 # General decoration
-color.label=blue
-color.label.sort=
-color.alternate=on gray2
+color.label=color15
+color.label.sort=color15
+color.alternate=
 color.header=gray10
 color.footnote=gray10
 color.warning=white on blue
@@ -39,7 +39,7 @@ color.debug=blue
 # Task state
 color.completed=
 color.deleted=
-color.active=color15 on color25
+color.active=yellow on color235
 color.recurring=
 color.scheduled=
 color.until=
@@ -60,9 +60,9 @@ color.tag.none=
 color.tagged=
 
 # Due
-color.due=color0 on rgb013
-color.due.today=color0 on rgb024
-color.overdue=color0 on rgb035
+color.due=color208
+color.due.today=red
+color.overdue=color0 on red
 
 # Report: burndown
 color.burndown.pending=white on gray9

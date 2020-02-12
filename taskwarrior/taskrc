@@ -29,7 +29,7 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-light-256.theme
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/no-color.theme
 
-#include ~/.local/src/dotfiles/taskwarrior/mine.theme
+include ~/.local/src/dotfiles/taskwarrior/mine.theme
 include ~/.local/src/dotfiles/taskwarrior/taskd.inc
 
 context.high=priority.not:L
