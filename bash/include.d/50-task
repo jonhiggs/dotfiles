@@ -1,0 +1,2 @@
+alias ta="task"
+complete -o nospace -F _task ta
