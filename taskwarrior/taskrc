@@ -33,7 +33,7 @@ data.location=~/.task
 include ~/.local/src/dotfiles/taskwarrior/taskd.inc
 
 context.high=priority.not:L
-context.work=project.not:home -env +UNBLOCKED
+context.work=(project.not:home -env +UNBLOCKED) or +ACTIVE
 urgency.blocking.coefficient=2
 urgency.user.tag.blocked.coefficient=-15.0
 urgency.user.tag.env.coefficient=-4.0
