@@ -30,9 +30,9 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/no-color.theme
 
 include ~/.local/src/dotfiles/taskwarrior/mine.theme
-include ~/.local/src/dotfiles/taskwarrior/taskd.inc
+include ~/.local/src/dotfiles/taskwarrior/server.inc
 
-context.high=priority.not:L
+context.high=priority.not:L scheduled.not:someday -BLOCKED
 context.work=(project.not:home -env +UNBLOCKED) or +ACTIVE
 urgency.blocking.coefficient=2
 urgency.user.tag.blocked.coefficient=-15.0
@@ -50,4 +50,4 @@ uda.priority.values=H,M,L,
 urgency.uda.priority.H.coefficient=7.0
 urgency.uda.priority.L.coefficient=-7.0
 urgency.uda.priority.M.coefficient=0.0
-context=work
+context=high

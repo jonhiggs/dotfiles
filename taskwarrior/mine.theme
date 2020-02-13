@@ -57,6 +57,7 @@ color.uda.priority.M=
 # Tags
 color.tag.next=
 color.tag.none=
+color.tag.blocked=color238 on color232
 color.tagged=
 
 # Due
