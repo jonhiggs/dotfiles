@@ -51,3 +51,4 @@ urgency.uda.priority.H.coefficient=7.0
 urgency.uda.priority.L.coefficient=-7.0
 urgency.uda.priority.M.coefficient=0.0
 context=high
+context.housework=project:housework
