@@ -50,7 +50,7 @@ color.blocking=color15 on color235
 color.project.none=
 
 # Priority
-color.uda.priority.H=
+color.uda.priority.H=red
 color.uda.priority.L=
 color.uda.priority.M=
 

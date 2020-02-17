@@ -1,3 +1,4 @@
 source /usr/share/bash-completion/completions/task
 alias ta="task"
+alias tsd='task completed end:today | awk \'/^ - / { print $2 }\' | xargs -I{} task _get {}.description'
 complete -o nospace -F _task ta
