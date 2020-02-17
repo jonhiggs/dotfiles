@@ -1,2 +1,3 @@
+source /usr/share/bash-completion/completions/task
 alias ta="task"
 complete -o nospace -F _task ta
