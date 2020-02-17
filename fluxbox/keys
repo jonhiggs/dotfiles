@@ -68,6 +68,7 @@ none XF86AudioRaiseVolume   :execCommand pamixer -i 10
 none XF86MonBrightnessDown  :execCommand sudo /home/jon/.local/bin/adjust_brightness -10 &> /tmp/out
 none XF86MonBrightnessUp    :execCommand sudo /home/jon/.local/bin/adjust_brightness  10 &> /tmp/out
 none XF86Launch1            :execCommand sudo /home/jon/.local/bin/laptop_configuration
+none XF86Launch5            :execCommand sudo /home/jon/.local/bin/desktop_configuration
 
 ! this will stop me from accidentaly printing my shell buffer.
 Shift 107                   :execCommand true
