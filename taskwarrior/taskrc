@@ -33,7 +33,7 @@ include ~/.local/src/dotfiles/taskwarrior/mine.theme
 include ~/.local/src/dotfiles/taskwarrior/server.inc
 
 context.high=priority.not:L scheduled.not:someday -BLOCKED
-context.work=(project.not:home -env +UNBLOCKED) or +ACTIVE
+context.work=(project.not:home project.not:housework project.not:shed -env +UNBLOCKED) or +ACTIVE
 urgency.blocking.coefficient=2
 urgency.user.tag.blocked.coefficient=-15.0
 urgency.user.tag.env.coefficient=-4.0
