@@ -11,6 +11,7 @@ else
 fi
 
 # DAEMONS
+pcloudcc -u jhiggs@eml.cc &
 ~/.dropbox-dist/dropbox &
 ~/.local/bin2/ssh_agent &
 dunst &
