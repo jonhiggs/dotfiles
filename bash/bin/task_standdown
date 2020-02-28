@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+TASKBIN="task"
+uuids="$(${TASKBIN} uuids end:"${1:-today}" +COMPLETED 2>&1)"
+
+for u in ${uuids}; do
+  ${TASKBIN} _get "$u.description"
+
+  a=1
+  while true; do
+    d=$(${TASKBIN} _get "$u.annotations.$a.description")
+    [[ -z $d ]] && break
+    echo "- $d"
+    a=$((a+1))
+  done
+
+  echo
+done
