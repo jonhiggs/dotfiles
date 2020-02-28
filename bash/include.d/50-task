@@ -1,10 +1,15 @@
-source /usr/share/bash-completion/completions/task
+for f in /usr/share/bash-completion/completions/task /usr/local/Cellar/task/*/etc/bash_completion.d/task.sh; do
+  [[ -f $f ]] && source $f
+done
+
 alias ta="task"
 alias tam="task modify"
 alias taa="task add"
 alias taw="task waiting"
-alias tsd='task completed end:today | awk \'/^ - / { print $2 }\' | xargs -I{} task _get {}.description'
+#alias tsd='task completed end:today | awk \'/^ - / { print $2 }\' | xargs -I{} task _get {}.description'
 complete -o nospace -F _task ta
 complete -o nospace -F _task tam
 complete -o nospace -F _task taa
 complete -o nospace -F _task taw
+
+# vim: ft=sh
