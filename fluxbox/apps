@@ -34,3 +34,9 @@
   [Fullscreen]  {true}
   [Jump]        {yes}
 [end]
+
+[app] (Name=xclock)
+  [Deco]        {NONE}
+  [Sticky]      {yes}
+  [Position]    (TopRight) {0 0}
+[end]
