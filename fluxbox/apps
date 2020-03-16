@@ -38,5 +38,5 @@
 [app] (Name=xclock)
   [Deco]        {NONE}
   [Sticky]      {yes}
-  [Position]    (TopRight) {0 0}
+  [Position]    (BottomRight) {0 0}
 [end]
