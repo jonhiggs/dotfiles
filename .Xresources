@@ -44,14 +44,13 @@ rofi.theme:                         Arc-Dark
 rofi.tokenize:                      true
 rofi.width:                         20
 
-xclock*background:  black
-xclock*foreground:  dimgrey
-xclock*analog:      false
-xclock*font:        -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-xclock*render:    false
-xclock*strftime:  %m-%d %H:%M:%S
-xclock*update:  1
-
+xclock*background:                  black
+xclock*foreground:                  dimgrey
+xclock*analog:                      false
+xclock*font:                        -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-1
+xclock*render:                      false
+xclock*strftime:                    %m/%d %H:%M:%S
+xclock*update:                      1
 
 !X C A L C
 XCalc*geometry:                             200x275
@@ -97,4 +96,4 @@ XCalc.ti.Command.background:                #777777
 !xcalc.ti.button39.background:               #555595
 !XCalc*Cursor:                               hand2
 !XCalc*ShapeStyle:                           rectangle
-XCalc*font:        -xos4-terminus-medium-r-normal--0-0-72-72-c-0-iso10646-1
+XCalc*font:                                 -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-1
