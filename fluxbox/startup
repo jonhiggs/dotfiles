@@ -3,7 +3,7 @@
 # ENVIRONMENT
 xset -b # turn off beeps
 xset dpms 120 120 120 # turn off display after 2 minutes
-xclock -update 1 -strftime '%T %d/%m' &
+xclock &
 
 if xrandr | grep -q "DP1 connected"; then
   sudo ~/.local/bin/desktop_configuration
